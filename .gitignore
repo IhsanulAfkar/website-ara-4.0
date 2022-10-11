@@ -1,7 +1,10 @@
 #-------------------------
 # Operating Specific Junk Files
 #-------------------------
-
+node_modules/
+package-lock.json
+package.json
+tailwind.config.js
 # OS X
 .DS_Store
 .AppleDouble

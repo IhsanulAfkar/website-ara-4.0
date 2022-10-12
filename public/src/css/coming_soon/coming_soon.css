@@ -605,6 +605,33 @@ video {
   margin: 1.5rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mx-\[200px\] {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.mx-\[150px\] {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.mt-40 {
+  margin-top: 10rem;
+}
+
+.mt-\[60px\] {
+  margin-top: 60px;
+}
+
+.mt-\[80px\] {
+  margin-top: 80px;
+}
+
 .block {
   display: block;
 }
@@ -613,21 +640,63 @@ video {
   display: table;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .border {
   border-width: 1px;
 }
 
+.bg-slate-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.bg-slate-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+
 .text-center {
   text-align: center;
+}
+
+.font-\[\'poppins\'\] {
+  font-family: 'poppins';
+}
+
+.font-poppins {
+  font-family: Poppins, sans-serif;
+}
+
+.text-\[150px\] {
+  font-size: 150px;
 }
 
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .antialiased {
@@ -657,3 +726,8 @@ video {
   transition-duration: 150ms;
 }
 
+body {
+  background-image: url('../../../coming_soon/bg2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -1,1 +1,4 @@
-npx tailwindcss -i .\public\css\input.css -o .\public\css\template.css --watch
+Ini cuma notes buat npx tailwind, tambahin baru sesuai file path yang diinginkan
+
+npx tailwindcss -i .\public\src\css\template\input.css -o .\public\src\css\template\template.css --watch 
+npx tailwindcss -i .\public\src\css\coming_soon\input.css -o .\public\src\css\coming_soon\coming_soon.css --watch 

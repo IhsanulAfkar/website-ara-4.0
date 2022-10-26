@@ -610,28 +610,6 @@ video {
   margin-right: auto;
 }
 
-.mx-\[200px\] {
-  margin-left: 200px;
-  margin-right: 200px;
-}
-
-.mx-\[150px\] {
-  margin-left: 150px;
-  margin-right: 150px;
-}
-
-.mt-40 {
-  margin-top: 10rem;
-}
-
-.mt-\[60px\] {
-  margin-top: 60px;
-}
-
-.mt-\[80px\] {
-  margin-top: 80px;
-}
-
 .block {
   display: block;
 }
@@ -640,63 +618,25 @@ video {
   display: table;
 }
 
-.grid {
-  display: grid;
-}
-
 .hidden {
   display: none;
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.grid-rows-3 {
-  grid-template-rows: repeat(3, minmax(0, 1fr));
-}
-
-.gap-4 {
-  gap: 1rem;
 }
 
 .border {
   border-width: 1px;
 }
 
-.bg-slate-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-}
-
-.bg-slate-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-}
-
 .text-center {
   text-align: center;
-}
-
-.font-\[\'poppins\'\] {
-  font-family: 'poppins';
 }
 
 .font-poppins {
   font-family: Poppins, sans-serif;
 }
 
-.text-\[150px\] {
-  font-size: 150px;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.font-bold {
-  font-weight: 700;
 }
 
 .antialiased {
@@ -727,7 +667,356 @@ video {
 }
 
 body {
-  background-image: url('../../../coming_soon/bg2.png');
+  background-image: url('../../../coming_soon/bg.png');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.top_star {
+  position: relative;
+}
+
+@media (min-width: 1280px) {
+  .top_star {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.yellow_star1 {
+  margin-left: 15%;
+  margin-top: 40px;
+}
+
+@media (min-width: 1280px) {
+  .yellow_star1 {
+    margin-left: 33%;
+    margin-top: 30px;
+  }
+}
+
+.blue_star1 {
+  position: absolute;
+  top: 5rem;
+  margin-left: 90%;
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .blue_star1 {
+    display: block;
+  }
+}
+
+.container_body {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container_body {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container_body {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container_body {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container_body {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container_body {
+    max-width: 1536px;
+  }
+}
+
+.container_body {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container_div {
+  margin-top: 40px;
+  display: grid;
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  font-weight: 700;
+}
+
+@media (min-width: 1280px) {
+  .container_div {
+    margin-top: -30px;
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+.coming_div {
+  text-align: center;
+}
+
+@media (min-width: 1280px) {
+  .coming_div {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    text-align: left;
+  }
+}
+
+.coming_text {
+  font-size: 70px;
+}
+
+@media (min-width: 1280px) {
+  .coming_text {
+    font-size: 170px;
+  }
+}
+
+.play_circle {
+  margin-left: 75%;
+  margin-top: 70px;
+  display: none;
+  width: 40%;
+}
+
+@media (min-width: 1280px) {
+  .play_circle {
+    display: block;
+  }
+}
+
+.red_star1 {
+  margin-left: 30%;
+  margin-top: 70px;
+  display: none;
+  width: 40%;
+}
+
+@media (min-width: 1280px) {
+  .red_star1 {
+    display: block;
+  }
+}
+
+.arrow {
+  margin-top: 90px;
+  display: none;
+  width: 150%;
+}
+
+@media (min-width: 1280px) {
+  .arrow {
+    display: block;
+  }
+
+  .soon_div {
+    margin-top: -40px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.slider {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: none;
+  height: 150px;
+  width: 80%;
+}
+
+@media (min-width: 1280px) {
+  .slider {
+    display: block;
+  }
+}
+
+.soon {
+  text-align: center;
+  font-size: 70px;
+}
+
+@media (min-width: 1280px) {
+  .soon {
+    margin-left: 15%;
+    text-align: left;
+    font-size: 170px;
+  }
+}
+
+.eclipse1 {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 45%;
+  display: none;
+  width: 80%;
+}
+
+@media (min-width: 1280px) {
+  .eclipse1 {
+    display: block;
+  }
+}
+
+.yellow_circle1 {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  display: none;
+  width: 140px;
+}
+
+@media (min-width: 1280px) {
+  .yellow_circle1 {
+    display: block;
+  }
+}
+
+.ara_div {
+  text-align: center;
+}
+
+@media (min-width: 1280px) {
+  .ara_div {
+    position: relative;
+    margin-top: -40px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.smile1 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  display: none;
+  width: 30%;
+}
+
+@media (min-width: 1280px) {
+  .smile1 {
+    display: block;
+  }
+}
+
+.ara {
+  font-size: 80px;
+}
+
+@media (min-width: 1280px) {
+  .ara {
+    position: absolute;
+    left: 27%;
+    font-size: 170px;
+  }
+}
+
+.blue_circle1 {
+  margin-left: 130%;
+  margin-top: 50px;
+  display: none;
+  width: 140px;
+}
+
+@media (min-width: 1280px) {
+  .blue_circle1 {
+    display: block;
+  }
+}
+
+.icons_div {
+  -moz-columns: 5;
+       columns: 5;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1280px) {
+  .icons_div {
+    -moz-columns: 7;
+         columns: 7;
+  }
+}
+
+.blue_star2 {
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .blue_star2 {
+    display: block;
+  }
+}
+
+.sosmed {
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+}
+
+@media (min-width: 1280px) {
+  .sosmed {
+    width: 40%;
+  }
+}
+
+.blue_star3 {
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .blue_star3 {
+    display: block;
+  }
+}
+
+.half_star1 {
+  position: absolute;
+  right: 0px;
+  top: 30%;
+}
+
+.quarter_circle {
+  position: absolute;
+  left: 0px;
+  bottom: -10%;
+}
+
+.half_circle1 {
+  position: absolute;
+  left: -100px;
+  bottom: 0px;
+}
+
+.half_circle2 {
+  position: absolute;
+  right: -100px;
+  bottom: 0px;
+}
+
+@media (min-width: 1280px) {
+  .xl\:block {
+    display: block;
+  }
+
+  .xl\:hidden {
+    display: none;
+  }
 }

@@ -3,5 +3,113 @@
 @tailwind utilities;
 
 body {
-    @apply bg-[url('../../../coming_soon/bg2.png')] bg-no-repeat bg-cover;
+    @apply bg-[url('../../../coming_soon/bg.png')] bg-no-repeat bg-cover;
+}
+
+.top_star {
+    @apply xl:grid xl:grid-cols-4 relative;
+}
+
+.yellow_star1{
+    @apply ml-[15%] xl:ml-[33%] mt-[40px] xl:mt-[30px];
+}
+
+.blue_star1{
+    @apply hidden xl:block ml-[90%] top-20 absolute;
+}
+
+.container_body{
+    @apply container mx-auto relative;
+}
+
+.container_div{
+    @apply grid grid-rows-5 xl:grid-rows-4 gap-4 xl:gap-4 font-bold mt-[40px] xl:mt-[-30px];
+}
+
+.coming_div{
+    @apply text-center xl:text-left xl:grid xl:grid-cols-4;
+}
+
+.coming_text {
+    @apply text-[70px] xl:text-[170px];
+}
+
+.play_circle {
+    @apply hidden xl:block ml-[75%] mt-[70px] w-[40%];
+}
+
+.red_star1 {
+    @apply hidden xl:block ml-[30%] mt-[70px] w-[40%];
+}
+
+.arrow {
+    @apply hidden xl:block w-[150%] mt-[90px];
+}
+
+.soon_div {
+    @apply text-[70px] text-center xl:text-left xl:text-[170px] xl:grid xl:grid-cols-4 xl:mt-[-40px];
+}
+
+.slider {
+    @apply hidden xl:block w-[80%] h-[150px] my-auto;
+}
+
+.soon {
+    @apply xl:ml-[15%] ;
+}
+
+.eclipse1 {
+    @apply hidden xl:block w-[80%] my-auto ml-[45%];
+}
+
+.yellow_circle1 {
+    @apply hidden xl:block w-[140px] my-auto ml-auto;
+}
+
+.ara_div {
+    @apply text-center xl:mt-[-40px] xl:grid xl:grid-cols-3 xl:relative; 
+}
+
+.smile1 {
+    @apply hidden xl:block w-[30%] mx-auto mt-[50px];
+}
+
+.ara { 
+    @apply text-[80px] xl:text-[170px] xl:absolute xl:left-[27%];
+}
+
+.blue_circle1 {
+    @apply hidden xl:block ml-[130%] w-[140px] mt-[50px];
+}
+
+.icons_div {
+    @apply columns-5 xl:columns-7 px-6;
+}
+
+.blue_star2 { 
+    @apply hidden xl:block mx-auto;
+}
+
+.sosmed {
+    @apply w-[65%] xl:w-[40%] mx-auto;
+}
+
+.blue_star3 {
+    @apply hidden xl:block mx-auto;
+}
+
+.half_star1 {
+    @apply absolute right-0 top-[30%];
+}
+
+.quarter_circle {
+    @apply absolute left-0 bottom-[-10%];
+}
+
+.half_circle1 {
+    @apply absolute left-[-100px] bottom-0;
+}
+
+.half_circle2 {
+    @apply absolute right-[-100px] bottom-0;
 }

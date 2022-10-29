@@ -1,5 +1,5 @@
-<footer class="bg-slate-200 border-t-2 border-black relative mt-24 py-12 px-4">
-  <img class="mx-auto w-24 absolute inset-x-1/2 -translate-x-1/2 -top-12" src="footer/smoothcorner.svg" alt="">
+<footer class="bg-slate-200 border-t-2 border-black relative mt-24 py-12 px-2">
+  <img class="w-24 absolute inset-x-1/2 -translate-x-1/2 -top-12" src="footer/smoothcorner.svg" alt="">
   <div class="container flex flex-col sm:flex-row items-center gap-16 mx-auto">
     <div class="flex-1">
       <img class="mx-auto mt-10 w-12" src="footer/fire.svg" alt="">

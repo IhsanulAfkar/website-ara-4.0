@@ -21,3 +21,7 @@
 <?= $this->include("landing/component/media-partner"); ?>
 
 <?= $this->endSection('content') ?>
+
+<?= $this->section('custom-js') ?>
+<script src="src/js/navbar/menu-initiator.js"></script>
+<?= $this->endSection('custom-js') ?>

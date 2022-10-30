@@ -9,7 +9,7 @@
     <img class="hidden md:block w-8 absolute right-8 top-36" src="event/rectangle-green.svg" alt="">
 
     <div class="flex-1">
-      <img class="mx-auto sm:mx-0 w-16" src="footer/fire.svg" alt="">
+      <img class="mx-auto sm:mx-0 w-16" src="global/icon/fire.svg" alt="">
       <p class="text-center sm:text-left mt-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus interdum lectus non interdum</p>
       <p class="text-center sm:text-left mt-8">© 2022 A Renewal Agent 4.0</p>
     </div>

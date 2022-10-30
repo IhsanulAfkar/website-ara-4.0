@@ -16,6 +16,14 @@ class Home extends BaseController
         $data['title'] = "Olimpiade";
         return view('landing/pages/olimpiade', $data);
     }
+    
+    // Register
+    public function registerOlimpiade()
+    {
+        $data['title'] = "Olimpiade";
+        return view('landing/pages/register-olimpiade', $data);
+    }
+    
     public function coba()
     {
         return view('testing');

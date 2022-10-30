@@ -1,10 +1,10 @@
 <section class="relative">
   <img class="hidden sm:block absolute right-0 inset-y-1/2 -z-10" src="event/blue-circle.svg" alt="">
-  <img class="hidden sm:block absolute right-48 top-8 -z-10" src="event/calendar.svg" alt="">
-  <img class="hidden sm:block absolute left-0 -top-16 -z-10" src="event/rectangle.svg" alt="">
-
-  <div class="container mx-auto mt-24 px-2">
-    <p class="text-xl lg:text-2xl font-semibold text-[#3FD78F]">Lorem Ipsum</p>
+  
+  <div class="relative container mx-auto mt-24 sm:mt-48 px-2">
+    <img class="hidden sm:block absolute -left-16 -top-16 -z-10" src="event/rectangle.svg" alt="">
+    <img class="hidden sm:block absolute right-48 top-8 -z-10" src="event/calendar.svg" alt="">
+    <p class="text-xl lg:text-2xl font-semibold text-[#339969]">Lorem Ipsum</p>
     <p class="text-4xl md:text-5xl lg:text-6xl font-bold text-4xl ">Timeline &#129488;</p>
     
   

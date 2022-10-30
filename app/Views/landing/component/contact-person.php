@@ -1,4 +1,4 @@
-<section class="relative py-16 sm:px-16 mt-24 bg-[#FFFCEF]">
+<section class="relative py-16 sm:px-16 mt-24 sm:mt-48 bg-[#FFFCEF]">
   <img class="hidden sm:block absolute inset-y-1/2 right-0" src="event/blue-circle.svg" alt="">
   <div class="relative container mx-auto px-2">
 
@@ -6,7 +6,7 @@
 
     <div class="flex items-center justify-center">
       <div class="grow-0">
-        <p class="text-xl lg:text-2xl font-semibold text-[#3FD78F]">Lorem Ipsum</p>
+        <p class="text-xl lg:text-2xl font-semibold text-[#339969]">Lorem Ipsum</p>
         <p class="text-4xl md:text-5xl lg:text-6xl font-bold text-4xl">Yess, Contact Person?</p>
         
         <div class="mt-16">

@@ -1,5 +1,5 @@
-<section class="container mx-auto px-2 mt-24">
-  <p class="text-xl lg:text-2xl font-semibold text-[#3FD78F]">Lorem Ipsum</p>
+<section class="container mx-auto px-2 mt-24 sm:mt-48">
+  <p class="text-xl lg:text-2xl font-semibold text-[#339969]">Lorem Ipsum</p>
   <p class="text-4xl font-bold text-4xl md:text-5xl lg:text-6xl">Who can, join Olimpiade?&#129488;</p>
 
   <div class="sm:relative">

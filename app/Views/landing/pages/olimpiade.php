@@ -18,4 +18,6 @@
 
 <?= $this->include("landing/component/sponsor"); ?>
 
+<?= $this->include("landing/component/media-partner"); ?>
+
 <?= $this->endSection('content') ?>

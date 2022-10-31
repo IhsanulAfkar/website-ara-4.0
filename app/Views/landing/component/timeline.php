@@ -1,13 +1,13 @@
 <section class="relative">
   <img class="hidden sm:block absolute right-0 inset-y-1/2 -z-10" src="event/blue-circle.svg" alt="">
-  
+
   <div class="relative container mx-auto mt-24 sm:mt-48 px-2">
     <img class="hidden sm:block absolute -left-16 -top-16 -z-10" src="event/rectangle.svg" alt="">
     <img class="hidden sm:block absolute right-48 top-8 -z-10" src="event/calendar.svg" alt="">
     <p class="text-xl lg:text-2xl font-semibold text-[#339969]">Lorem Ipsum</p>
     <p class="text-4xl md:text-5xl lg:text-6xl font-bold text-4xl ">Timeline &#129488;</p>
-    
-  
+
+
     <div class="relative border-2 border-black rounded-2xl mt-16 px-4 overflow-hidden bg-white z-10">
       <div class="absolute w-full h-4 border-4 border-black top-[225px]"></div>
       <div class="flex flex-nowrap overflow-auto py-16 gap-24">

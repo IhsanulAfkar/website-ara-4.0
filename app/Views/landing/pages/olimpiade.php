@@ -1,5 +1,8 @@
 <?= $this->extend('landing/template/default') ?>
-
+<?= $this->section('custom-css') ?>
+<!-- Local tailwindcss -->
+<link rel="stylesheet" href="src/css/template/template.css">
+<?= $this->endSection('custom-css') ?>
 <?= $this->section('content') ?>
 
 <?= $this->include("landing/component/header_event"); ?>

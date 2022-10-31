@@ -5,12 +5,12 @@
         <img class="w-full" src="global/icon/logo_ara.svg" alt="">
       </div>
       <div class="hidden lg:flex gap-8 font-bold text-lg">
-        <a class="block" href="#">Home</a>
-        <a class="block" href="#">About</a>
-        <a class="block text-yellow-500" href="#">Olimpiade</a>
-        <a class="block" href="#">CTF</a>
-        <a class="block" href="#">ExploIT</a>
-        <a class="block" href="#">HMIT</a>
+        <a id="home_nav" class="block" href="#">Home</a>
+        <a id="about_nav" class="block" href="#">About</a>
+        <a id="olimpiade_nav" class="block " href="#">Olimpiade</a>
+        <a id="ctf_nav" class="block" href="#">CTF</a>
+        <a id="exloit_nav" class="block" href="#">ExploIT</a>
+        <a id="hmit_nav" class="block" href="#">HMIT</a>
       </div>
     </div>
     <div class="hidden lg:flex gap-8 font-bold text-lg items-center">
@@ -45,12 +45,13 @@
     <div class="absolute bottom-8 left-[50%] -translate-x-1/2 w-full">
       <p class="text-center mt-8 text-lg mt-16">Follow <span class="font-bold">ARA 4.0</span></p>
       <div class="flex justify-around items-center gap-2 mt-4 max-w-xl mx-auto">
-            <a class="block flex-1" href="https://www.instagram.com/ara_its/"><img class="w-full" src="coming_soon/sosmed/ig.png" alt="instagram"></a>
-            <a class="block flex-1" href="https://www.youtube.com/channel/UC0jutwJdiQ_MRNSJG0CRYGA"><img class="w-full" src="coming_soon/sosmed/yt.png" alt="youtube"></a>
-            <a class="block flex-1" href="https://twitter.com/ara__its"><img class="w-full" src="coming_soon/sosmed/twitter.png" alt="twitter"></a>
-            <a class="block flex-1" href="https://web.facebook.com/profile.php?id=100086878021327&is_tour_completed=true"><img class="w-full" src="coming_soon/sosmed/fb.png" alt="facebook"></a>
-            <a class="block flex-1" href="https://www.tiktok.com/@ara_its"><img class="w-full" src="coming_soon/sosmed/tiktok.png" alt="tiktok"></a>
+        <a class="block flex-1" href="https://www.instagram.com/ara_its/"><img class="w-full" src="coming_soon/sosmed/ig.png" alt="instagram"></a>
+        <a class="block flex-1" href="https://www.youtube.com/channel/UC0jutwJdiQ_MRNSJG0CRYGA"><img class="w-full" src="coming_soon/sosmed/yt.png" alt="youtube"></a>
+        <a class="block flex-1" href="https://twitter.com/ara__its"><img class="w-full" src="coming_soon/sosmed/twitter.png" alt="twitter"></a>
+        <a class="block flex-1" href="https://web.facebook.com/profile.php?id=100086878021327&is_tour_completed=true"><img class="w-full" src="coming_soon/sosmed/fb.png" alt="facebook"></a>
+        <a class="block flex-1" href="https://www.tiktok.com/@ara_its"><img class="w-full" src="coming_soon/sosmed/tiktok.png" alt="tiktok"></a>
       </div>
     </div>
   </div>
 </div>
+<div></div>

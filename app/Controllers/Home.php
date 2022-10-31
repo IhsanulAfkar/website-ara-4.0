@@ -6,24 +6,24 @@ class Home extends BaseController
 {
     public function index()
     {
-        // return view('welcome_message');
-        return view('coming_soon');
+        $data['title'] = "Home";
+        return view('landing/pages/home', $data);
+        // return view('coming_soon');
     }
-
     // Event Page
     public function olimpiade()
     {
         $data['title'] = "Olimpiade";
         return view('landing/pages/olimpiade', $data);
     }
-    
+
     // Register
     public function registerOlimpiade()
     {
         $data['title'] = "Olimpiade";
         return view('landing/pages/register-olimpiade', $data);
     }
-    
+
     public function coba()
     {
         return view('testing');

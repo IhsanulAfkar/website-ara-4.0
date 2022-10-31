@@ -8,7 +8,7 @@
       <div class="grow-0">
         <p class="text-xl lg:text-2xl font-semibold text-[#339969]">Lorem Ipsum</p>
         <p class="text-4xl md:text-5xl lg:text-6xl font-bold text-4xl">Yess, Contact Person?</p>
-        
+
         <div class="mt-16">
           <a class="block bg-[#339969] w-full py-4 text-2xl text-center font-bold text-white rounded-2xl border-2 border-black" href="#"><i class="fa-brands fa-whatsapp"></i> Hubungi Ares</a>
           <a class="mt-8 block bg-[#3AABD7] w-full py-4 text-2xl text-center font-bold text-white rounded-2xl border-2 border-black" href="#"><i class="fa-brands fa-line"></i> @add</a>

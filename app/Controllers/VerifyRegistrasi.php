@@ -27,26 +27,27 @@ class VerifyRegistrasi extends BaseController
     public function verify_regis_olim()
     {
         $fieldError = 'Field ini harus diisi';
-        $imgSizeError = 'Melebihi batas max 500 kb';
+        $imgSizeError = 'Melebihi batas max 512 kb';
         $imgTypeError = 'File ini bukan gambar';
 
         $validationRules = [
             'tim_nama' => [
                 'label' => 'tim_nama',
-                'rules' => 'required|uniqe[olim.olim_tim_nama]',
+                'rules' => 'required|is_unique[olim.olim_tim_nama]',
                 'errors' => [
                     'required' => $fieldError,
+                    'is_unique' => 'Nama tim sudah terdaftar'
                 ]
             ],
-            'bukti_bayar' => [
-                'label' => 'bukti_bayar',
-                'rules' => 'uploaded[olim_bukti_bayar]|max_size[bukti_bayar,500]|is_image[bukti_bayar]',
-                'errors' => [
-                    'uploaded' => $fieldError,
-                    'max_size' => $imgSizeError,
-                    'is_image' => $imgTypeError,
-                ]
-            ],
+            // 'bukti_bayar' => [
+            //     'label'     => 'bukti_bayar',
+            //     'rules'     => 'uploaded[bukti_bayar]|is_image[bukti_bayar]|max_size[bukti_bayar, 512]',
+            //     'errors'    => [
+            //         'uploaded'  => 'Field ini harus diisi',
+            //         'is_image'  => $imgTypeError,
+            //         'max_size'  => $imgSizeError
+            //     ]
+            // ],
             'nama_ketua' => [
                 'label' => 'nama_ketua',
                 'rules' => 'required',

@@ -20,7 +20,12 @@ class Home extends BaseController
     // Register
     public function registerOlimpiade()
     {
-        $data['title'] = "Olimpiade";
+        session();
+        $data = 
+        [
+            'title' => 'Olimpiade',
+            'validation' => \Config\Services::validation()
+        ];
         return view('landing/pages/register-olimpiade', $data);
     }
 

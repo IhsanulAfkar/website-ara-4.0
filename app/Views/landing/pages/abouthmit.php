@@ -11,7 +11,7 @@
       <div class="flex flex-col w-1/2 mx-auto xl:p-12 xl:ml-12 items-center xl:items-start">
         <img class="invisible xl:visible xl:relative xl:left-28" src="/abouthmit/chatyellow.png" alt="">
         <div>
-          <h1 class="font-sans font-bold text-xl lg:text-7xl xl:text-[100px] xl:mt-20 xl:pb-8">
+          <h1 class="font-poppins font-bold text-xl lg:text-7xl xl:text-[100px] xl:mt-20 xl:pb-8">
             HMIT</h1>
         </div>
 
@@ -69,11 +69,11 @@
         <div class="pt-0 md:pt-2 xl:w-2/3 w-full xl:pl-20 flex-row mx-auto md:p-12">
           <h3 class="text-[#339969]">Lorem Ipsum</h3>
           <div class="flex flex-row items-center md:flex-row space-y-0">
-            <div class="font-sans mb-5 text-2xl md:text-3xl font-bold">Mmm, ARA? 😲
+            <div class="font-poppins mb-5 text-2xl md:text-3xl font-bold">Mmm, ARA? 😲
             </div>
           </div>
 
-          <p class="xl:w-2/3 my-4 text-lg w-full text-start text-black font-sans">
+          <p class="xl:w-2/3 my-4 text-lg w-full text-start text-black font-poppins">
             ARA atau A Renewal Agent merupakan sebuah kegiatan yang diselenggarakan oleh Himpunan
             Mahasiswa
             Teknologi Informasi ITS periode 2020-2021. Kegiatan ARA atau A Renewal Agent diadakan
@@ -108,11 +108,11 @@
         <div class="pt-0 md:pt-2 xl:w-2/3 md:p-12 flex-row mx-auto w-full">
           <h3 class="text-[#339969]">Lorem Ipsum</h3>
           <div class="flex flex-row items-center md:flex-row space-y-0">
-            <div class="font-sans mb-5 text-2xl md:text-3xl font-bold">The Philosophy 🧐
+            <div class="font-poppins mb-5 text-2xl md:text-3xl font-bold">The Philosophy 🧐
             </div>
           </div>
 
-          <p class="xl:w-2/3 my-4 text-lg w-full text-start text-black font-sans">
+          <p class="xl:w-2/3 my-4 text-lg w-full text-start text-black font-poppins">
             ARA atau A Renewal Agent merupakan sebuah kegiatan yang diselenggarakan oleh Himpunan
             Mahasiswa
             Teknologi Informasi ITS periode 2020-2021. Kegiatan ARA atau A Renewal Agent diadakan

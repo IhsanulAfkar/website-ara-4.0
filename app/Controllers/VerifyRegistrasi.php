@@ -39,15 +39,15 @@ class VerifyRegistrasi extends BaseController
                     'is_unique' => 'Nama tim sudah terdaftar'
                 ]
             ],
-            // 'bukti_bayar' => [
-            //     'label'     => 'bukti_bayar',
-            //     'rules'     => 'uploaded[bukti_bayar]|is_image[bukti_bayar]|max_size[bukti_bayar, 512]',
-            //     'errors'    => [
-            //         'uploaded'  => 'Field ini harus diisi',
-            //         'is_image'  => $imgTypeError,
-            //         'max_size'  => $imgSizeError
-            //     ]
-            // ],
+            'bukti_bayar' => [
+                'label'     => 'bukti_bayar',
+                'rules'     => 'uploaded[bukti_bayar]|is_image[bukti_bayar]|max_size[bukti_bayar, 512]',
+                'errors'    => [
+                    'uploaded'  => 'Field ini harus diisi',
+                    'is_image'  => $imgTypeError,
+                    'max_size'  => $imgSizeError
+                ]
+            ],
             'nama_ketua' => [
                 'label' => 'nama_ketua',
                 'rules' => 'required',
@@ -75,7 +75,7 @@ class VerifyRegistrasi extends BaseController
         ];
 
         if (!$this->validate($validationRules)) {
-            return redirect()->to('/register-olimpiade')->withInput();
+            return redirect()->back()->withInput();
         }
 
         $fileBuktiBayar = $this->request->getFile('bukti_bayar');
@@ -96,7 +96,7 @@ class VerifyRegistrasi extends BaseController
 
         // Insert ke db dan redirect ke finish regist
         $this->Olim_Model->save($data);
-        session()->setFlashdata('pesan', 'Registrasi berhasil');
+        // session()->setFlashdata('pesan', 'Registrasi berhasil');
         return redirect()->to('/home/coba');
     }
 }

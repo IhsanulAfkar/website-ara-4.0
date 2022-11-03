@@ -65,10 +65,11 @@ class VerifyRegistrasi extends BaseController
             ],
             'email_ketua' => [
                 'label' => 'email_ketua',
-                'rules' => 'required|valid_email',
+                'rules' => 'required|valid_email|is_unique[olim.olim_email_ketua]',
                 'errors' => [
                     'required' => $fieldError,
                     'valid_email' => 'Email tidak valid',
+                    'is_unique' => 'Email sudah terdaftar'
                 ]
             ],
         ];

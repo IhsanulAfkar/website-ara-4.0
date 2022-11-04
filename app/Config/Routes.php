@@ -37,6 +37,8 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/olimpiade', 'Home::olimpiade');
+$routes->get('/hmit', 'Home::about_hmit');
+$routes->get('/ara', 'Home::about_ara');
 $routes->get('/register-olimpiade', 'Home::registerOlimpiade');
 $routes->add('/home/coba', 'Home::coba');
 $routes->post('/verify-regis-olim', 'VerifyRegistrasi::verify_regis_olim');

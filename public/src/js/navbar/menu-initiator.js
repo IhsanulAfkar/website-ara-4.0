@@ -22,6 +22,10 @@ function activeHeader(title) {
       const olimpiade = document.getElementById('olimpiade_nav')
       olimpiade.classList.add("text-yellow-500");
       break;
+    case 'About':
+      const about = document.getElementById('about_nav')
+      about.classList.add("text-yellow-500");
+      break;
     case 'CTF':
       const ctf = document.getElementById('ctf_nav')
       ctf.classList.add("text-yellow-500");

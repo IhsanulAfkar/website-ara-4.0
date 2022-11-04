@@ -1,10 +1,8 @@
 <div class="pb-36 ">
-    <img src="home/vector_3.png" class="absolute left-0 hidden 2xl:block">
-    <img src="home/Vector 18.png" class="absolute left-0 top-[4%] hidden 2xl:block">
-    <img src="home/Vector 16.png" class="absolute top-[14%] right-0 hidden 2xl:block">
-
     <section class="relative container mx-auto mt-20">
-
+        <img src="home/vector_3.png" class="absolute left-[-12%] hidden 2xl:block">
+        <img src="home/Vector 18.png" class="absolute left-[-12%] top-[62%] -z-10 hidden 2xl:block">
+        <img src="home/Vector 16.png" class="absolute top-[9%] -z-10 right-[-12%] hidden 2xl:block">
         <img class="relative inset-x-1/2 -translate-x-1/2 -top-8" src="home/half_eclipse.png">
         <img class="hidden sm:block absolute top-12 right-16 w-16" src="home/Clapping hands.png">
         <img class="hidden sm:block absolute top-12 left-16 w-24" src="home/thumbs up.png">

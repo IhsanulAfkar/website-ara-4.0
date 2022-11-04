@@ -10,6 +10,18 @@ class Home extends BaseController
         return view('landing/pages/home', $data);
         // return view('coming_soon');
     }
+    public function about_hmit()
+    {
+        $data['title'] = "HMIT";
+        return view('landing/pages/abouthmit', $data);
+        // return view('coming_soon');
+    }
+    public function about_ara()
+    {
+        $data['title'] = "About";
+        return view('landing/pages/aboutara', $data);
+        // return view('coming_soon');
+    }
     // Event Page
     public function olimpiade()
     {
@@ -21,11 +33,11 @@ class Home extends BaseController
     public function registerOlimpiade()
     {
         session();
-        $data = 
-        [
-            'title' => 'Olimpiade',
-            'validation' => \Config\Services::validation()
-        ];
+        $data =
+            [
+                'title' => 'Olimpiade',
+                'validation' => \Config\Services::validation()
+            ];
         return view('landing/pages/register-olimpiade', $data);
     }
 

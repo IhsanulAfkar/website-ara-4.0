@@ -5,12 +5,12 @@
         <img class="w-full" src="global/icon/logo_ara.svg" alt="">
       </div>
       <div class="hidden lg:flex gap-8 font-bold text-lg">
-        <a id="home_nav" class="block" href="#">Home</a>
-        <a id="about_nav" class="block" href="#">About</a>
-        <a id="olimpiade_nav" class="block " href="#">Olimpiade</a>
+        <a id="home_nav" class="block" href="<?= base_url(); ?>">Home</a>
+        <a id="about_nav" class="block" href="<?= base_url(); ?>/ara">About</a>
+        <a id="olimpiade_nav" class="block " href="<?= base_url(); ?>/olimpiade">Olimpiade</a>
         <a id="ctf_nav" class="block" href="#">CTF</a>
         <a id="exloit_nav" class="block" href="#">ExploIT</a>
-        <a id="hmit_nav" class="block" href="#">HMIT</a>
+        <a id="hmit_nav" class="block" href="<?= base_url(); ?>/hmit">HMIT</a>
       </div>
     </div>
     <div class="hidden lg:flex gap-8 font-bold text-lg items-center">

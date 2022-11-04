@@ -39,6 +39,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/olimpiade', 'Home::olimpiade');
 $routes->get('/register-olimpiade', 'Home::registerOlimpiade');
 $routes->add('/home/coba', 'Home::coba');
+$routes->post('/verify-regis-olim', 'VerifyRegistrasi::verify_regis_olim');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

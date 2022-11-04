@@ -1,0 +1,3 @@
+-janlup view landing/template/default.php, cdn-nya dicomment lagi (kan tadi diuncomment)
+-nanti janlup kembaliin kolom olim_bukti_bayar jadi NOT NULL. sekalian yang di ctrllr VerifyRegistrasi sama viewnya juga diuncomment
+-DATA UDAH BERHASIL MASUK, VALIDASINYA JUGA. KECUALI IMAGE. BELUM TAU KENAPA.

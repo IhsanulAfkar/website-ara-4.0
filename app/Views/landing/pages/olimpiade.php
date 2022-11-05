@@ -1,4 +1,5 @@
 <?= $this->extend('landing/template/default') ?>
+
 <?= $this->section('custom-css') ?>
 <!-- Local tailwindcss -->
 <link rel="stylesheet" href="src/css/template/template.css">

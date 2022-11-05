@@ -27,4 +27,5 @@
 
 <?= $this->section('custom-js') ?>
 <script src="src/js/navbar/menu-initiator.js"></script>
+<script src="src/js/navbar/countdown.js"></script>
 <?= $this->endSection('custom-js') ?>

@@ -3,17 +3,18 @@
 <!-- Local tailwindcss -->
 <link rel="stylesheet" href="src/css/template/template.css">
 <?= $this->endSection('custom-css') ?>
+
 <?= $this->section('content') ?>
 
-<?= $this->include("landing/component/header_event"); ?>
+<?= $this->include("landing/component/olimpiade/header_event"); ?>
 
 <?= $this->include("landing/component/countdown"); ?>
 
 <?= $this->include("landing/component/who_can_join"); ?>
 
-<?= $this->include("landing/component/timeline"); ?>
+<?= $this->include("landing/component/olimpiade/timeline"); ?>
 
-<?= $this->include("landing/component/prize"); ?>
+<?= $this->include("landing/component/olimpiade/prize"); ?>
 
 <?= $this->include("landing/component/faq"); ?>
 
@@ -23,7 +24,8 @@
 
 <?= $this->include("landing/component/media-partner"); ?>
 
-<?= $this->endSection('content') ?>
+<?= $this->endSection() ?>
+
 
 <?= $this->section('custom-js') ?>
 <script src="src/js/navbar/menu-initiator.js"></script>

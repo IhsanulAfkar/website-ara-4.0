@@ -1,4 +1,4 @@
-const event_time = new Date("Jan 1, 2023 00:00:00").getTime();
+const event_time = new Date(document.getElementById('event-time').textContent).getTime();
 
 const hari = document.getElementById('hari')
 const jam = document.getElementById('jam')

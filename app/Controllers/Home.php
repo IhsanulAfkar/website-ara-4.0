@@ -26,6 +26,7 @@ class Home extends BaseController
     public function olimpiade()
     {
         $data['title'] = "Olimpiade";
+        $data['event_time'] = "Jan 1, 2023 00:00:00";
         return view('landing/pages/olimpiade', $data);
     }
 

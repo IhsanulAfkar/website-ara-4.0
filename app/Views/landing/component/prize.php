@@ -1,6 +1,6 @@
-<section class="relative py-16 mt-24 sm:mt-48 bg-[#F9FAFF]">
-  <div class="container mx-auto px-2">
-    <img src="event/love-chat.svg" alt="">
+<section class="py-16 mt-24 sm:mt-48 bg-[#F9FAFF]">
+  <div class="relative container mx-auto px-2">
+    <img class="hidden sm:block absolute -top-16 left-0" src="event/love-chat.svg" alt="">
     <img class="hidden sm:block absolute top-0 right-0" src="event/rectangle.svg" alt="">
     <img class="hidden sm:block absolute bottom-8 right-8" src="event/open-file-folder.svg" alt="">
   

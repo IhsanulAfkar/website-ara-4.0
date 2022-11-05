@@ -35,12 +35,12 @@
       </div>
     </div>
     <div class="flex flex-col gap-6 font-bold text-lg text-center mt-8">
-      <a class="block text-4xl" href="#">Home</a>
-      <a class="block text-4xl" href="#">About</a>
-      <a class="block text-4xl text-yellow-500" href="#">Olimpiade</a>
-      <a class="block text-4xl" href="#">CTF</a>
-      <a class="block text-4xl" href="#">ExploIT</a>
-      <a class="block text-4xl" href="#">HMIT</a>
+      <a id="res_home_nav" class="block text-4xl" href="<?= base_url(); ?>">Home</a>
+      <a id="res_about_nav" class="block text-4xl" href="<?= base_url(); ?>/ara">About</a>
+      <a id="res_olimpiade_nav" class="block text-4xl " href="<?= base_url(); ?>/olimpiade">Olimpiade</a>
+      <a id="res_ctf_nav" class="block text-4xl" href="#">CTF</a>
+      <a id="res_exloit_nav" class="block text-4xl" href="#">ExploIT</a>
+      <a id="res_hmit_nav" class="block text-4xl" href="<?= base_url(); ?>/hmit">HMIT</a>
     </div>
     <div class="absolute bottom-8 left-[50%] -translate-x-1/2 w-full">
       <p class="text-center mt-8 text-lg mt-16">Follow <span class="font-bold">ARA 4.0</span></p>

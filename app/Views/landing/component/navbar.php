@@ -8,9 +8,9 @@
         <a id="home_nav" class="block" href="<?= base_url(); ?>">Home</a>
         <a id="about_nav" class="block" href="<?= base_url(); ?>/ara">About</a>
         <a id="olimpiade_nav" class="block " href="<?= base_url(); ?>/olimpiade">Olimpiade</a>
-        <a id="ctf_nav" class="block" href="#">CTF</a>
-        <a id="exloit_nav" class="block" href="#">ExploIT</a>
-        <a id="hmit_nav" class="block" href="<?= base_url(); ?>/hmit">HMIT</a>
+        <a id="ctf_nav" class="block" href="<?= base_url(); ?>/ctf">CTF</a>
+        <a id="exploit_nav" class="block" href="<?= base_url(); ?>/exploit">ExploIT</a>
+        <!-- <a id="hmit_nav" class="block" href="<?= base_url(); ?>/hmit">HMIT</a> -->
       </div>
     </div>
     <div class="hidden lg:flex gap-8 font-bold text-lg items-center">
@@ -38,9 +38,9 @@
       <a id="res_home_nav" class="block text-4xl" href="<?= base_url(); ?>">Home</a>
       <a id="res_about_nav" class="block text-4xl" href="<?= base_url(); ?>/ara">About</a>
       <a id="res_olimpiade_nav" class="block text-4xl " href="<?= base_url(); ?>/olimpiade">Olimpiade</a>
-      <a id="res_ctf_nav" class="block text-4xl" href="#">CTF</a>
-      <a id="res_exloit_nav" class="block text-4xl" href="#">ExploIT</a>
-      <a id="res_hmit_nav" class="block text-4xl" href="<?= base_url(); ?>/hmit">HMIT</a>
+      <a id="res_ctf_nav" class="block text-4xl" href="<?= base_url(); ?>/ctf">CTF</a>
+      <a id="res_exploit_nav" class="block text-4xl" href="<?= base_url(); ?>/exploit">ExploIT</a>
+      <!-- <a id="res_hmit_nav" class="block text-4xl" href="<?= base_url(); ?>/hmit">HMIT</a> -->
     </div>
     <div class="absolute bottom-8 left-[50%] -translate-x-1/2 w-full">
       <p class="text-center mt-8 text-lg mt-16">Follow <span class="font-bold">ARA 4.0</span></p>

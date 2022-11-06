@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= base_url(); ?>/src/css/coming_soon/coming_soon.css.min">
-    <title>Coming Soon</title>
-</head>
-
-<body class="bg-[url('../../../coming_soon/bg.png')] bg-no-repeat bg-cover">
+<div class="bg-[url('../../../coming_soon/bg.png')] bg-cover mt-20">
     <div class="xl:grid xl:grid-cols-4 relative">
         <img src="<?= base_url(); ?>/coming_soon/yellow_star.png" class="ml-[15%] xl:ml-[33%] mt-[40px] xl:mt-[30px]">
         <img src="<?= base_url(); ?>/coming_soon/blue star.png" class="hidden xl:block ml-[90%] top-20 absolute">
@@ -82,6 +71,4 @@
             <img src="<?= base_url(); ?>/coming_soon/half circle2.png" class="absolute right-[-100px] bottom-0">
         </div>
     </div>
-</body>
-
-</html>
+</div>

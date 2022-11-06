@@ -10,12 +10,12 @@ class Home extends BaseController
         return view('landing/pages/home', $data);
         // return view('coming_soon');
     }
-    public function about_hmit()
-    {
-        $data['title'] = "HMIT";
-        return view('landing/pages/abouthmit', $data);
-        // return view('coming_soon');
-    }
+    // public function about_hmit()
+    // {
+    //     $data['title'] = "HMIT";
+    //     return view('landing/pages/abouthmit', $data);
+    //     // return view('coming_soon');
+    // }
     public function about_ara()
     {
         $data['title'] = "About";
@@ -28,6 +28,18 @@ class Home extends BaseController
         $data['title'] = "Olimpiade";
         $data['event_time'] = "Jan 1, 2023 00:00:00";
         return view('landing/pages/olimpiade', $data);
+    }
+    public function ctf()
+    {
+        $data['title'] = "CTF";
+        $data['event_time'] = "Jan 1, 2023 00:00:00";
+        return view('landing/pages/coming_soon', $data);
+    }
+    public function exploit()
+    {
+        $data['title'] = "ExploIT";
+        $data['event_time'] = "Jan 1, 2023 00:00:00";
+        return view('landing/pages/coming_soon', $data);
     }
 
     // Register

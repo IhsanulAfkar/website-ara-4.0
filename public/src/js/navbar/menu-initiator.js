@@ -33,13 +33,16 @@ function activeHeader(title) {
       const ctf = document.getElementById('ctf_nav')
       ctf.classList.add("text-yellow-500")
       document.getElementById('res_ctf_nav').classList.add("text-yellow-500")
+      break
     case 'ExploIT':
       const exploit = document.getElementById('exploit_nav')
       exploit.classList.add("text-yellow-500")
       document.getElementById('res_exploit_nav').classList.add("text-yellow-500")
-    case 'HMIT':
-      const hmit = document.getElementById('hmit_nav')
-      hmit.classList.add("text-yellow-500")
-      document.getElementById('res_hmit_nav').classList.add("text-yellow-500")
+    //   break
+    // case 'HMIT':
+    //   const hmit = document.getElementById('hmit_nav')
+    //   hmit.classList.add("text-yellow-500")
+    //   document.getElementById('res_hmit_nav').classList.add("text-yellow-500")
+    //   break
   }
 }

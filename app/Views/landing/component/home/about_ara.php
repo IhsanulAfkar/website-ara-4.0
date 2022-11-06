@@ -24,7 +24,7 @@
                 <div class="mt-16 flex gap-4 mx-auto sticky justify-center">
                     <img src="home/half_star2.png" class="left-0 absolute sm:hidden">
                     <img src="home/star.png" class="mx-auto hidden sm:block">
-                    <a href="#" class="block text-center bg-green-600 font-bold  text-white text-xl w-[70%] lg:w-[35%] py-2 rounded-2xl border-2 border-black drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Selengkapnya</a>
+                    <a href="<?= base_url(); ?>/ara" class="block text-center bg-green-600 font-bold  text-white text-xl w-[70%] lg:w-[35%] py-2 rounded-2xl border-2 border-black drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Selengkapnya</a>
                     <img src="home/half_star1.png" class="absolute right-0 sm:hidden">
                     <img src="home/star.png" class="w-auto mx-auto hidden sm:block">
                 </div>

@@ -44,5 +44,8 @@ function activeHeader(title) {
       hmit.classList.add("text-yellow-500")
       document.getElementById('res_hmit_nav').classList.add("text-yellow-500")
       break
+    case 'Login':
+      document.getElementById('res_login_nav').classList.add("text-yellow-500")
+      break
   }
 }

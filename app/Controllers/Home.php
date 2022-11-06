@@ -22,6 +22,18 @@ class Home extends BaseController
         return view('landing/pages/aboutara', $data);
         // return view('coming_soon');
     }
+
+    public function login()
+    {
+        session();
+        $data =
+            [
+                'title' => 'Login',
+                'validation' => \Config\Services::validation()
+            ];
+        return view('landing/pages/login', $data);
+        // return view('coming_soon');
+    }
     // Event Page
     public function olimpiade()
     {

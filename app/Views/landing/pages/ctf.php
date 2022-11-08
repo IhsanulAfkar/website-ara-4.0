@@ -6,10 +6,10 @@
 
 <?= $this->section('content') ?>
 
-<?= $this->include("landing/component/about_ara/ara"); ?>
+<?= $this->include("landing/component/ctf/soon_count"); ?>
 
 <?= $this->endSection('content') ?>
 <?= $this->section('custom-js') ?>
 <script src="src/js/navbar/menu-initiator.js"></script>
-
+<script src="src/js/navbar/countdown.js"></script>
 <?= $this->endSection('custom-js') ?>

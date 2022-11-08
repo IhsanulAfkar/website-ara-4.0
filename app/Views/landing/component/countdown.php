@@ -1,5 +1,5 @@
 <img class="w-full mt-24" src="event/wave.svg">
-<section class="mx-auto px-2 pt-24 pb-40 bg-[#4C1FAD]">
+<section class="mx-auto px-2 pt-32 pb-72 bg-[#4C1FAD]">
   <div class="invisible" id="event-time"><?= $event_time ?></div>
   <div class="relative container mx-auto">
     <img class="hidden sm:block absolute top-16 left-8 w-24" src="event/watch.svg" alt="">

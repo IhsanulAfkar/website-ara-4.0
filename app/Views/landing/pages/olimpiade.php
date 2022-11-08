@@ -17,13 +17,17 @@
 
 <?= $this->include("landing/component/olimpiade/prize"); ?>
 
-<!-- <? //$this->include("landing/component/faq"); ?> -->
+<!-- <? //$this->include("landing/component/faq"); 
+        ?> -->
 
-<!-- <? //$this->include("landing/component/contact-person"); ?> -->
+<!-- <? //$this->include("landing/component/contact-person"); 
+        ?> -->
 
-<!-- <? //$this->include("landing/component/sponsor"); ?> -->
+<!-- <? //$this->include("landing/component/sponsor"); 
+        ?> -->
 
-<!-- <? //$this->include("landing/component/media-partner"); ?> -->
+<!-- <? //$this->include("landing/component/media-partner"); 
+        ?> -->
 
 <?= $this->endSection() ?>
 

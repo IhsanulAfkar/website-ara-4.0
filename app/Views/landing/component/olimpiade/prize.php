@@ -9,10 +9,10 @@
         <img class="w-full" src="event/giveaway.svg" alt="">
       </div>
       <div>
-        <p class="text-xl lg:text-2xl font-semibold text-[#339969]">Lorem Ipsum</p>
-        <p class="text-4xl md:text-5xl lg:text-6xl font-bold text-4xl">Woow, Prizeee!? &#128562;</p>
+        <!-- <p class="text-xl lg:text-2xl font-semibold text-[#339969]">Lorem Ipsum</p> -->
+        <p class="md:text-5xl lg:text-6xl font-bold text-4xl">Total Hadiah &#128562;</p>
       
-        <p class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#025AF1] mt-16">Rp<br>200.000.000</p>
+        <p class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#025AF1] mt-16">Rp<br>5.000.000</p>
       </div>
     </div>
   </div>

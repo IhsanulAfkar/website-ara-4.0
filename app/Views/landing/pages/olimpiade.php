@@ -15,7 +15,7 @@
 
 <?= $this->include("landing/component/olimpiade/timeline"); ?>
 
-<!-- <? //$this->include("landing/component/olimpiade/prize"); ?> -->
+<?= $this->include("landing/component/olimpiade/prize"); ?>
 
 <!-- <? //$this->include("landing/component/faq"); ?> -->
 

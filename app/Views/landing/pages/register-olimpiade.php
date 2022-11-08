@@ -58,7 +58,7 @@
         <span class="text-red-700"><?= $validation->getError('ig_ara_ketua') ?></span>
       </label>
       <label for="ig_hmit_ketua" class="block mt-8">
-        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm text-slate-700"><span class="font-bold">Bukti Follow Ig HMIT </span>(File berupa .jpg atau .png)</span>
+        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm text-slate-700"><span class="font-bold">Bukti Follow Tiktok HMIT </span>(File berupa .jpg atau .png)</span>
         <input type="file" id="ig_hmit_ketua" name="ig_hmit_ketua" value="<?= old('ig_hmit_ketua') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
         <span class="text-red-700"><?= $validation->getError('ig_hmit_ketua') ?></span>
       </label>
@@ -81,7 +81,7 @@
         <span class="text-red-700"><?= $validation->getError('ig_ara_anggota_1') ?></span>
       </label>
       <label for="ig_hmit_anggota_1" class="block mt-8">
-        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm text-slate-700"><span class="font-bold">Bukti Follow Ig HMIT </span>(File berupa .jpg atau .png)</span>
+        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm text-slate-700"><span class="font-bold">Bukti Follow Tiktok HMIT </span>(File berupa .jpg atau .png)</span>
         <input type="file" id="ig_hmit_anggota_1" name="ig_hmit_anggota_1" value="<?= old('ig_hmit_anggota_1') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
         <span class="text-red-700"><?= $validation->getError('ig_hmit_anggota_1') ?></span>
       </label>

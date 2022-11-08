@@ -1,15 +1,15 @@
 <footer class="bg-slate-200 border-t-2 border-black relative mt-24 sm:mt-48 py-24 px-2">
-  <img class="hidden md:block w-24 absolute inset-x-1/2 -translate-x-1/2 -top-12" src="footer/smoothcorner.svg" alt="">
-  <img class="hidden md:block w-12 absolute left-0 rotate-180" src="event/blue-circle.svg" alt="">
-  <img class="hidden md:block w-8 absolute right-0" src="event/circle-yellow.svg" alt="">
+  <img class="hidden md:block w-24 absolute inset-x-1/2 -translate-x-1/2 -top-12" src="<?= base_url(); ?>/footer/smoothcorner.svg" alt="">
+  <img class="hidden md:block w-12 absolute left-0 rotate-180" src="<?= base_url(); ?>/event/blue-circle.svg" alt="">
+  <img class="hidden md:block w-8 absolute right-0" src="<?= base_url(); ?>/event/circle-yellow.svg" alt="">
 
   <div class="relative container flex flex-wrap flex-col sm:flex-row sm:px-16 gap-16 mx-auto">
-    <img class="hidden md:block w-8 absolute inset-x-1/2 top-56" src="event/rectangle.svg" alt="">
-    <img class="hidden md:block w-8 absolute inset-x-2/3 -top-16" src="event/rectangle-blue.svg" alt="">
-    <img class="hidden md:block w-8 absolute right-8 top-36" src="event/rectangle-green.svg" alt="">
+    <img class="hidden md:block w-8 absolute inset-x-1/2 top-56" src="<?= base_url(); ?>/event/rectangle.svg" alt="">
+    <img class="hidden md:block w-8 absolute inset-x-2/3 -top-16" src="<?= base_url(); ?>/event/rectangle-blue.svg" alt="">
+    <img class="hidden md:block w-8 absolute right-8 top-36" src="<?= base_url(); ?>/event/rectangle-green.svg" alt="">
 
     <div class="flex-1">
-      <img class="mx-auto sm:mx-0 w-16" src="global/icon/fire.svg" alt="">
+      <img class="mx-auto sm:mx-0 w-16" src="<?= base_url(); ?>/global/icon/logo_ara.svg" alt="">
       <p class="text-center sm:text-left mt-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus interdum lectus non interdum</p>
       <p class="text-center sm:text-left mt-8">© 2022 A Renewal Agent 4.0</p>
     </div>
@@ -39,7 +39,7 @@
     </div>
     <div class="mx-auto">
       <div class="relative">
-        <img class="w-8 absolute left-56 -top-4 lg:left-36" src="event/smoothcorner-yellow.png" alt="">
+        <img class="w-8 absolute left-56 -top-4 lg:left-36" src="<?= base_url(); ?>/event/smoothcorner-yellow.png" alt="">
         <p class="font-bold mb-2 text-center lg:text-start">Teknologi Informasi</p>
       </div>
       <p class="font-bold mb-2 text-center lg:text-start"><a href="#">Institut Teknologi Sepuluh Nopember</a></p>

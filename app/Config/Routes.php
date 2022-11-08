@@ -20,7 +20,10 @@ $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
-$routes->set404Override();
+$routes->set404Override(function () {
+    $data['title'] = '404 :(';
+    return view('error404', $data);
+});
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
@@ -41,7 +44,8 @@ $routes->get('/olimpiade', 'Home::olimpiade');
 $routes->get('/ara', 'Home::about_ara');
 $routes->get('/ctf', 'Home::ctf');
 $routes->get('/exploit', 'Home::exploit');
-$routes->get('/register-olimpiade', 'Home::registerOlimpiade');
+$routes->get('/auth/login', 'Home::login');
+$routes->get('/register/olimpiade', 'Home::registerOlimpiade');
 $routes->add('/home/coba', 'Home::coba');
 $routes->post('/verify-regis-olim', 'VerifyRegistrasi::verify_regis_olim');
 /*

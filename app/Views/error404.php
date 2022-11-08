@@ -1,7 +1,7 @@
 <?= $this->extend('landing/template/default'); ?>
 
 <?= $this->section('custom-css'); ?>
-<link rel="stylesheet" href="./public/src/css/error404/output.css">
+<link rel="stylesheet" href="<?= base_url(); ?>/src/css/error404/output.css">
 <?= $this->endSection('custom-css'); ?>
 
 <?= $this->section('content') ?>

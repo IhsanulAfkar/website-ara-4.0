@@ -3,3 +3,30 @@ Ini cuma notes buat npx tailwind, tambahin baru sesuai file path yang diinginkan
 npx tailwindcss -i .\public\src\css\template\input.css -o .\public\src\css\template\template.css --watch 
 npx tailwindcss -i .\public\src\css\coming_soon\input.css -o .\public\src\css\coming_soon\coming_soon.css --watch 
 npx tailwindcss -i .\public\src\css\home\input.css -o .\public\src\css\home\home.css --watch 
+
+[ OLIM ]
+- Nama tim
+- Asal Sekolah
+
+-Nama Ketua tim 
+- No telfon Aktif Ketua
+-Email Ketua Tim
+-Bukti (Kartu Pelajar atau Surat Keterangan Sekolah Aktif)
+
+- Nama anggota 1 
+-Bukti (Kartu Pelajar atau Surat Keterangan Sekolah Aktif)
+ 
+- Nama anggota 2 
+-Bukti (Kartu Pelajar atau Surat Keterangan Sekolah Aktif)
+
+tim_nama
+asal_institusi
+nama_ketua
+phone_ketua
+email_ketua
+surket_ketua
+
+nama_anggota_1
+surket_anggota_1
+
+bukti_bayar

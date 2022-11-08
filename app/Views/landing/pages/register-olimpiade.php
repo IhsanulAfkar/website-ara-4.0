@@ -91,6 +91,11 @@
         <input type="file" id="bukti_bayar" name="bukti_bayar" value="<?= old('bukti_bayar') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
         <span class="text-red-700"><?= $validation->getError('bukti_bayar') ?></span>
       </label>
+      <label for="bukti_bayar" class="block mt-16">
+        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-bold text-slate-700">Bukti Pembayaran</span>
+        <input type="file" id="bukti_bayar" name="bukti_bayar" value="<?= old('bukti_bayar') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
+        <span class="text-red-700"><?= $validation->getError('bukti_bayar') ?></span>
+      </label>
       <button type="submit" class="mt-16 py-2 bg-[#339969] border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-2xl sm:text-lg focus:ring-1 font-bold text-white">Register</button>
     </form>
     <div class="hidden lg:block flex-1">

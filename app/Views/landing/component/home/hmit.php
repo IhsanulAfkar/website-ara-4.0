@@ -8,13 +8,13 @@
             </div>
         </div>
         <div class="flex-auto basis-[60%] text-xl mt-20 md:mt-0">
-            <p class="font-semibold text-xl text-[#339969]">lorem ipsum</p>
-            <h2 class="text-3xl font-semibold mt-2 md:text-4xl lg:text-5xl py-1 ">Organizer 🤓</h2>
+            <p class="font-semibold text-xl text-[#339969] mb-4">Diselenggarakan Oleh</p>
+            <h2 class="text-4xl font-semibold mt-2 md:text-5xl lg:text-6xl py-1 ">HMIT 🤓</h2>
             <p class="py-14">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsum sapiente. Cumque tenetur, esse unde placeat obcaecati fugiat asperiores ab ipsum ipsa veritatis corrupti odio deserunt dicta enim optio voluptas in, iure distinctio cum itaque perferendis quibusdam laboriosam nihil. Aliquam vel quibusdam odit eligendi? Possimus earum enim quas nulla alias.
+                HMIT atau Himpunan Mahasiswa Teknologi Informasi merupakan himpunan yang mengayomi mahasiswa Departemen Teknologi Informasi ITS. Didirikan pada November 2019 dan sejak saat itu telah mengadakan 3 event besar yakni ExploIT 2020, ARA 2021, dan ARA 2022 yang sukses dan diikuti oleh ribuan peserta.
             </p>
             <div class="mt-[40px]">
-                <a href="#" class="mx-auto text-center border-2 w-full border-black bg-[#F3CA20] py-2 px-8 rounded-2xl drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Selengkapnya</a>
+                <a href="https://www.instagram.com/hmit_its/" class="mx-auto text-center border-2 w-full border-black bg-[#F3CA20] py-2 px-8 rounded-2xl drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Selengkapnya</a>
             </div>
         </div>
     </div>

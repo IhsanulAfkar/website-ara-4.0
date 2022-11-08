@@ -191,10 +191,34 @@ class VerifyRegistrasi extends BaseController
                 'olim_status' => 0,
                 'olim_status_final' => 0,
             ];
+        // Kirim Email
+        $email = \Config\Services::email();
+        $email->setTo($email_ketua);
+        $email->setFrom('arenewalagent@gmail.com', 'ARA 4.0');
+        $email->setSubject('Email Konfirmasi Pendaftaran Olimpiade');
+        $body = "Halo {$tim_nama} dari {$asal_institusi},</br>
+        </br>
+        Terima kasih sudah mendaftar pada event kami, \"Olimpiade.\"<br>
+        <br>
+        Dengan ini, kami telah menerima berkas Anda. Kami akan mengecek kelengkapan berkas yang sudah dikirimkan sesuai dengan persyaratan kami. <br>
+        <br>
+        Terima kasih.<br>
+        <br>
+        --<br>
+        Salam Hormat,<br>
+        <br>
+        A Renewal Agents 4.0";
+        $email->setMessage($body);
+        if ($email->send()) {
+            $this->Olim_Model->save($data);
+            $this->session->setFlashdata('msg', 'Registrasi berhasil');
+            return redirect()->to('/register/olimpiade');
+        } else {
+            $dd = $email->printDebugger(['headers']);
+            print_r($dd);
+        }
 
         // Insert ke db dan redirect ke finish regist
-        $this->Olim_Model->save($data);
-        $this->session->setFlashdata('msg', 'Registrasi berhasil');
-        return redirect()->to('/register/olimpiade');
+
     }
 }

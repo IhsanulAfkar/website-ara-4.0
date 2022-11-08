@@ -8,7 +8,7 @@ class Home extends BaseController
     {
         $data['title'] = "Home";
         return view('landing/pages/home', $data);
-        // return view('coming_soon');
+        // return view('soon');
     }
     // public function about_hmit()
     // {
@@ -45,13 +45,13 @@ class Home extends BaseController
     {
         $data['title'] = "CTF";
         $data['event_time'] = "Jan 1, 2023 00:00:00";
-        return view('landing/pages/coming_soon', $data);
+        return view('landing/pages/ctf', $data);
     }
     public function exploit()
     {
         $data['title'] = "ExploIT";
         $data['event_time'] = "Jan 1, 2023 00:00:00";
-        return view('landing/pages/coming_soon', $data);
+        return view('landing/pages/exploit', $data);
     }
 
     // Register

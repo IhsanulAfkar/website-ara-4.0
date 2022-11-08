@@ -25,7 +25,7 @@
                             <p class="font-bold">3.2k</p>
                         </div>
                         <div class="basis-[40%] flex">
-                            <a href="#" class="mx-auto text-center border-2 w-full border-black bg-[#F3CA20] p-2 rounded-2xl drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Selengkapnya</a>
+                            <a href="<?= base_url(); ?>/olimpiade" class="mx-auto text-center border-2 w-full border-black bg-[#F3CA20] p-2 rounded-2xl drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                         Capture The Flag
                     </div>
                     <p>
-                        Olimpiade ARA 2022 adalah olimpiade dengan topik IoT dan Cyber Security (keamanan siber).
+                        Capture The Flag ARA 2022 adalah kompetisi di bidang Cyber Security dengan bersaing mencari celah pada suatu sistem
                     </p>
                     <div class="flex mt-[60px] ">
                         <div class="basis-[30%] flex my-auto gap-2">
@@ -48,7 +48,7 @@
                             <p class="font-bold">3.2k</p>
                         </div>
                         <div class="basis-[40%] flex">
-                            <a href="#" class="mx-auto text-center border-2 w-full border-black bg-[#F3CA20] p-2 rounded-2xl drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Selengkapnya</a>
+                            <a href="<?= base_url(); ?>/ctf" class="mx-auto text-center border-2 w-full border-black bg-[#F3CA20] p-2 rounded-2xl drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                         ExploIT
                     </div>
                     <p>
-                        Olimpiade ARA 2022 adalah olimpiade dengan topik IoT dan Cyber Security (keamanan siber).
+                        ExploIT ARA 2022 adalah pameran IoT kepada masyarakat umum, dan diselingi oleh talkshow serta pelatihan IoT
                     </p>
                     <div class="flex mt-[60px] ">
                         <div class="basis-[30%] flex my-auto gap-2">
@@ -71,7 +71,7 @@
                             <p class="font-bold">3.2k</p>
                         </div>
                         <div class="basis-[40%] flex">
-                            <a href="#" class="mx-auto text-center border-2 w-full border-black bg-[#F3CA20] p-2 rounded-2xl drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Selengkapnya</a>
+                            <a href="<?= base_url(); ?>/exploit" class="mx-auto text-center border-2 w-full border-black bg-[#F3CA20] p-2 rounded-2xl drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                         Roadshow IT
                     </div>
                     <p>
-                        Olimpiade ARA 2022 adalah olimpiade dengan topik IoT dan Cyber Security (keamanan siber).
+                        Roadshow IT 2022 adalah pengenalan IT ITS ke sekolah-sekolah seluruh Indonesia
                     </p>
                     <div class="flex mt-[60px] ">
                         <div class="basis-[30%] flex my-auto gap-2">
@@ -93,7 +93,7 @@
                             <p class="font-bold">3.2k</p>
                         </div>
                         <div class="basis-[40%] flex">
-                            <a href="#" class="mx-auto text-center border-2 w-full border-black bg-[#F3CA20] p-2 rounded-2xl drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Selengkapnya</a>
+                            <a href="https://www.instagram.com/p/CknOzhuptbA/?utm_source=ig_web_copy_link" class="mx-auto text-center border-2 w-full border-black bg-[#F3CA20] p-2 rounded-2xl drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Selengkapnya</a>
                         </div>
                     </div>
                 </div>

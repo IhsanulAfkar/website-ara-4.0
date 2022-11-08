@@ -10,7 +10,7 @@
         <a id="about_nav" class="block" href="<?= base_url(); ?>/ara">About</a>
         <a id="olimpiade_nav" class="block " href="<?= base_url(); ?>/olimpiade">Olimpiade</a>
         <a id="ctf_nav" class="block" href="<?= base_url(); ?>/ctf">CTF</a>
-        <a id="exloit_nav" class="block" href="<?= base_url(); ?>/exploit">ExploIT</a>
+        <a id="exploit_nav" class="block" href="<?= base_url(); ?>/exploit">ExploIT</a>
         <!-- <a id="hmit_nav" class="block" href="<?= base_url(); ?>/hmit">HMIT</a> -->
       </div>
     </div>
@@ -47,7 +47,7 @@
       <a id="res_about_nav" class="block text-2xl py-2" href="<?= base_url(); ?>/ara">About</a>
       <a id="res_olimpiade_nav" class="block text-2xl py-2" href="<?= base_url(); ?>/olimpiade">Olimpiade</a>
       <a id="res_ctf_nav" class="block text-2xl py-2" href="<?= base_url(); ?>/ctf">CTF</a>
-      <a id="res_exloit_nav" class="block text-2xl py-2" href="<?= base_url(); ?>/exploit">ExploIT</a>
+      <a id="res_exploit_nav" class="block text-2xl py-2" href="<?= base_url(); ?>/exploit">ExploIT</a>
       <a id="res_login_nav" class="block text-2xl py-2" href="<?= base_url(); ?>/auth/login">login</a>
     </div>
     <hr class="my-2">

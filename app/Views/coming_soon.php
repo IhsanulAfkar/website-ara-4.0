@@ -1,4 +1,4 @@
-<div class="bg-[url('../../../coming_soon/bg.png')] bg-cover mt-20">
+<div class="bg-cover mt-20">
     <div class="xl:grid xl:grid-cols-4 relative">
         <img src="<?= base_url(); ?>/coming_soon/yellow_star.png" class="ml-[15%] xl:ml-[33%] mt-[40px] xl:mt-[30px]">
         <img src="<?= base_url(); ?>/coming_soon/blue star.png" class="hidden xl:block ml-[90%] top-20 absolute">
@@ -28,47 +28,6 @@
                 <span class="text-[80px] xl:text-[170px] xl:absolute xl:left-[27%]">ARA 4.0</span>
                 <img src="<?= base_url(); ?>/coming_soon/blue circle.png" class="hidden xl:block ml-[130%] w-[140px] mt-[50px]">
             </div>
-            <div class="columns-5 xl:columns-7 px-6">
-                <img src="<?= base_url(); ?>/coming_soon/blue star.png" alt="" class="hidden xl:block mx-auto">
-                <div class="w-[65%] xl:w-[40%] mx-auto">
-                    <a href="https://www.instagram.com/ara_its/">
-                        <img src="<?= base_url(); ?>/coming_soon/sosmed/ig.png" alt="instagram">
-                    </a>
-                </div>
-                <div class="w-[65%] xl:w-[40%] mx-auto">
-                    <a href="https://www.youtube.com/channel/UC0jutwJdiQ_MRNSJG0CRYGA">
-                        <img src="<?= base_url(); ?>/coming_soon/sosmed/yt.png" alt="youtube">
-                    </a>
-                </div>
-                <div class="w-[65%] xl:w-[40%] mx-auto">
-                    <a href="https://twitter.com/ara__its">
-                        <img src="<?= base_url(); ?>/coming_soon/sosmed/twitter.png" alt="twitter">
-                    </a>
-                </div>
-                <div class="w-[65%] xl:w-[40%] mx-auto">
-                    <a href="https://web.facebook.com/profile.php?id=100086878021327&is_tour_completed=true">
-                        <img src="<?= base_url(); ?>/coming_soon/sosmed/fb.png" alt="facebook">
-                    </a>
-                </div>
-                <div class="w-[65%] xl:w-[40%] mx-auto">
-                    <a href="https://www.tiktok.com/@ara_its">
-                        <img src="<?= base_url(); ?>/coming_soon/sosmed/tiktok.png" alt="tiktok">
-                    </a>
-                </div>
-                <img src="<?= base_url(); ?>/coming_soon/blue star.png" alt="" class="hidden xl:block mx-auto">
-            </div>
-            <div class="xl:hidden">
-                <img src="<?= base_url(); ?>/coming_soon/smile.png" class="mx-auto" width="100px">
-            </div>
-        </div>
-
-        <div class="xl:hidden">
-            <img src="<?= base_url(); ?>/coming_soon/half_star.png" class="absolute right-0 top-[30%]">
-            <img src="<?= base_url(); ?>/coming_soon/quarter_circle.png" class="absolute left-0 bottom-[-10%]">
-        </div>
-        <div class="hidden xl:block">
-            <img src="<?= base_url(); ?>/coming_soon/half circle1.png" class="absolute left-[-100px] bottom-0">
-            <img src="<?= base_url(); ?>/coming_soon/half circle2.png" class="absolute right-[-100px] bottom-0">
         </div>
     </div>
 </div>

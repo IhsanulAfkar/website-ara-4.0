@@ -1,14 +1,12 @@
 <?= $this->extend('landing/template/default'); ?>
 
 <?= $this->section('custom-css'); ?>
-<link rel="stylesheet" href="src/css/home/home.css">
+<link rel="stylesheet" href="src/css/template/template.css">
 <?= $this->endSection('custom-css'); ?>
 
 <?= $this->section('content') ?>
 
-<?= $this->include("landing/component/home/about_ara"); ?>
-<?= $this->include("landing/component/home/activities"); ?>
-<?= $this->include("landing/component/home/hmit"); ?>
+<?= $this->include("landing/component/countdown"); ?>
 
 <?= $this->endSection('content') ?>
 <?= $this->section('custom-js') ?>

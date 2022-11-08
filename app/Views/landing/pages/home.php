@@ -1,7 +1,7 @@
 <?= $this->extend('landing/template/default'); ?>
 
 <?= $this->section('custom-css'); ?>
-<link rel="stylesheet" href="src/css/home/home.css">
+<link rel="stylesheet" href="src/css/template/template.css">
 <?= $this->endSection('custom-css'); ?>
 
 <?= $this->section('content') ?>

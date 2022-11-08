@@ -21,7 +21,7 @@
             <div class="my-16 xl:my-[5rem]">
                 <img src="aboutara/slider.svg" class="mx-auto w-[200px] xl:w-[300px]">
             </div>
-            <p class="text-center px-[20px] xl:px-[420px] text-xl">ARA (A Renewal Agent) 4.0 adalah kegiatan yang diselenggarakan oleh HMIT (Himpunan Mahasiswa Teknologi Informasi) ITS periode 2020-2021 yang dimana event ini akan menjadi media untuk menyalurkan minat di bidang IT (teknologi informasi) bagi siswa SMA/SMK dan mahasiswa.</p>
+            <p class="xl:text-center text-justify px-[20px] xl:px-[420px] text-xl">ARA (A Renewal Agent) 4.0 adalah kegiatan yang diselenggarakan oleh HMIT (Himpunan Mahasiswa Teknologi Informasi) ITS periode 2020-2021 yang dimana event ini akan menjadi media untuk menyalurkan minat di bidang IT (teknologi informasi) bagi siswa SMA/SMK dan mahasiswa.</p>
         </div>
 
     </section>
@@ -43,17 +43,17 @@
 </div>
 
 <!-- Section 3  -->
-<div class="py-12 text-xl mt-32">
+<div class="py-12 text-xl mt-32 mb-20">
     <div class="relative">
         <img src="./aboutara/redrectangleaboutara.png" class="left-[5%] hidden lg:block absolute top-[-5%]" alt="">
     </div>
     <div class="container mx-auto">
-
         <div class="px-4 lg:px-[50px] ">
-            <p class="font-semibold text-[#339969] text-left text-xl  lg:text-2xl">Photos!!</p>
-            <p class="text-4xl font-semibold mt-2 md:text-5xl lg:text-6xl mb-16 text-left">Documentary 🤩</p>
+            <p class="font-semibold text-[#339969] text-left lg:text-center text-xl  lg:text-2xl">Photos!!</p>
+            <p class="text-4xl font-semibold mt-2 md:text-5xl lg:text-6xl mb-16 text-left lg:text-center flex justify-start md:justify-center"> <span class="hidden lg:block">🤩</span> Documentary🤩</p>
+
             <!-- Content -->
-            <div id="carouselExampleCaptions" class="carousel slide relative rounded-xl bg-[#D9D9D9]" data-bs-ride="carousel">
+            <div id="carouselExampleCaptions" class="carousel slide relative rounded-xl bg-[#D9D9D9] lg:w-[80%] mx-auto" data-bs-ride="carousel">
                 <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4 ">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -70,7 +70,6 @@
                     </div>
                     <div class="carousel-item relative float-left w-full">
                         <img src="<?= base_url(); ?>/aboutara/img/ara/3.png" class="block w-full rounded-lg" alt="..." />
-
                     </div>
                 </div>
             </div>

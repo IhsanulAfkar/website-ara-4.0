@@ -1,4 +1,4 @@
-<section class="relative container mx-auto px-4 py-16 mt-36">
+<section class="relative container mx-auto px-4 py-16 mt-36 mb-20">
     <img src="home/zoom.png" class="absolute -top-4 hidden md:block">
     <img src="home/slider.png" class="absolute bottom-0 right-0 hidden md:block">
     <div class="lg:flex gap-2">

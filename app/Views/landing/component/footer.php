@@ -1,4 +1,4 @@
-<footer class="bg-slate-200 border-t-2 border-black relative mt-24 sm:mt-48 py-24 px-2">
+<footer class="bg-slate-200 border-t-2 border-black relative py-24 px-2">
   <img class="hidden md:block w-24 absolute inset-x-1/2 -translate-x-1/2 -top-12" src="<?= base_url(); ?>/footer/smoothcorner.svg" alt="">
   <img class="hidden md:block w-12 absolute left-0 rotate-180" src="<?= base_url(); ?>/event/blue-circle.svg" alt="">
   <img class="hidden md:block w-8 absolute right-0" src="<?= base_url(); ?>/event/circle-yellow.svg" alt="">

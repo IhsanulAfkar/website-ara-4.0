@@ -34,3 +34,24 @@ bukti_bayar
 
 // roadshow hyperlink ke post ig roadshow
 // 
+TIMELINE OLIMPIADE
+
+1. Pendaftaran Batch 1
+Timeline: ... November - 26 November 2022
+Deskripsi: Pendaftaran Batch ke-1 akan dikenanakan biaya sebesar Rp60.000/tim
+
+2. Pendaftaran Batch 2
+Timeline: 27 November -15 Desember 2022
+Deskripsi: Pendaftaran Batch ke-1 akan dikenanakan biaya sebesar Rp80.000/tim
+
+3. Technical Meeting
+Timeline: 17 Desember 2022
+Deskripsi: Pencerdasan mengenai teknis perlombaan dan pemberitahuan mengenai platform yang digunakan
+
+4. Penyisihan
+Timeline: 18 Desember 2022
+Deskripsi: Pelaksaan perlombaan tahap penyisihan akan dilakukan secara online
+
+5. Final
+Timeline: 8 Januari 2023
+Deskripsi: Pelaksaan perlombaan tahap final akan dilakukan secara offline

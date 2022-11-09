@@ -96,9 +96,9 @@ class VerifyRegistrasi extends BaseController
                     'max_size'  => $imgSizeError
                 ]
             ],
-            'ig_hmit_ketua' => [
-                'label'     => 'ig_hmit_ketua',
-                'rules'     => 'uploaded[ig_hmit_ketua]|is_image[ig_hmit_ketua]|max_size[ig_hmit_ketua, 1024]',
+            'tiktok_ketua' => [
+                'label'     => 'tiktok_ketua',
+                'rules'     => 'uploaded[tiktok_ketua]|is_image[tiktok_ketua]|max_size[tiktok_ketua, 1024]',
                 'errors'    => [
                     'uploaded'  => 'Field ini harus diisi',
                     'is_image'  => $imgTypeError,
@@ -114,9 +114,9 @@ class VerifyRegistrasi extends BaseController
                     'max_size'  => $imgSizeError
                 ]
             ],
-            'ig_hmit_anggota_1' => [
-                'label'     => 'ig_hmit_anggota_1',
-                'rules'     => 'uploaded[ig_hmit_anggota_1]|is_image[ig_hmit_anggota_1]|max_size[ig_hmit_anggota_1, 1024]',
+            'tiktok_anggota_1' => [
+                'label'     => 'tiktok_anggota_1',
+                'rules'     => 'uploaded[tiktok_anggota_1]|is_image[tiktok_anggota_1]|max_size[tiktok_anggota_1, 1024]',
                 'errors'    => [
                     'uploaded'  => 'Field ini harus diisi',
                     'is_image'  => $imgTypeError,
@@ -147,29 +147,29 @@ class VerifyRegistrasi extends BaseController
         $email_ketua = $this->request->getVar('email_ketua');
         $surket_ketua = $this->request->getFile('surket_ketua');
         $ig_ara_ketua = $this->request->getFile('ig_ara_ketua');
-        $ig_hmit_ketua = $this->request->getFile('ig_hmit_ketua');
+        $tiktok_ketua = $this->request->getFile('tiktok_ketua');
 
         // Anggota 
         $nama_anggota_1 = $this->request->getVar('nama_anggota_1');
         $surket_anggota_1 = $this->request->getFile('surket_anggota_1');
         $ig_ara_anggota_1 = $this->request->getFile('ig_ara_anggota_1');
-        $ig_hmit_anggota_1 = $this->request->getFile('ig_hmit_anggota_1');
-
+        $tiktok_anggota_1 = $this->request->getFile('tiktok_anggota_1');
+        $kupon = $this->request->getVar('kupon');
         $fileBuktiBayar = $this->request->getFile('bukti_bayar');
 
         // Define path
         $bukti_bayar_path = 'uploads/olim/bukti_bayar/';
         $surket_path = 'uploads/olim/suket/';
         $ig_ara_path = 'uploads/olim/ig_ara/';
-        $ig_hmit_path = 'uploads/olim/ig_hmit/';
+        $tiktok_path = 'uploads/olim/tiktok/';
 
         // Pindah file + rename
         $moved_surket_ketua = $this->moveFile($surket_path, $surket_ketua);
         $moved_surket_anggota_1 = $this->moveFile($surket_path, $surket_anggota_1);
         $moved_ig_ara_ketua = $this->moveFile($ig_ara_path, $ig_ara_ketua);
         $moved_ig_ara_anggota_1 = $this->moveFile($ig_ara_path, $ig_ara_anggota_1);
-        $moved_ig_hmit_ketua = $this->moveFile($ig_hmit_path, $ig_hmit_ketua);
-        $moved_ig_hmit_anggota_1 = $this->moveFile($ig_hmit_path, $ig_hmit_anggota_1);
+        $moved_tiktok_ketua = $this->moveFile($tiktok_path, $tiktok_ketua);
+        $moved_tiktok_anggota_1 = $this->moveFile($tiktok_path, $tiktok_anggota_1);
 
         $movedBuktiBayar = $this->moveFile($bukti_bayar_path, $fileBuktiBayar);
         $data =
@@ -183,9 +183,10 @@ class VerifyRegistrasi extends BaseController
                 'olim_nama_anggota_1' => $nama_anggota_1,
                 'olim_kp_surket_anggota_1' => $moved_surket_anggota_1,
                 'olim_ig_ara_ketua' => $moved_ig_ara_ketua,
-                'olim_ig_hmit_ketua' => $moved_ig_hmit_ketua,
+                'olim_tiktok_ketua' => $moved_tiktok_ketua,
                 'olim_ig_ara_anggota_1' => $moved_ig_ara_anggota_1,
-                'olim_ig_hmit_anggota_1' => $moved_ig_hmit_anggota_1,
+                'olim_tiktok_anggota_1' => $moved_tiktok_anggota_1,
+                'coupon' => $kupon,
                 'olim_bukti_bayar' => $movedBuktiBayar,
                 // olim_status 0 berarti belum konfirmasi
                 'olim_status' => 0,
@@ -217,8 +218,6 @@ class VerifyRegistrasi extends BaseController
             $dd = $email->printDebugger(['headers']);
             print_r($dd);
         }
-
         // Insert ke db dan redirect ke finish regist
-
     }
 }

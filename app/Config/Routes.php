@@ -48,6 +48,8 @@ $routes->get('/auth/login', 'Home::login');
 $routes->get('/register/olimpiade', 'Home::registerOlimpiade');
 $routes->add('/home/coba', 'Home::coba');
 $routes->post('/verify-regis-olim', 'VerifyRegistrasi::verify_regis_olim');
+$routes->get('/verify_kupon/(:any)', 'Api::verify_kupon/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

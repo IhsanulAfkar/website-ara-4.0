@@ -14,20 +14,35 @@
         <div class="flex-1">
           <p class="text-4xl font-semibold text-center">Pendaftaran <br> Batch 1</p>
           <div class="w-12 h-12 bg-[#F3CA20] rounded-full mx-auto mt-16 border-2 border-black drop-shadow-[0_2px_0_rgba(0,0,0,1)]"></div>
-          <p class="mt-12 text-center font-semibold text-2xl">1 Maret - 31 Maret 2021</p>
-          <p class="text-center text-xl mt-8">ARA (A Renewal Agent) 4.0 adalah kegiatan yang diselenggarakan oleh HMIT (Himpunan Mahasiswa </p>
+          <p class="mt-12 text-center font-semibold text-2xl">11 November - 26 November 2022</p>
+          <p class="text-center text-xl mt-8">Pendaftaran Batch ke-1 akan dikenanakan biaya sebesar Rp60.000/tim</p>
         </div>
         <div class="flex-1">
           <p class="text-4xl font-semibold text-center">Pendaftaran <br> Batch 2</p>
-          <div class="w-12 h-12 bg-[#F3CA20] rounded-full mx-auto mt-16 border-2 border-black drop-shadow-[0_2px_0_rgba(0,0,0,1)]"></div>
-          <p class="mt-12 text-center font-semibold text-2xl">1 Maret - 31 Maret 2021</p>
-          <p class="text-center text-xl mt-8">ARA (A Renewal Agent) 4.0 adalah kegiatan yang diselenggarakan oleh HMIT (Himpunan Mahasiswa IT)</p>
+          <div class="w-12 h-12 bg-[#339969] rounded-full mx-auto mt-16 border-2 border-black drop-shadow-[0_2px_0_rgba(0,0,0,1)]"></div>
+          <p class="mt-12 text-center font-semibold text-2xl">27 November -15 Desember 2022</p>
+          <p class="text-center text-xl mt-8">Pendaftaran Batch ke-1 akan dikenanakan biaya sebesar Rp80.000/tim</p>
         </div>
         <div class="flex-1">
-          <p class="text-4xl font-semibold text-center">Technical <br> Meeting</p>
+          <p class="text-4xl font-semibold text-center">Technical <br>Meeting</p>
           <div class="w-12 h-12 bg-[#339969] rounded-full mx-auto mt-16 border-2 border-black drop-shadow-[0_2px_0_rgba(0,0,0,1)]"></div>
-          <p class="mt-12 text-center font-semibold text-2xl">1 Maret - 31 Maret 2021</p>
-          <p class="text-center text-xl mt-8">ARA (A Renewal Agent) 4.0 adalah kegiatan yang diselenggarakan oleh HMIT (Himpunan Mahasiswa IT)</p>
+          <p class="mt-12 text-center font-semibold text-2xl">17 Desember 2022</p>
+          <p class="text-center text-xl mt-8">Pencerdasan mengenai teknis perlombaan dan pemberitahuan mengenai platform yang digunakan</p>
+        </div>
+        <div class="flex-1">
+          <p class="text-4xl font-semibold text-center">Penyisihan <br>
+            &nbsp;
+          </p>
+          <div class="w-12 h-12 bg-[#339969] rounded-full mx-auto mt-16 border-2 border-black drop-shadow-[0_2px_0_rgba(0,0,0,1)]"></div>
+          <p class="mt-12 text-center font-semibold text-2xl">18 Desember 2022</p>
+          <p class="text-center text-xl mt-8">Pelaksaan perlombaan tahap penyisihan akan dilakukan secara online</p>
+        </div>
+        <div class="flex-1">
+          <p class="text-4xl font-semibold text-center">Final<br>
+            &nbsp;</p>
+          <div class="w-12 h-12 bg-[#339969] rounded-full mx-auto mt-16 border-2 border-black drop-shadow-[0_2px_0_rgba(0,0,0,1)]"></div>
+          <p class="mt-12 text-center font-semibold text-2xl">8 Januari 2023</p>
+          <p class="text-center text-xl mt-8">Pelaksaan perlombaan tahap final akan dilakukan secara offline</p>
         </div>
       </div>
     </div>

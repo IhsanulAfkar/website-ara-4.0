@@ -10,7 +10,7 @@
 
     <div class="flex-1">
       <img class="mx-auto sm:mx-0 w-16" src="<?= base_url(); ?>/global/icon/logo_ara.svg" alt="">
-      <p class="text-center sm:text-left mt-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus interdum lectus non interdum</p>
+
       <p class="text-center sm:text-left mt-8">© 2022 A Renewal Agent 4.0</p>
     </div>
     <div class="flex flex-1 flex-wrap sm:flex-nowrap gap-x-4 gap-y-12 justify-around sm:justify-evenly">

@@ -1,4 +1,4 @@
-<section class="container mx-auto px-2 mt-24 sm:mt-48">
+<section class="container mx-auto px-2 mt-24 sm:mt-48 mb-96">
   <p class="text-xl lg:text-2xl font-semibold text-[#339969] text-center">Participant</p>
   <p class="font-bold text-4xl md:text-5xl lg:text-6xl text-center"><span class="hidden sm:inline">&#129488;</span> Who can, join Olimpiade? &#129488;</p>
 

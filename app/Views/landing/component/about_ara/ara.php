@@ -1,6 +1,6 @@
 <!-- Section 1 -->
-<div class="pb-40">
-    <section class="relative container mx-auto mt-20 pb-20">
+<div class="pb-40 container mx-auto mt-20 lg:w-[85%] ">
+    <section class="relative pb-20 ">
         <img src="aboutara/cat.svg" class="absolute left-[-10%] top-[60%] hidden xl:block w-[350px]">
         <img src="aboutara/love.svg" class="absolute z-[-2] top-[45%] left-0 hidden xl:block">
         <img src="aboutara/circle.svg" class="absolute z-[-2] top-[35%] right-0 hidden xl:block">
@@ -9,7 +9,7 @@
         <img class="relative inset-x-1/2 -translate-x-1/2 -top-8" src="home/half_eclipse.png">
         <img class="hidden xl:block absolute top-12 right-16 w-24" src="aboutara/hand.svg">
         <img class="hidden xl:block absolute top-12 left-16 w-20" src="aboutara/nerd.png">
-        <img class="absolute right-[-12%] top-[50%] mx-auto hidden xl:block w-[400px]" src="aboutara/astronaut.svg">
+        <img class="absolute right-[-8%] top-[50%] mx-auto hidden xl:block w-[350px] z-10" src="aboutara/astronaut.svg">
         <div class="mt-10">
             <div class="text-center font-bold text-4xl md:text-6xl lg:text-[90px] ">
                 <h2 class="">A Renewal Agent</h2>

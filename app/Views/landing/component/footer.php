@@ -16,12 +16,12 @@
     <div class="flex flex-1 flex-wrap sm:flex-nowrap gap-x-4 gap-y-12 justify-around sm:justify-evenly">
       <div>
         <p class="font-bold mb-2">Event</p>
-        <p><a href="<?= base_url(); ?>/ara">About</a></p>
-        <p><a href="https://www.instagram.com/ara_its/">Instagram</a></p>
-        <p><a href="https://www.youtube.com/channel/UC0jutwJdiQ_MRNSJG0CRYGA">Youtube</a></p>
-        <p><a href="https://twitter.com/ara__its">Twitter</a></p>
-        <p><a href="https://web.facebook.com/profile.php?id=100086878021327&is_tour_completed=true">Facebook</a></p>
-        <p><a href="https://www.tiktok.com/@ara_its">Tiktok</a></p>
+        <p><a href="<?= base_url(); ?>/ara" target="_blank">About</a></p>
+        <p><a href="https://www.instagram.com/ara_its/" target="_blank">Instagram</a></p>
+        <p><a href="https://www.youtube.com/channel/UC0jutwJdiQ_MRNSJG0CRYGA" target="_blank">Youtube</a></p>
+        <p><a href="https://twitter.com/ara__its" target="_blank">Twitter</a></p>
+        <p><a href="https://web.facebook.com/profile.php?id=100086878021327&is_tour_completed=true" target="_blank">Facebook</a></p>
+        <p><a href="https://www.tiktok.com/@ara_its" target="_blank">Tiktok</a></p>
       </div>
 
       <div>
@@ -33,8 +33,7 @@
 
       <div>
         <p class="font-bold mb-2">HMIT</p>
-        <p><a href="<?= base_url(); ?>/hmit">About</a></p>
-        <p><a href="https://www.instagram.com/hmit_its/">Instagram</a></p>
+        <p><a href="https://www.instagram.com/hmit_its/" target="_blank">Instagram</a></p>
       </div>
     </div>
     <div class="mx-auto">
@@ -42,8 +41,8 @@
         <img class="w-8 absolute left-56 -top-4 lg:left-36" src="<?= base_url(); ?>/event/smoothcorner-yellow.png" alt="">
         <p class="font-bold mb-2 text-center lg:text-start">Teknologi Informasi</p>
       </div>
-      <p class="font-bold mb-2 text-center lg:text-start"><a href="#">Institut Teknologi Sepuluh Nopember</a></p>
-      <p class="font-bold text-center lg:text-start"><a href="#">Surabaya</a></p>
+      <p class="font-bold mb-2 text-center lg:text-start">Institut Teknologi Sepuluh Nopember</p>
+      <p class="font-bold text-center lg:text-start">Surabaya</p>
     </div>
   </div>
 </footer>

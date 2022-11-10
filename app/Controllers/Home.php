@@ -38,19 +38,19 @@ class Home extends BaseController
     public function olimpiade()
     {
         $data['title'] = "Olimpiade";
-        $data['event_time'] = "Jan 1, 2023 00:00:00";
+        $data['event_time'] = "Nov 27, 2022 00:00:00";
         return view('landing/pages/olimpiade', $data);
     }
     public function ctf()
     {
         $data['title'] = "CTF";
-        $data['event_time'] = "Jan 1, 2023 00:00:00";
+        $data['event_time'] = "Nov 20, 2022 00:00:00";
         return view('landing/pages/ctf', $data);
     }
     public function exploit()
     {
         $data['title'] = "ExploIT";
-        $data['event_time'] = "Jan 1, 2023 00:00:00";
+        $data['event_time'] = "Nov 20, 2022 00:00:00";
         return view('landing/pages/exploit', $data);
     }
 

@@ -14,7 +14,7 @@
                 HMIT atau Himpunan Mahasiswa Teknologi Informasi merupakan himpunan yang mengayomi mahasiswa Departemen Teknologi Informasi ITS. Didirikan pada November 2019 dan sejak saat itu telah mengadakan 3 event besar yakni ExploIT 2020, ARA 2021, dan ARA 2022 yang sukses dan diikuti oleh ribuan peserta.
             </p>
             <div class="mt-[40px]">
-                <a href="https://www.instagram.com/hmit_its/" class="mx-auto text-center border-2 w-full border-black bg-[#F3CA20] py-2 px-8 rounded-2xl drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Selengkapnya</a>
+                <a href="https://www.instagram.com/hmit_its/" target="_blank" class="mx-auto text-center border-2 w-full border-black bg-[#F3CA20] py-2 px-8 rounded-2xl drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Selengkapnya</a>
             </div>
         </div>
     </div>

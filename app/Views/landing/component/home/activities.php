@@ -93,7 +93,7 @@
                             <p class="font-bold">3.2k</p>
                         </div>
                         <div class="basis-[40%] flex">
-                            <a href="https://www.instagram.com/p/CknOzhuptbA/?utm_source=ig_web_copy_link" class="mx-auto text-center border-2 w-full border-black bg-[#F3CA20] p-2 rounded-2xl drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Selengkapnya</a>
+                            <a href="https://www.instagram.com/p/CknOzhuptbA/?utm_source=ig_web_copy_link" target="_blank" class="mx-auto text-center border-2 w-full border-black bg-[#F3CA20] p-2 rounded-2xl drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Selengkapnya</a>
                         </div>
                     </div>
                 </div>

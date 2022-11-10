@@ -1,7 +1,7 @@
 <?= $this->extend('landing/template/default') ?>
 
 <?= $this->section('custom-css'); ?>
-<link rel="stylesheet" href="<?= base_url(); ?>/src/css/template/template.css">
+<link rel="stylesheet" href="../src/css/template/template.min.css">
 <?= $this->endSection('custom-css'); ?>
 
 <?= $this->section('content') ?>
@@ -86,15 +86,12 @@
       </label>
 
       <p class="mt-16">Untuk pembayaran, silahkan transfer sebesar <b>Rp. <span id="nominal">80.000</span> </b>ke bank mandiri No. Rek 1710007291308 a.n. SALSABILA BRILIANA</p>
+      <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm text-slate-700">Jika memiliki kupon, silahkan submit dan membayar sesuai dengan harga pendaftaran dikurangi harga diskon pada kupon tersebut</span>
 
       <label for="kupon" class="block mt-8">
         <span class="block text-sm font-bold text-slate-700">Masukkan Kupon</span>
-        <div class=" bg-white flex justify-between">
-          <input type="text" id="kupon" name="kupon" required class="px-3 py-2 w-[72%] border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-md sm:text-sm focus:ring-1 flex-none" />
-          <button type="button" onclick="verify_kupon('<?= site_url('verify_kupon'); ?>');" id="kupon_btn" class="w-[25%] flex-none bg-[#339969]  border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg sm:text-lg focus:ring-1 font-bold text-white">Cek Kupon</button>
-        </div>
-        <p id="kupon_status_0" class="text-red-700 hidden">kupon salah!</p>
-        <p id="kupon_status_1" class="text-green-700 hidden">kupon benar!</p>
+        <input type="text" id="kupon" name="kupon" class="px-3 py-2 w-full border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-md sm:text-sm focus:ring-1 flex-none" />
+
       </label>
       <label for="bukti_bayar" class="block mt-8">
         <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-bold text-slate-700">Bukti Pembayaran</span>
@@ -113,6 +110,4 @@
 
 <?= $this->section('custom-js') ?>
 <script src="<?= base_url(); ?>/src/js/navbar/menu-initiator.js"></script>
-<script src="<?= base_url(); ?>/src/js/form.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <?= $this->endSection('custom-js') ?>

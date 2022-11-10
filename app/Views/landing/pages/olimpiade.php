@@ -2,7 +2,7 @@
 
 <?= $this->section('custom-css') ?>
 <!-- Local tailwindcss -->
-<link rel="stylesheet" href="src/css/template/template.css">
+<link rel="stylesheet" href="src/css/olimpiade/olimpiade.css">
 <?= $this->endSection('custom-css') ?>
 
 <?= $this->section('content') ?>

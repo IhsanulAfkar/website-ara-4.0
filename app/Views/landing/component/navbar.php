@@ -32,11 +32,11 @@
 </nav>
 
 <!-- Menu Navbar -->
-<div id="menu-list" class="hidden relative">
-  <div class="fixed inset-0 bg-white z-50 p-4">
+<div id="menu-list" class="hidden fixed inset-0 bg-white z-50 p-4 h-full overflow-auto">
+  <div class="">
     <div class="flex items-center justify-between">
       <div class="w-10">
-        <img class="w-full" src="<?= base_url(); ?>/global/icon/fire.svg" alt="">
+        <img class="w-full" src="<?= base_url(); ?>/global/icon/ara.png" alt="">
       </div>
       <div id="close-menu-button" class="w-12">
         <img class="w-full" src="<?= base_url(); ?>/navbar/cross.svg" alt="">
@@ -56,9 +56,9 @@
       <!-- <a class="block text-2xl py-2" href="<?= base_url(); ?>/olimpiade">Daftar CTF</a>
       <a class="block text-2xl py-2" href="<?= base_url(); ?>/olimpiade">Daftar ExploIT</a> -->
     </div>
-    <div class="absolute bottom-8 left-[50%] -translate-x-1/2 w-full px-2">
+    <div class="overflow-auto">
       <p class="text-center text-lg mt-16">Follow <span class="font-bold">ARA 4.0</span></p>
-      <div class="flex justify-around items-center gap-2 mt-4 max-w-xl mx-auto">
+      <div class="flex justify-around items-center gap-2 sm:gap-4 mt-4 w-96 max-w-full mx-auto">
         <a class="block flex-1" href="https://www.instagram.com/ara_its/"><img class="w-full" src="<?= base_url(); ?>/coming_soon/sosmed/ig.png" alt="instagram"></a>
         <a class="block flex-1" href="https://www.youtube.com/channel/UC0jutwJdiQ_MRNSJG0CRYGA"><img class="w-full" src="<?= base_url(); ?>/coming_soon/sosmed/yt.png" alt="youtube"></a>
         <a class="block flex-1" href="https://twitter.com/ara__its"><img class="w-full" src="<?= base_url(); ?>/coming_soon/sosmed/twitter.png" alt="twitter"></a>

@@ -6,8 +6,8 @@
         <div class="relative container mx-auto px-2 pb-8 text-xl ">
             <p class="font-semibold text-[#3FD78F] lg:text-2xl">Follow ARA 4.0 now!!</p>
             <p class="text-4xl font-semibold text-white mt-2 md:text-5xl lg:text-6xl">Our Activities 🤩</p>
-            <div class="md:flex md:flex-nowrap gap-7 mt-24 md:relative md:overflow-auto mx-auto">
-                <div class="border-black bg-white border-2 drop-shadow-[0_4px_0_rgba(0,0,0,1)] w-full rounded-2xl p-6 flex-none max-w-md mb-4">
+            <div class="md:flex md:flex-nowrap gap-7 mt-24 md:relative md:overflow-auto mx-auto lg:w-[85%]">
+                <div class="border-black bg-white border-2 drop-shadow-[0_4px_0_rgba(0,0,0,1)] w-full rounded-2xl p-6 flex-none max-w-md mb-4 mx-auto">
                     <img src="home/olim.png" class="w-full">
                     <div class="mt-4 py-4 font-bold text-4xl">
                         Olimpiade
@@ -30,7 +30,7 @@
                     </div>
                 </div>
 
-                <div class="border-black bg-white border-2 drop-shadow-[0_4px_0_rgba(0,0,0,1)] w-full rounded-2xl p-6 flex-none max-w-md mb-4">
+                <div class="border-black bg-white border-2 drop-shadow-[0_4px_0_rgba(0,0,0,1)] w-full rounded-2xl p-6 flex-none max-w-md mb-4 mx-auto">
                     <img src="home/ctf.png" class="w-full">
                     <div class="mt-4 py-4 font-bold text-4xl">
                         Capture The Flag
@@ -53,7 +53,7 @@
                     </div>
                 </div>
 
-                <div class="border-black bg-white border-2 drop-shadow-[0_4px_0_rgba(0,0,0,1)] w-full rounded-2xl p-6 flex-none max-w-md mb-4">
+                <div class="border-black bg-white border-2 drop-shadow-[0_4px_0_rgba(0,0,0,1)] w-full rounded-2xl p-6 flex-none max-w-md mb-4 mx-auto">
                     <img src="home/exploit.png" class="w-full">
                     <div class="mt-4 py-4 font-bold text-4xl">
                         ExploIT
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="border-black bg-white border-2 drop-shadow-[0_4px_0_rgba(0,0,0,1)] w-full rounded-2xl p-6 flex-none max-w-md mb-4">
+                <div class="border-black bg-white border-2 drop-shadow-[0_4px_0_rgba(0,0,0,1)] w-full rounded-2xl p-6 flex-none max-w-md mb-4 mx-auto">
                     <img src="home/roadshow.png" class="w-full">
                     <div class="mt-4 py-4 font-bold text-4xl">
                         Roadshow IT

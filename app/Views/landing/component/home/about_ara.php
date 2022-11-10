@@ -1,4 +1,4 @@
-<div class="pb-36 ">
+<div class="pb-36 overflow-hidden">
     <section class="relative container mx-auto mt-20">
         <img src="home/vector_3.png" class="absolute left-[-12%] hidden 2xl:block">
         <img src="home/Vector 18.png" class="absolute left-[-12%] top-[62%] -z-10 hidden 2xl:block">

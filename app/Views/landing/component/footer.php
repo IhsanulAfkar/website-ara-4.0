@@ -1,10 +1,10 @@
 <footer class="bg-slate-200 border-t-2 border-black relative py-24 px-2">
-  <img class="hidden md:block w-24 absolute inset-x-1/2 -translate-x-1/2 -top-12" src="<?= base_url(); ?>/footer/smoothcorner.svg" alt="">
+  <img class="block w-24 absolute inset-x-1/2 -translate-x-1/2 -top-12" src="<?= base_url(); ?>/footer/smoothcorner.svg" alt="">
   <img class="hidden md:block w-12 absolute left-0 rotate-180" src="<?= base_url(); ?>/event/blue-circle.svg" alt="">
   <img class="hidden md:block w-8 absolute right-0" src="<?= base_url(); ?>/event/circle-yellow.svg" alt="">
 
   <div class="relative container flex flex-wrap flex-col sm:flex-row sm:px-16 gap-16 mx-auto">
-    <img class="hidden md:block w-8 absolute inset-x-1/2 top-56" src="<?= base_url(); ?>/event/rectangle.svg" alt="">
+    <img class="hidden md:block w-8 absolute inset-x-1/3 lg:inset-x-1/2 top-48" src="<?= base_url(); ?>/event/rectangle.svg" alt="">
     <img class="hidden md:block w-8 absolute inset-x-2/3 -top-16" src="<?= base_url(); ?>/event/rectangle-blue.svg" alt="">
     <img class="hidden md:block w-8 absolute right-8 top-36" src="<?= base_url(); ?>/event/rectangle-green.svg" alt="">
 

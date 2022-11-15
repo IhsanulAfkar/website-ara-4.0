@@ -38,7 +38,7 @@
                 <a href="#" class="text-2xl">Konfirmasi Team</a>
             </div>
             <div class="flex">
-                <a href="#" class="text-center bg-yellow-500 font-bold text-xl py-1 px-5 border-2 border-black absolute inset-x-10 bottom-[10%]">Keluar</a>
+                <a href="<?= base_url(); ?>/verify/logout" class="text-center bg-yellow-500 font-bold text-xl py-1 px-5 border-2 border-black absolute inset-x-10 bottom-[10%]">Keluar</a>
             </div>
         </div>
     </div>

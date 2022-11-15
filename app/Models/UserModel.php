@@ -23,4 +23,16 @@ class UserModel extends Model
     protected $useTimestamps = true;
     protected $createdField = 'user_date_created';
     protected $updatedField = 'user_date_updated';
+
+    public function getUser($username, $password)
+    {
+        $query = $this->where($this->user_username, $username)->first();
+        if($query){
+            if(password_verify($password, $query[$this->user_password])){
+                return $query;
+            }
+        }else{
+            return false;
+        }
+    }
 }

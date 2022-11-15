@@ -49,6 +49,10 @@ $routes->get('/register/olimpiade', 'Home::registerOlimpiade');
 $routes->add('/home/coba', 'Home::coba');
 $routes->post('/verify-regis-olim', 'VerifyRegistrasi::verify_regis_olim');
 $routes->get('/verify_kupon/(:any)', 'Api::verify_kupon/$1');
+$routes->get('/dashboard/admin-olim/konfirmasi-team', 'dashboard\AdminOlim::konfirmasi_team');
+$routes->get('/dashboard/admin-olim/list-team', 'dashboard\AdminOlim::confirmed_team');
+//route for verify_konfirmasi_team
+$routes->get('/dashboard/admin-olim/verify-konfirmasi-team/(:any)/(:any)', 'dashboard\AdminOlim::verify_konfirmasi_team/$1/$2');
 
 /*
  * --------------------------------------------------------------------

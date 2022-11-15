@@ -49,19 +49,4 @@ abstract class BaseController extends Controller
 
         // E.g.: $this->session = \Config\Services::session();
     }
-
-    protected function sendEmail($alamat_tujuan, $subject, $message)
-    {
-        $email = \Config\Services::email();
-        $alamat_sender = "arahmit2022@gmail.com";
-        $email->setTo($alamat_tujuan);
-        $email->setFrom($alamat_sender, 'ARA 4.0');
-        $email->setSubject($subject);
-        $email->setMessage($message);
-
-        if (!$email->send()) {
-            $dd = $email->printDebugger(['headers']);
-            print_r($dd);
-        }
-    }
 }

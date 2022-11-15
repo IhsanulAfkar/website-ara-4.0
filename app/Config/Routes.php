@@ -45,10 +45,25 @@ $routes->get('/ara', 'Home::about_ara');
 $routes->get('/ctf', 'Home::ctf');
 $routes->get('/exploit', 'Home::exploit');
 $routes->get('/auth/login', 'Home::login');
-$routes->get('/register/olimpiade', 'Home::registerOlimpiade');
+
 $routes->add('/home/coba', 'Home::coba');
-$routes->post('/verify-regis-olim', 'VerifyRegistrasi::verify_regis_olim');
+
+$routes->get('/register/olimpiade', 'Home::registerOlimpiade');
+$routes->get('/verify-regis-olim', 'VerifyRegistrasi::verify_regis_olim');
+
+$routes->match(['get', 'post'],'/verify/login', 'VerifyLogin::login', ["filter" => "noauth"]);
+$routes->get('/verify/logout', 'VerifyLogin::logout');
+
 $routes->get('/verify_kupon/(:any)', 'Api::verify_kupon/$1');
+
+$routes->group("dashboard", ["filter" => "auth"], function ($routes) {
+    $routes->group("admin-olim", ["filter" => "auth"], function ($routes) {
+        $routes->get('konfirmasi-team', 'dashboard\AdminOlim::konfirmasi_team');
+        $routes->get('list-team', 'dashboard\AdminOlim::confirmed_team');
+        $routes->get('verify-konfirmasi-team/(:any)/(:any)', 'dashboard\AdminOlim::verify_konfirmasi_team/$1/$2');
+    });
+});
+//route for verify_konfirmasi_team
 
 /*
  * --------------------------------------------------------------------

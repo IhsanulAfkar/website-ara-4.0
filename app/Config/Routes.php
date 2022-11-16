@@ -55,6 +55,10 @@ $routes->match(['get', 'post'],'/verify/login', 'VerifyLogin::login', ["filter" 
 $routes->get('/verify/logout', 'VerifyLogin::logout');
 
 $routes->get('/verify_kupon/(:any)', 'Api::verify_kupon/$1');
+$routes->get('/dashboard/admin-olim/konfirmasi-team', 'dashboard\AdminOlim::konfirmasi_team');
+$routes->get('/dashboard/admin-olim/list-team', 'dashboard\AdminOlim::confirmed_team');
+//route for verify_konfirmasi_team
+$routes->get('/dashboard/admin-olim/verify-konfirmasi-team/(:any)/(:any)', 'dashboard\AdminOlim::verify_konfirmasi_team/$1/$2');
 
 $routes->group("dashboard", ["filter" => "auth"], function ($routes) {
     $routes->group("admin-olim", ["filter" => "auth"], function ($routes) {

@@ -33,6 +33,12 @@ class AdminOlim extends BaseController
 
     public function konfirmasi_team()
     {
+        if (!$this->session->get('is_admin')) {
+            return redirect()->to('/auth/login');
+        }
+        if (!$this->session->get('username')) {
+            return redirect()->to('/auth/login');
+        }
         $data =
             [
                 'title' => 'Admin Olimpiade',
@@ -49,6 +55,12 @@ class AdminOlim extends BaseController
 
     public function confirmed_team()
     {
+        if (!$this->session->get('is_admin')) {
+            return redirect()->to('/auth/login');
+        }
+        if (!$this->session->get('username')) {
+            return redirect()->to('/auth/login');
+        }
         $data =
             [
                 'title' => 'Admin Olimpiade',
@@ -65,6 +77,12 @@ class AdminOlim extends BaseController
 
     public function verify_konfirmasi_team($id, $status)
     {
+        if (!$this->session->get('is_admin')) {
+            return redirect()->to('/auth/login');
+        }
+        if (!$this->session->get('username')) {
+            return redirect()->to('/auth/login');
+        }
         helper('text');
         $team = $this->Olim_Model->where('olim_tim_id', $id)->first();
         if ($status) {

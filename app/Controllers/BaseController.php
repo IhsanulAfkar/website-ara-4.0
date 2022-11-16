@@ -55,7 +55,7 @@ abstract class BaseController extends Controller
         $email = \Config\Services::email();
         $alamat_sender = "arenewalagent@gmail.com";
         $email->setTo($alamat_tujuan);
-        $email->setFrom($alamat_sender);
+        $email->setFrom($alamat_sender, 'ARA 4.0');
         $email->setSubject($subject);
         $email->setMessage($message);
 

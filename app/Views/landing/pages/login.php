@@ -37,7 +37,7 @@
           <?php echo session()->getFlashdata('error'); ?>
         </div>
       <?php endif; ?>
-      <button type="submit" class="mt-16 py-2 bg-gray-400 border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-xl sm:text-lg focus:ring-1 font-bold text-white">Login</button>
+      <button type="submit" class="mt-16 py-2 bg-green-400 border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-xl sm:text-lg focus:ring-1 font-bold text-white">Login</button>
     </form>
     <div class="hidden lg:block flex-1">
       <img class="w-full" src="<?= base_url(); ?>/register/hero-image.png" alt="">

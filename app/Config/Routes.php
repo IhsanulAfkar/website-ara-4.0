@@ -49,9 +49,9 @@ $routes->get('/auth/login', 'Home::login');
 $routes->add('/home/coba', 'Home::coba');
 
 $routes->get('/register/olimpiade', 'Home::registerOlimpiade');
-$routes->get('/verify-regis-olim', 'VerifyRegistrasi::verify_regis_olim');
+$routes->post('/verify-regis-olim', 'VerifyRegistrasi::verify_regis_olim');
 
-$routes->match(['get', 'post'],'/verify/login', 'VerifyLogin::login', ["filter" => "noauth"]);
+$routes->match(['get', 'post'], '/verify/login', 'VerifyLogin::login', ["filter" => "noauth"]);
 $routes->get('/verify/logout', 'VerifyLogin::logout');
 
 $routes->get('/verify_kupon/(:any)', 'Api::verify_kupon/$1');

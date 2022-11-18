@@ -25,28 +25,28 @@ class NoAuth implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null)
     {
-        if(session()->get('isLoggedIn')){
-            if(session()->get('is_admin')) {
-                if(session()->get('lomba') == "ctf") {
+        if (session()->get('isLoggedIn')) {
+            if (session()->get('is_admin')) {
+                if (session()->get('lomba') == "ctf") {
                     return redirect()->to(base_url('dashboard/admin-ctf'));
                 }
-                if(session()->get('lomba') == "olim") {
+                if (session()->get('lomba') == "olim") {
                     return redirect()->to(base_url('dashboard/admin-olim'));
                 }
-                if(session()->get('lomba') == "exploit") {
+                if (session()->get('lomba') == "exploit") {
                     return redirect()->to(base_url('dashboard/admin-exploit'));
                 }
             }
-            if(session()->get('is_admin') == false) {
-               if(session()->get('lomba') == "ctf") {
+            if (session()->get('is_admin') == false) {
+                if (session()->get('lomba') == "ctf") {
                     return redirect()->to(base_url('dashboard/user-ctf'));
                 }
-                if(session()->get('lomba') == "olim") {
+                if (session()->get('lomba') == "olim") {
                     return redirect()->to(base_url('dashboard/user-olim'));
                 }
-                if(session()->get('lomba') == "exploit") {
+                if (session()->get('lomba') == "exploit") {
                     return redirect()->to(base_url('dashboard/user-exploit'));
-                } 
+                }
             }
         }
     }

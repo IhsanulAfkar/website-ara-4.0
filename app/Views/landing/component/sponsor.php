@@ -19,6 +19,9 @@
       <div class="inline-block h-36 p-4 border-2 border-black rounded-2xl bg-[#F9FAFF] drop-shadow-[0_8px_0_rgba(0,0,0,1)]">
         <img class="h-full object-contain" src="global/sponsor/kencana.png" alt="">
       </div>
+      <div class="inline-block h-36 p-3 border-2 border-black rounded-2xl bg-[#F9FAFF] drop-shadow-[0_8px_0_rgba(0,0,0,1)]">
+        <img class="h-full object-contain" src="global/sponsor/dewaweb-chp-horizontal-logo-rgb.png" alt="">
+      </div>          
     </div>
   </div>
 </section>

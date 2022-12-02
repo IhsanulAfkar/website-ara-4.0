@@ -22,9 +22,55 @@
 <!-- for active header -->
 
 <body class="font-poppins">
-    <img src="<?= base_url(); ?>/dashboard/message.svg" class="absolute top-0 right-0">
+    <div id="menu-list" class="hidden fixed inset-0 bg-white z-50 p-4 h-full overflow-auto">
+        <div class="relative h-full ">
+            <div class="flex items-center justify-between">
+                <div class="w-10">
+                    <img class="w-full" src="<?= base_url(); ?>/global/icon/ara.png" alt="">
+                </div>
+                <div id="close-menu-button" class="w-12">
+                    <img class="w-full" src="<?= base_url(); ?>/navbar/cross.svg" alt="">
+                </div>
+            </div>
+            <div class="w-full text-center">
+                <img src="<?= base_url(); ?>/dashboard/pic.svg" class="mx-auto mt-20">
+                <p class="text-2xl mt-8">A Renewal Agent 4.0</p>
+                <p class="text-4xl font-bold mt-14"><?= $event; ?></p>
+            </div>
+            <div class="absolute bottom-4 w-full">
+                <div class="flex w-full justify-center">
+                    <a href="<?= base_url(); ?>/verify/logout" class="text-center bg-yellow-500 font-bold text-xl py-1 px-5 border-2 border-black">Keluar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="<?= base_url(); ?>/dashboard/message.svg" class="absolute top-0 right-0 hidden md:block">
+    <nav class="py-4 bg-white border-b-2 border-black sm:px-16 fixed inset-x-0 top-0 z-10 md:hidden">
+        <div class="container px-2 mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-16">
+                <a href="<?= base_url(); ?>" class="w-8">
+                    <img class="w-full" src="<?= base_url(); ?>/global/icon/logo_ara.svg" alt="">
+                </a>
+            </div>
 
-    <div class="border-solid border-r-[1px] border-black h-full  py-5 px-10 w-[300px] overflow-hidden fixed top-0 left-0 z-10">
+            <div id="open-menu-button" class="block lg:hidden text-3xl px-2 py-1 bg-yellow-500 border-2 border-black">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <div id="menu-list" class="hidden fixed inset-0 bg-white z-50 p-4 h-full overflow-auto">
+        <div class="">
+            <div class="flex items-center justify-between">
+                <div class="w-10">
+                    <img class="w-full" src="<?= base_url(); ?>/global/icon/ara.png" alt="">
+                </div>
+                <div id="close-menu-button" class="w-12">
+                    <img class="w-full" src="<?= base_url(); ?>/navbar/cross.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="border-solid border-r-[1px] border-black h-full  py-5 px-10 xl:w-[300px] w-[250px] overflow-hidden hidden fixed top-0 left-0 z-10 md:block">
         <div class="">
             <img src="<?= base_url(); ?>/dashboard/star.svg" class="absolute top-0 right-0">
             <img src="<?= base_url(); ?>/dashboard/Watch.svg" class="absolute top-[65%] left-0">
@@ -32,42 +78,24 @@
                 <img src="<?= base_url(); ?>/dashboard/pic.svg" class="mx-auto">
             </div>
             <p class="text-3xl text-center">A Renewal Agent 4.0</p>
-            <p class="font-bold text-3xl text-center my-[60px]">Olimpiade</p>
-            <div class="mt-[40px] flex flex-col gap-5 font-bold">
-                <a href="#" class="text-2xl text-yellow-500">List Team</a>
-                <a href="#" class="text-2xl">Konfirmasi Team</a>
-            </div>
+            <p class="font-bold text-3xl text-center my-[60px]"><?= $event; ?></p>
             <div class="flex">
                 <a href="<?= base_url(); ?>/verify/logout" class="text-center bg-yellow-500 font-bold text-xl py-1 px-5 border-2 border-black absolute inset-x-10 bottom-[10%]">Keluar</a>
             </div>
         </div>
     </div>
-    <div class="p-5 mt-6 ml-[300px]">
-        <div class="text-4xl font-bold">List Team 😁</div>
-        <div class="mt-[40px] h-[180px] bg-[#4C1FAD] text-white rounded-xl p-10 relative overflow-hidden border-black drop-shadow-[0_4px_0_rgba(0,0,0,1)]">
-            <div class="flex items-center h-full">
-                <p class=" font-bold text-5xl ">Halo, Nama</p>
+    <div class="p-5 mt-20 md:ml-[250px] xl:ml-[300px] md:mt-6">
+        <div class="text-4xl font-bold mb-4">Pengumuman 😁</div>
+        <div class="md:mt-[40px] h-[140px] md:h-[180px] bg-[#4C1FAD] text-white rounded-xl p-10 relative overflow-hidden border-black drop-shadow-[0_4px_0_rgba(0,0,0,1)]">
+            <div class="flex items-center h-full justify-center lg:justify-start">
+                <p class="font-bold text-5xl ">Halo, <?= $nama_tim; ?></p>
             </div>
-            <img src="<?= base_url(); ?>/dashboard/icon.svg" class="absolute right-0 top-0">
-        </div>
-        <div class="mt-4 flex gap-40 mx-auto text-2xl">
-            <div class="flex text-center bg-red-500 font-bold text-white w-full py-4 px-6 rounded-xl border-2 border-black drop-shadow-[0_2px_0_rgba(0,0,0,1)] items-center">
-                <p class="w-full text-left">Jumlah Peserta</p>
-                <p class="w-full text-6xl">85</p>
-            </div>
-            <div class="flex text-center bg-green-500 font-bold text-white w-full py-4 px-6 rounded-xl border-2 border-black drop-shadow-[0_2px_0_rgba(0,0,0,1)] items-center">
-                <p class="w-full text-left">Peserta Terkonfirmasi</p>
-                <p class="w-full text-6xl">85</p>
-            </div>
-            <div class="flex text-center bg-yellow-500 font-bold text-white w-full py-4 px-6 rounded-xl border-2 border-black drop-shadow-[0_2px_0_rgba(0,0,0,1)] items-center">
-                <p class="w-full text-left">Peserta Pending</p>
-                <p class="w-full text-6xl">85</p>
-            </div>
+            <img src="<?= base_url(); ?>/dashboard/icon.svg" class="absolute right-0 top-0 hidden lg:block">
         </div>
         <?= $this->renderSection('content') ?>
     </div>
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="<?= base_url(); ?>/src/js/navbar/menu-initiator.js"></script>
     <?= $this->renderSection('custom-js') ?>
 </body>
 

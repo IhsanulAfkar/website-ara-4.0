@@ -69,6 +69,6 @@ class Home extends BaseController
     public function coba()
     {
         $data['title'] = 'Dashboard';
-        return view('landing/pages/dashboard/dashboard', $data);
+        return view('landing/pages/dashboard/user/olim', $data);
     }
 }

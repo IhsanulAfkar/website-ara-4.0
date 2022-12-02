@@ -9,7 +9,7 @@
 <?= $this->include("landing/component/home/about_ara"); ?>
 <?= $this->include("landing/component/home/activities"); ?>
 <?= $this->include("landing/component/home/hmit"); ?>
-
+<?= $this->include("landing/component/sponsor"); ?>
 <?= $this->endSection('content') ?>
 <?= $this->section('custom-js') ?>
 <script src="src/js/navbar/menu-initiator.js"></script>

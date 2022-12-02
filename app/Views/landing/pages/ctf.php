@@ -6,7 +6,7 @@
 
 <?= $this->section('content') ?>
 
-<?= $this->include("landing/component/ctf/soon_count"); ?>
+<?= $this->include("landing/component/ctf/detailctf"); ?>
 
 <?= $this->endSection('content') ?>
 <?= $this->section('custom-js') ?>

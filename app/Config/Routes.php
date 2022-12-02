@@ -66,6 +66,7 @@ $routes->group("dashboard", ["filter" => "auth"], function ($routes) {
         $routes->get('list-team', 'dashboard\AdminOlim::confirmed_team');
         $routes->get('verify-konfirmasi-team/(:any)/(:any)', 'dashboard\AdminOlim::verify_konfirmasi_team/$1/$2');
     });
+    $routes->get('olimpiade', 'dashboard\User::olim');
 });
 //route for verify_konfirmasi_team
 

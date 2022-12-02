@@ -4,6 +4,7 @@
     <table class="table-auto border-collapse w-screen  text-center">
         <thead class="">
             <tr class="bg-slate-300">
+                <th class="p-2 border border-slate-800">Id Tim</th>
                 <th class="p-2 border border-slate-800">Nama Tim</th>
                 <th class="p-2 border border-slate-800">Institusi / Sekolah</th>
                 <th class="p-2 border border-slate-800">Nama Ketua</th>
@@ -13,8 +14,9 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach($team_list as $team) : ?>
+            <?php foreach ($team_list as $team) : ?>
                 <tr>
+                    <td class="p-2 border border-slate-300"><?= $team['olim_tim_id']; ?></td>
                     <td class="p-2 border border-slate-300"><?= $team['olim_tim_nama']; ?></td>
                     <td class="p-2 border border-slate-300"><?= $team['olim_asal_institusi']; ?></td>
                     <td class="p-2 border border-slate-300"><?= $team['olim_nama_ketua']; ?></td>

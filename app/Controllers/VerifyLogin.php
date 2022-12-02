@@ -61,33 +61,33 @@ class VerifyLogin extends BaseController
                     }
                 }
 
-                // if ($query = $this->userModel->getUser($username, $password)) {
-                //     $data = [
-                //         'id' => $query['user_id'],
-                //         'lomba' => $query['user_lomba'],
-                //         'tim' => $query['user_tim_nama'],
-                //         'username' => $query['user_username'],
-                //         'isLoggedIn' => true,
-                //         'is_admin' => false,
-                //     ];
-                //     $this->session->set($data);
+                if ($query = $this->userModel->getUser($username, $password)) {
+                    $data = [
+                        'id' => $query['user_id'],
+                        'lomba' => $query['user_lomba'],
+                        'tim' => $query['user_tim_nama'],
+                        'username' => $query['user_username'],
+                        'isLoggedIn' => true,
+                        'is_admin' => false,
+                    ];
+                    $this->session->set($data);
 
-                //     switch ($query['user_lomba']) {
-                //         case 'ctf':
-                //             return redirect()->to('/ctf');
-                //             break;
-                //         case 'olim':
-                //             return redirect()->to('/olim');
-                //             break;
-                //         case 'exploit':
-                //             return redirect()->to('/exploit');
-                //             break;
+                    switch ($query['user_lomba']) {
+                        case 'ctf':
+                            return redirect()->to('/dashboard/ctf');
+                            break;
+                        case 'olim':
+                            return redirect()->to('/dashboard/olimpiade');
+                            break;
+                        case 'exploit':
+                            return redirect()->to('/dashboard/exploit');
+                            break;
 
-                //         default:
-                //             return redirect()->to('/auth/login');
-                //             break;
-                //     }
-                // }
+                        default:
+                            return redirect()->to('/auth/login');
+                            break;
+                    }
+                }
 
                 // $admin = $this->adminModel->where('admin_username', $username)->first();
                 // $user = $this->userModel->where('user_username', $username)->first();

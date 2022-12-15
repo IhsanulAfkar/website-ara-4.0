@@ -61,9 +61,9 @@ class Home extends BaseController
         $data =
             [
                 'title' => 'Olimpiade',
-                'validation' => \Config\Services::validation()
+                // 'validation' => \Config\Services::validation()
             ];
-        return view('landing/pages/register-olimpiade', $data);
+        return view('landing/pages/close_olim', $data);
     }
 
     public function coba()

@@ -11,18 +11,7 @@ class VerifyRegistrasi extends BaseController
 {
     public function __construct()
     {
-        
-        if (!isset($_SESSION)) {
-
-            // server should keep session data for AT LEAST 24 hour
-            ini_set('session.gc_maxlifetime', 60 * 60 * 24);
-
-            // each client should remember their session id for EXACTLY 24 hour
-            session_set_cookie_params(60 * 60 * 24);
-            session_start();
-        }
-        
-        $this->session = \Config\Services::session();;
+        // $this->session = \Config\Services::session();;
         $this->Olim_Model = new OlimModel();
         $this->Exploit_Model = new ExploitModel();
 
@@ -352,21 +341,25 @@ class VerifyRegistrasi extends BaseController
 
         $data = [
             'exploit_tim_nama' => $tim_nama,
-            'exploit_ketua_nama' => $ketua_nama,
+            'exploit_nama_ketua' => $ketua_nama,
             'exploit_asal_institusi' => $asal_institusi,
-            'exploit_bidang_iot' => $bidang_iot,
+            'exploit_bidang' => $bidang_iot,
             'exploit_email' => $email_ketua,
             'exploit_phone' => $phone_ketua,
             'exploit_nama_produk' => $nama_produk,
-            'exploit_deskripsi_produk' => $deskripsi_produk,
+            'exploit_desk_produk' => $deskripsi_produk,
             'exploit_link_youtube' => $link_youtube,
             'exploit_surat_kontrak' => $moved_surat_kontrak,
         ];
 
-        $subject = 'Email Konfirmasi Pendaftaran Olimpiade';
-        $message = "Halo {$tim_nama} dari {$asal_institusi},</br>
+        // Kirim Email
+        $email = \Config\Services::email();
+        $email->setTo($email_ketua);
+        $email->setFrom('arenewalagent@gmail.com', 'ARA 4.0');
+        $email->setSubject('Email Konfirmasi Pendaftaran ExploIT');
+        $body = "Halo {$tim_nama} dari {$asal_institusi},</br>
         </br>
-        Terima kasih sudah mendaftar pada event kami, \"Olimpiade.\"<br>
+        Terima kasih sudah mendaftar pada event kami, \"ExploIT.\"<br>
         <br>
         Dengan ini, kami telah menerima berkas Anda. Kami akan mengecek kelengkapan berkas yang sudah dikirimkan sesuai dengan persyaratan kami. <br>
         <br>
@@ -376,16 +369,14 @@ class VerifyRegistrasi extends BaseController
         Salam Hormat,<br>
         <br>
         A Renewal Agents 4.0";
-
-        if ($this->sendEmail($email_ketua, $subject, $message)) {
-            $this->ExploitModel->save($data);
-            $this->session->setFlashdata('msg', 'Registrasi berhasil');
-            return redirect()->to('/register/exploit');
+        $email->setMessage($body);
+        if ($email->send()) {
+            $this->Exploit_Model->save($data);
+            // $this->session->setFlashdata('msg', 'Registrasi berhasil');
+            return redirect()->to('/register/olimpiade');
         } else {
-            $this->session->setFlashdata('msg', 'Registrasi gagal');
-            return redirect()->to('/register/exploit');
+            $dd = $email->printDebugger(['headers']);
+            print_r($dd);
         }
-
-        // dd($data);
     }
 }

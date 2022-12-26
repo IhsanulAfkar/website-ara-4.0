@@ -51,6 +51,9 @@ $routes->add('/home/coba', 'Home::coba');
 $routes->get('/register/olimpiade', 'Home::registerOlimpiade');
 $routes->post('/verify-regis-olim', 'VerifyRegistrasi::verify_regis_olim');
 
+$routes->get('/register/exploit', 'Home::registerExploit');
+$routes->post('/verify-regis-exploit', 'VerifyRegistrasi::verify_regis_exploit');
+
 $routes->match(['get', 'post'], '/verify/login', 'VerifyLogin::login', ["filter" => "noauth"]);
 $routes->get('/verify/logout', 'VerifyLogin::logout');
 

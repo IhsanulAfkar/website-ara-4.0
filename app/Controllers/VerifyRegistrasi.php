@@ -11,7 +11,7 @@ class VerifyRegistrasi extends BaseController
 {
     public function __construct()
     {
-        // $this->session = \Config\Services::session();;
+        $this->session = \Config\Services::session();
         $this->Olim_Model = new OlimModel();
         $this->Exploit_Model = new ExploitModel();
 
@@ -226,7 +226,7 @@ class VerifyRegistrasi extends BaseController
 
     public function verify_regis_exploit()
     {
-        dd("masuk kan ya");
+        // dd("masuk kan ya");
         $fieldError = 'Field ini harus diisi';
         $pdfSizeError = 'Melebihi batas max 1 mb';
         $pdfTypeError = 'File ini bukan pdf';
@@ -372,8 +372,8 @@ class VerifyRegistrasi extends BaseController
         $email->setMessage($body);
         if ($email->send()) {
             $this->Exploit_Model->save($data);
-            // $this->session->setFlashdata('msg', 'Registrasi berhasil');
-            return redirect()->to('/register/olimpiade');
+            $this->session->setFlashdata('msg', 'Registrasi berhasil');
+            return redirect()->to('/register/exploit');
         } else {
             $dd = $email->printDebugger(['headers']);
             print_r($dd);

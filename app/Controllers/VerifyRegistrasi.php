@@ -5,13 +5,16 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 
 use App\Models\OlimModel;
+use App\Models\ExploitModel;
 
 class VerifyRegistrasi extends BaseController
 {
     public function __construct()
     {
-        $this->session = \Config\Services::session();;
+        $this->session = \Config\Services::session();
         $this->Olim_Model = new OlimModel();
+        $this->Exploit_Model = new ExploitModel();
+
     }
 
     private function moveFile($path, $file)
@@ -219,5 +222,161 @@ class VerifyRegistrasi extends BaseController
             print_r($dd);
         }
         // Insert ke db dan redirect ke finish regist
+    }
+
+    public function verify_regis_exploit()
+    {
+        // dd("masuk kan ya");
+        $fieldError = 'Field ini harus diisi';
+        $pdfSizeError = 'Melebihi batas max 1 mb';
+        $pdfTypeError = 'File ini bukan pdf';
+
+        $validationRules = [
+            'tim_nama' => [
+                'label' => 'tim_nama',
+                'rules' => 'required|is_unique[exploit.exploit_tim_nama]',
+                'errors' => [
+                    'required' => $fieldError,
+                    'is_unique' => 'Nama tim sudah terdaftar'
+                ]
+            ],
+            'ketua_nama' => [
+                'label' => 'ketua_nama',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => $fieldError,
+                ]
+            ],
+            'asal_institusi' => [
+                'label' => 'asal_institusi',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => $fieldError,
+                ]
+            ],
+            'bidang_iot' => [
+                'label' => 'bidang_iot',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => $fieldError,
+                ]
+            ],
+            'email_ketua' => [
+                'label' => 'email_ketua',
+                'rules' => 'required|valid_email|is_unique[exploit.exploit_email]',
+                'errors' => [
+                    'required' => $fieldError,
+                    'valid_email' => 'Email tidak valid',
+                    'is_unique' => 'Email sudah terdaftar'
+                ]
+            ],
+            'phone_ketua' => [
+                'label' => 'phone_ketua',
+                'rules' => 'required|is_unique[exploit.exploit_phone]|numeric',
+                'errors' => [
+                    'required' => $fieldError,
+                    'is_unique' => 'Nomor sudah terdaftar',
+                    'numeric' => 'Nomor harus berupa angka'
+                ]
+            ],
+            'nama_produk' => [
+                'label' => 'nama_produk',
+                'rules' => 'required|is_unique[exploit.exploit_nama_produk]',
+                'errors' => [
+                    'required' => $fieldError,
+                    'is_unique' => 'Nama produk sudah terdaftar'
+                ]
+            ],
+            'deskripsi_produk' => [
+                'label' => 'deskripsi_produk',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => $fieldError,
+                ]
+            ],
+            'link_youtube' => [
+                'label' => 'link_youtube',
+                'rules' => 'required|valid_url|is_unique[exploit.exploit_link_youtube]',
+                'errors' => [
+                    'required' => $fieldError,
+                    'valid_url' => 'Url tidak valid',
+                    'is_unique' => 'Url sudah terdaftar'
+                ]
+            ],
+            'surat_kontrak' => [
+                'label'     => 'surat_kontrak',
+                'rules'     => 'uploaded[surat_kontrak]|max_size[surat_kontrak, 1024]|mime_in[surat_kontrak,application/pdf]',
+                'errors'    => [
+                    'uploaded'  => 'Field ini harus diisi',
+                    'max_size'  => $pdfSizeError,
+                    'mime_in'   => $pdfTypeError,
+                ]
+            ],
+        ];
+
+        if (!$this->validate($validationRules)) {
+            return redirect()->to('/register/exploit')->withInput();
+        }
+
+        // data tim
+        $tim_nama = $this->request->getVar('tim_nama');
+        $ketua_nama = $this->request->getVar('ketua_nama');
+        $asal_institusi = $this->request->getVar('asal_institusi');
+        $bidang_iot = $this->request->getVar('bidang_iot');
+        $email_ketua = $this->request->getVar('email_ketua');
+        $phone_ketua = $this->request->getVar('phone_ketua');
+
+        // data produk
+        $nama_produk = $this->request->getVar('nama_produk');
+        $deskripsi_produk = $this->request->getVar('deskripsi_produk');
+        $link_youtube = $this->request->getVar('link_youtube');
+
+        $surat_kontrak = $this->request->getFile('surat_kontrak');
+
+        // Define path
+        $surat_kontrak_path = 'uploads/expoit/surat_kontrak/';
+
+        // Pindah file + rename
+        $moved_surat_kontrak = $this->moveFile($surat_kontrak_path, $surat_kontrak);
+
+        $data = [
+            'exploit_tim_nama' => $tim_nama,
+            'exploit_nama_ketua' => $ketua_nama,
+            'exploit_asal_institusi' => $asal_institusi,
+            'exploit_bidang' => $bidang_iot,
+            'exploit_email' => $email_ketua,
+            'exploit_phone' => $phone_ketua,
+            'exploit_nama_produk' => $nama_produk,
+            'exploit_desk_produk' => $deskripsi_produk,
+            'exploit_link_youtube' => $link_youtube,
+            'exploit_surat_kontrak' => $moved_surat_kontrak,
+        ];
+
+        // Kirim Email
+        $email = \Config\Services::email();
+        $email->setTo($email_ketua);
+        $email->setFrom('arenewalagent@gmail.com', 'ARA 4.0');
+        $email->setSubject('Email Konfirmasi Pendaftaran ExploIT');
+        $body = "Halo {$tim_nama} dari {$asal_institusi},</br>
+        </br>
+        Terima kasih sudah mendaftar pada event kami, \"ExploIT.\"<br>
+        <br>
+        Dengan ini, kami telah menerima berkas Anda. Kami akan mengecek kelengkapan berkas yang sudah dikirimkan sesuai dengan persyaratan kami. <br>
+        <br>
+        Terima kasih.<br>
+        <br>
+        --<br>
+        Salam Hormat,<br>
+        <br>
+        A Renewal Agents 4.0";
+        $email->setMessage($body);
+        if ($email->send()) {
+            $this->Exploit_Model->save($data);
+            $this->session->setFlashdata('msg', 'Registrasi berhasil');
+            return redirect()->to('/register/exploit');
+        } else {
+            $dd = $email->printDebugger(['headers']);
+            print_r($dd);
+        }
     }
 }

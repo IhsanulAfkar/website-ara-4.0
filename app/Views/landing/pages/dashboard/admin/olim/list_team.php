@@ -1,6 +1,7 @@
 <?= $this->extend('landing/component/dashboard/template_olim'); ?>
 <?= $this->section('content'); ?>
 <section class="mt-4 w-full overflow-auto h-[500px] border-2 border-black">
+    <!--  -->
     <table class="table-auto border-collapse w-screen  text-center">
         <thead class="">
             <tr class="bg-slate-300">

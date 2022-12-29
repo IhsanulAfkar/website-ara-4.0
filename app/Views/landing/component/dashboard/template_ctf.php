@@ -39,13 +39,13 @@
             <p class="font-bold text-3xl text-center my-[60px]"><?= $event ?></p>
             <?php if($step !== 'Konfirmasi'): ?>
             <div class="mt-[40px] flex flex-col gap-5 font-bold">
-                <a href="<?= base_url() ?>/dashboard/admin-olim/list-team" class="text-2xl text-yellow-500">List Team</a>
-                <a href="<?= base_url() ?>/dashboard/admin-olim/konfirmasi-team" class="text-2xl">Konfirmasi Team</a>
+                <a href="<?= base_url() ?>/dashboard/admin-ctf/list-team" class="text-2xl text-yellow-500">List Team</a>
+                <a href="<?= base_url() ?>/dashboard/admin-ctf/konfirmasi-team" class="text-2xl">Konfirmasi Team</a>
             </div>
             <?php else: ?>
             <div class="mt-[40px] flex flex-col gap-5 font-bold">
-                <a href="<?= base_url() ?>/dashboard/admin-olim/list-team" class="text-2xl">List Team</a>
-                <a href="<?= base_url() ?>/dashboard/admin-olim/konfirmasi-team" class="text-2xl text-yellow-500">Konfirmasi Team</a>
+                <a href="<?= base_url() ?>/dashboard/admin-ctf/list-team" class="text-2xl">List Team</a>
+                <a href="<?= base_url() ?>/dashboard/admin-ctf/konfirmasi-team" class="text-2xl text-yellow-500">Konfirmasi Team</a>
             </div>
             <?php endif;?>
             <div class="flex">

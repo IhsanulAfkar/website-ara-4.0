@@ -50,10 +50,10 @@ $routes->add('/home/coba', 'Home::coba');
 
 $routes->get('/register/olimpiade', 'Home::registerOlimpiade');
 $routes->post('/verify-regis-olim', 'VerifyRegistrasi::verify_regis_olim');
-
-// $routes->get('/register/exploit', 'Home::registerExploit');
-// $routes->post('/verify-regis-exploit', 'VerifyRegistrasi::verify_regis_exploit');
-
+// 
+$routes->get('/register/exploit', 'Home::registerExploit');
+$routes->post('/verify-regis-exploit', 'VerifyRegistrasi::verify_regis_exploit');
+// 
 $routes->match(['get', 'post'], '/verify/login', 'VerifyLogin::login', ["filter" => "noauth"]);
 $routes->get('/verify/logout', 'VerifyLogin::logout');
 
@@ -68,6 +68,10 @@ $routes->group("dashboard", ["filter" => "auth"], function ($routes) {
         $routes->get('konfirmasi-team', 'dashboard\AdminOlim::konfirmasi_team');
         $routes->get('list-team', 'dashboard\AdminOlim::confirmed_team');
         $routes->get('verify-konfirmasi-team/(:any)/(:any)', 'dashboard\AdminOlim::verify_konfirmasi_team/$1/$2');
+    });
+    $routes->group("admin-exploit", ["filter" => "auth"], function ($routes) {
+        // Not finished yet
+        $routes->get("konfirmasi-team", 'dashboard/AdminExploit::konfirmasi_team');
     });
     $routes->get('olimpiade', 'dashboard\User::olim');
 });

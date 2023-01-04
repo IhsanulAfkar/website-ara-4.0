@@ -9,17 +9,20 @@ use App\Models\ExploitModel;
 
 class VerifyRegistrasi extends BaseController
 {
+    protected $session;
+    protected $Olim_Model;
+    protected $Exploit_Model;
+
     public function __construct()
     {
         $this->session = \Config\Services::session();
         $this->Olim_Model = new OlimModel();
         $this->Exploit_Model = new ExploitModel();
-
     }
 
     private function moveFile($path, $file)
     {
-        if (!empty($file)) {
+        if (!empty($file) && $file->getSize() != 0) {
             $renamed = $file->getRandomName();
             $file->move($path, $renamed);
             return $renamed;
@@ -247,6 +250,54 @@ class VerifyRegistrasi extends BaseController
                     'required' => $fieldError,
                 ]
             ],
+            'suket_ketua' => [
+                'label'     => 'suket_ketua',
+                'rules'     => 'uploaded[suket_ketua]|max_size[suket_ketua, 1024]|mime_in[suket_ketua,application/pdf]',
+                'errors'    => [
+                    'uploaded'  => 'Field ini harus diisi',
+                    'max_size'  => $pdfSizeError,
+                    'mime_in'   => $pdfTypeError,
+                ]
+            ],
+            // Anggota 1
+            'suket_anggota_1' => [
+                'label'     => 'suket_anggota_1',
+                'rules'     => 'max_size[suket_anggota_1, 1024]|mime_in[suket_anggota_1,application/pdf]',
+                'errors'    => [
+                    'uploaded'  => 'Field ini harus diisi',
+                    'max_size'  => $pdfSizeError,
+                    'mime_in'   => $pdfTypeError,
+                ]
+            ],
+            // Anggota 2
+            'suket_anggota_2' => [
+                'label'     => 'suket_anggota_2',
+                'rules'     => 'max_size[suket_anggota_2, 1024]|mime_in[suket_anggota_2,application/pdf]',
+                'errors'    => [
+                    'uploaded'  => 'Field ini harus diisi',
+                    'max_size'  => $pdfSizeError,
+                    'mime_in'   => $pdfTypeError,
+                ]
+            ],
+            // Anggota 3
+            'suket_anggota_3' => [
+                'label'     => 'suket_anggota_3',
+                'rules'     => 'max_size[suket_anggota_3, 1024]|mime_in[suket_anggota_3,application/pdf]',
+                'errors'    => [
+                    'max_size'  => $pdfSizeError,
+                    'mime_in'   => $pdfTypeError,
+                ]
+            ],
+            // Anggota 4
+            'suket_anggota_4' => [
+                'label'     => 'suket_anggota_4',
+                'rules'     => 'max_size[suket_anggota_4, 1024]|mime_in[suket_anggota_4,application/pdf]',
+                'errors'    => [
+                    'max_size'  => $pdfSizeError,
+                    'mime_in'   => $pdfTypeError,
+                ]
+            ],
+            //
             'asal_institusi' => [
                 'label' => 'asal_institusi',
                 'rules' => 'required',
@@ -317,35 +368,78 @@ class VerifyRegistrasi extends BaseController
         if (!$this->validate($validationRules)) {
             return redirect()->to('/register/exploit')->withInput();
         }
-
+        $jumlah_anggota = 1;
         // data tim
         $tim_nama = $this->request->getVar('tim_nama');
         $ketua_nama = $this->request->getVar('ketua_nama');
+        $suket_ketua = $this->request->getFile('suket_ketua');
+        $nama_anggota_1 = $this->request->getVar('nama_anggota_1');
+        $suket_anggota_1 = $this->request->getFile('suket_anggota_1');
+        $nama_anggota_2 = $this->request->getVar('nama_anggota_2');
+        $suket_anggota_2 = $this->request->getFile('suket_anggota_2');
+        $nama_anggota_3 = $this->request->getVar('nama_anggota_3');
+        $suket_anggota_3 = $this->request->getFile('suket_anggota_3');
+        $nama_anggota_4 = $this->request->getVar('nama_anggota_4');
+        $suket_anggota_4 = $this->request->getFile('suket_anggota_4');
         $asal_institusi = $this->request->getVar('asal_institusi');
         $bidang_iot = $this->request->getVar('bidang_iot');
         $email_ketua = $this->request->getVar('email_ketua');
         $phone_ketua = $this->request->getVar('phone_ketua');
-
+        // dd($suket_anggota_1);
         // data produk
         $nama_produk = $this->request->getVar('nama_produk');
         $deskripsi_produk = $this->request->getVar('deskripsi_produk');
         $link_youtube = $this->request->getVar('link_youtube');
 
         $surat_kontrak = $this->request->getFile('surat_kontrak');
-
+        // if (empty($suket_anggota_1))
+        // dd($suket_anggota_1->getSize());
+        // else
+        // dd($suket_anggota_1);
         // Define path
-        $surat_kontrak_path = 'uploads/expoit/surat_kontrak/';
-
+        $surat_kontrak_path = 'uploads/exploit/surat_kontrak/';
+        $suket_path = 'uploads/exploit/identitas/';
+        $moved_suket_anggota_1 = null;
+        $moved_suket_anggota_2 = null;
+        $moved_suket_anggota_3 = null;
+        $moved_suket_anggota_4 = null;
         // Pindah file + rename
         $moved_surat_kontrak = $this->moveFile($surat_kontrak_path, $surat_kontrak);
+        $moved_suket_ketua = $this->moveFile($suket_path, $suket_ketua);
+        if (!empty($nama_anggota_1)) {
+            $jumlah_anggota++;
+            $moved_suket_anggota_1 = $this->moveFile($suket_path, $suket_anggota_1);
+        }
+        if (!empty($nama_anggota_2)) {
+            $jumlah_anggota++;
+            $moved_suket_anggota_2 = $this->moveFile($suket_path, $suket_anggota_2);
+        }
+        if (!empty($nama_anggota_3)) {
+            $jumlah_anggota++;
+            $moved_suket_anggota_3 = $this->moveFile($suket_path, $suket_anggota_3);
+        }
+        if (!empty($nama_anggota_4)) {
+            $jumlah_anggota++;
+            $moved_suket_anggota_4 = $this->moveFile($suket_path, $suket_anggota_4);
+        }
 
         $data = [
             'exploit_tim_nama' => $tim_nama,
+            'exploit_jumlah_anggota' => $jumlah_anggota,
             'exploit_nama_ketua' => $ketua_nama,
             'exploit_asal_institusi' => $asal_institusi,
             'exploit_bidang' => $bidang_iot,
             'exploit_email' => $email_ketua,
             'exploit_phone' => $phone_ketua,
+            'exploit_nama_anggota_1' => $nama_anggota_1,
+            'exploit_nama_anggota_2' => $nama_anggota_2,
+            'exploit_nama_anggota_3' => $nama_anggota_3,
+            'exploit_nama_anggota_4' => $nama_anggota_4,
+            'exploit_suket_ketua' => $moved_suket_ketua,
+            'exploit_suket_anggota_1' => $moved_suket_anggota_1,
+            'exploit_suket_anggota_2' => $moved_suket_anggota_2,
+            'exploit_suket_anggota_3' => $moved_suket_anggota_3,
+            'exploit_suket_anggota_4' => $moved_suket_anggota_4,
             'exploit_nama_produk' => $nama_produk,
             'exploit_desk_produk' => $deskripsi_produk,
             'exploit_link_youtube' => $link_youtube,

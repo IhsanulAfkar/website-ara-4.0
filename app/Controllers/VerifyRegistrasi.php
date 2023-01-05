@@ -267,24 +267,17 @@ class VerifyRegistrasi extends BaseController
             'nama_anggota_1' => 
             [
                 'label' => 'nama_anggota_1',
-                'rules' => 'required',
-                'errors' => [
-                    'required' => $fieldError,
-                ]
             ],
             'nama_anggota_2' => 
             [
                 'label' => 'nama_anggota_2',
-                'rules' => 'required',
-                'errors' => [
-                    'required' => $fieldError,
-                ]
             ],
             'surket_ketua' => 
             [
                 'label'     => 'suket_ketua',
-                'rules'     => 'uploaded[surket_ketua]|is_image[surket_ketua]|max_size[surket_ketua, 1024]',
+                'rules'     => 'required|uploaded[surket_ketua]|is_image[surket_ketua]|max_size[surket_ketua, 1024]',
                 'errors'    => [
+                    'required' => $fieldError,
                     'uploaded'  => 'Field ini harus diisi',
                     'is_image'  => $imgTypeError,
                     'max_size'  => $imgSizeError
@@ -313,18 +306,9 @@ class VerifyRegistrasi extends BaseController
             'ig_ara_ketua' => 
             [
                 'label'     => 'ig_ara_ketua',
-                'rules'     => 'uploaded[ig_ara_ketua]|is_image[ig_ara_ketua]|max_size[ig_ara_ketua, 1024]',
+                'rules'     => 'required|uploaded[ig_ara_ketua]|is_image[ig_ara_ketua]|max_size[ig_ara_ketua, 1024]',
                 'errors'    => [
-                    'uploaded'  => 'Field ini harus diisi',
-                    'is_image'  => $imgTypeError,
-                    'max_size'  => $imgSizeError
-                ]
-            ],
-            'tiktok_ketua' => 
-            [
-                'label'     => 'tiktok_ketua',
-                'rules'     => 'uploaded[tiktok_ketua]|is_image[tiktok_ketua]|max_size[tiktok_ketua, 1024]',
-                'errors'    => [
+                    'required' => $fieldError,
                     'uploaded'  => 'Field ini harus diisi',
                     'is_image'  => $imgTypeError,
                     'max_size'  => $imgSizeError
@@ -334,16 +318,6 @@ class VerifyRegistrasi extends BaseController
             [
                 'label'     => 'ig_ara_anggota_1',
                 'rules'     => 'uploaded[ig_ara_anggota_1]|is_image[ig_ara_anggota_1]|max_size[ig_ara_anggota_1, 1024]',
-                'errors'    => [
-                    'uploaded'  => 'Field ini harus diisi',
-                    'is_image'  => $imgTypeError,
-                    'max_size'  => $imgSizeError
-                ]
-            ],
-            'tiktok_anggota_1' => 
-            [
-                'label'     => 'tiktok_anggota_1',
-                'rules'     => 'uploaded[tiktok_anggota_1]|is_image[tiktok_anggota_1]|max_size[tiktok_anggota_1, 1024]',
                 'errors'    => [
                     'uploaded'  => 'Field ini harus diisi',
                     'is_image'  => $imgTypeError,
@@ -360,21 +334,12 @@ class VerifyRegistrasi extends BaseController
                     'max_size'  => $imgSizeError
                 ]
             ],
-            'tiktok_anggota_2' => 
-            [
-                'label'     => 'tiktok_anggota_2',
-                'rules'     => 'uploaded[tiktok_anggota_2]|is_image[tiktok_anggota_2]|max_size[tiktok_anggota_2, 1024]',
-                'errors'    => [
-                    'uploaded'  => 'Field ini harus diisi',
-                    'is_image'  => $imgTypeError,
-                    'max_size'  => $imgSizeError
-                ]
-            ],
             'bukti_bayar' => 
             [
                 'label'     => 'bukti_bayar',
-                'rules'     => 'uploaded[bukti_bayar]|is_image[bukti_bayar]|max_size[bukti_bayar, 1024]',
+                'rules'     => 'required|uploaded[bukti_bayar]|is_image[bukti_bayar]|max_size[bukti_bayar, 1024]',
                 'errors'    => [
+                    'required' => $fieldError,
                     'uploaded'  => 'Field ini harus diisi',
                     'is_image'  => $imgTypeError,
                     'max_size'  => $imgSizeError
@@ -395,13 +360,11 @@ class VerifyRegistrasi extends BaseController
         $email_ketua = $this->request->getVar('email_ketua');
         $surket_ketua = $this->request->getFile('surket_ketua');
         $ig_ara_ketua = $this->request->getFile('ig_ara_ketua');
-        $tiktok_ketua = $this->request->getFile('tiktok_ketua');
 
         // Anggota 1
         $nama_anggota_1 = $this->request->getVar('nama_anggota_1');
         $surket_anggota_1 = $this->request->getFile('surket_anggota_1');
         $ig_ara_anggota_1 = $this->request->getFile('ig_ara_anggota_1');
-        $tiktok_anggota_1 = $this->request->getFile('tiktok_anggota_1');
         $kupon = $this->request->getVar('kupon');
         $fileBuktiBayar = $this->request->getFile('bukti_bayar');
 
@@ -409,7 +372,6 @@ class VerifyRegistrasi extends BaseController
         $nama_anggota_2 = $this->request->getVar('nama_anggota_2');
         $surket_anggota_2 = $this->request->getFile('surket_anggota_2');
         $ig_ara_anggota_2 = $this->request->getFile('ig_ara_anggota_2');
-        $tiktok_anggota_2 = $this->request->getFile('tiktok_anggota_2');
         $kupon = $this->request->getVar('kupon');
         $fileBuktiBayar = $this->request->getFile('bukti_bayar');
 
@@ -417,7 +379,6 @@ class VerifyRegistrasi extends BaseController
         $bukti_bayar_path = 'uploads/ctf/bukti_bayar/';
         $surket_path = 'uploads/ctf/suket/';
         $ig_ara_path = 'uploads/ctf/ig_ara/';
-        $tiktok_path = 'uploads/ctf/tiktok/';
 
         // Pindah file + rename
         $moved_surket_ketua = $this->moveFile($surket_path, $surket_ketua);
@@ -426,9 +387,6 @@ class VerifyRegistrasi extends BaseController
         $moved_ig_ara_ketua = $this->moveFile($ig_ara_path, $ig_ara_ketua);
         $moved_ig_ara_anggota_1 = $this->moveFile($ig_ara_path, $ig_ara_anggota_1);
         $moved_ig_ara_anggota_2 = $this->moveFile($ig_ara_path, $ig_ara_anggota_2);
-        $moved_tiktok_ketua = $this->moveFile($tiktok_path, $tiktok_ketua);
-        $moved_tiktok_anggota_1 = $this->moveFile($tiktok_path, $tiktok_anggota_1);
-        $moved_tiktok_anggota_2 = $this->moveFile($tiktok_path, $tiktok_anggota_2);
         $movedBuktiBayar = $this->moveFile($bukti_bayar_path, $fileBuktiBayar);
         
         $data =
@@ -444,11 +402,8 @@ class VerifyRegistrasi extends BaseController
                 'ctf_nama_anggota_2' => $nama_anggota_2,
                 'ctf_kp_surket_anggota_2' => $moved_surket_anggota_2,
                 'ctf_ig_ara_ketua' => $moved_ig_ara_ketua,
-                'ctf_tiktok_ketua' => $moved_tiktok_ketua,
                 'ctf_ig_ara_anggota_1' => $moved_ig_ara_anggota_1,
-                'ctf_tiktok_anggota_1' => $moved_tiktok_anggota_1,
                 'ctf_ig_ara_anggota_2' => $moved_ig_ara_anggota_2,
-                'ctf_tiktok_anggota_2' => $moved_tiktok_anggota_2,
                 'coupon' => $kupon,
                 'ctf_bukti_bayar' => $movedBuktiBayar,
                 'ctf_status' => 0, //default 0 = belum bayar

@@ -135,7 +135,6 @@ class AdminCTF extends BaseController
         } else {
             $kp_path = 'uploads/ctf/suket/';
             $ig_path = 'uploads/ctf/ig_ara/';
-            $tt_path = 'uploads/ctf/tiktok/';
             $bukti_bayar_path = 'uploads/ctf/bukti_bayar/';
 
             $subject = "[Rejected] CTF";
@@ -163,10 +162,6 @@ class AdminCTF extends BaseController
                 $this->delete_file($ig_path, $team['ctf_ig_ara_ketua']);
                 $this->delete_file($ig_path, $team['ctf_ig_ara_anggota_1']);
                 $this->delete_file($ig_path, $team['ctf_ig_ara_anggota_2']);
-
-                $this->delete_file($tt_path, $team['ctf_tiktok_ketua']);
-                $this->delete_file($tt_path, $team['ctf_tiktok_anggota_1']);
-                $this->delete_file($tt_path, $team['ctf_tiktok_anggota_2']);
 
                 $this->delete_file($bukti_bayar_path, $team['ctf_bukti_bayar']);
 

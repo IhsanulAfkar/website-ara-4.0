@@ -18,15 +18,12 @@ class CTFModel extends Model
         'ctf_email_ketua', 
         'ctf_kp_surket_ketua', 
         'ctf_ig_ara_ketua', 
-        'ctf_tiktok_ketua', 
         'ctf_nama_anggota_1', 
         'ctf_kp_surket_anggota_1', 
         'ctf_ig_ara_anggota_1', 
-        'ctf_tiktok_anggota_1', 
         'ctf_nama_anggota_2',	
         'ctf_kp_surket_anggota_2',	
         'ctf_ig_ara_anggota_2',	
-        'ctf_tiktok_anggota_2',	
         'ctf_bukti_bayar'
     ];
     

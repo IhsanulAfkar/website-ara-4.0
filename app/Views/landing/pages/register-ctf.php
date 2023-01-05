@@ -24,7 +24,7 @@
         <span class="text-red-700"><?= $validation->getError('tim_nama') ?></span>
       </label>
       <label for="asal_institusi" class="block mt-8">
-        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-bold text-slate-700">Asal Sekolah</span>
+        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-bold text-slate-700">Asal Universitas/Sekolah</span>
         <input type="text" id="asal_institusi" name="asal_institusi" value="<?= old('asal_institusi') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Sekolah mana nih?" />
         <span class="text-red-700"><?= $validation->getError('asal_institusi') ?></span>
       </label>
@@ -56,11 +56,6 @@
         <input type="file" id="ig_ara_ketua" name="ig_ara_ketua" value="<?= old('ig_ara_ketua') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
         <span class="text-red-700"><?= $validation->getError('ig_ara_ketua') ?></span>
       </label>
-      <label for="tiktok_ketua" class="block mt-8">
-        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm text-slate-700"><span class="font-bold">Bukti Follow Tiktok ARA </span>(File berupa .jpg atau .png)</span>
-        <input type="file" id="tiktok_ketua" name="tiktok_ketua" value="<?= old('tiktok_ketua') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
-        <span class="text-red-700"><?= $validation->getError('tiktok_ketua') ?></span>
-      </label>
 
       <!-- Anggota 1 -->
       <p class="text-2xl font-bold mt-16">Anggota 1</p>
@@ -79,11 +74,6 @@
         <input type="file" id="ig_ara_anggota_1" name="ig_ara_anggota_1" value="<?= old('ig_ara_anggota_1') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
         <span class="text-red-700"><?= $validation->getError('ig_ara_anggota_1') ?></span>
       </label>
-      <label for="tiktok_anggota_1" class="block mt-8">
-        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm text-slate-700"><span class="font-bold">Bukti Follow Tiktok ARA </span>(File berupa .jpg atau .png)</span>
-        <input type="file" id="tiktok_anggota_1" name="tiktok_anggota_1" value="<?= old('tiktok_anggota_1') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
-        <span class="text-red-700"><?= $validation->getError('tiktok_anggota_1') ?></span>
-      </label>
 
       <!-- Anggota 2 -->
       <p class="text-2xl font-bold mt-16">Anggota 2</p>
@@ -101,11 +91,6 @@
         <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm text-slate-700"><span class="font-bold">Bukti Follow Ig ARA </span>(File berupa .jpg atau .png)</span>
         <input type="file" id="ig_ara_anggota_2" name="ig_ara_anggota_2" value="<?= old('ig_ara_anggota_2') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
         <span class="text-red-700"><?= $validation->getError('ig_ara_anggota_2') ?></span>
-      </label>
-      <label for="tiktok_anggota_2" class="block mt-8">
-        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm text-slate-700"><span class="font-bold">Bukti Follow Tiktok ARA </span>(File berupa .jpg atau .png)</span>
-        <input type="file" id="tiktok_anggota_2" name="tiktok_anggota_2" value="<?= old('tiktok_anggota_2') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
-        <span class="text-red-700"><?= $validation->getError('tiktok_anggota_2') ?></span>
       </label>
 
       <p class="mt-16">Untuk pembayaran, silahkan transfer sebesar <b>Rp. <span id="nominal">80.000</span> </b>ke bank mandiri No. Rek 1710007291308 a.n. SALSABILA BRILIANA</p>

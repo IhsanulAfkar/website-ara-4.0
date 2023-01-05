@@ -17,15 +17,12 @@
                 <th class="p-2 border border-slate-800">Email Ketua</th>
                 <th class="p-2 border border-slate-800">Surket Ketua</th>
                 <th class="p-2 border border-slate-800">Ig ARA Ketua</th>
-                <th class="p-2 border border-slate-800">Tiktok Ketua</th>
                 <th class="p-2 border border-slate-800">Nama Anggota 1</th>
                 <th class="p-2 border border-slate-800">Surket Anggota 1</th>
                 <th class="p-2 border border-slate-800">Ig ARA Anggota 1</th>
-                <th class="p-2 border border-slate-800">Tiktok Anggota 1</th>
                 <th class="p-2 border border-slate-800">Nama Anggota 2</th>
                 <th class="p-2 border border-slate-800">Surket Anggota 2</th>
                 <th class="p-2 border border-slate-800">Ig ARA Anggota 2</th>
-                <th class="p-2 border border-slate-800">Tiktok Anggota 2</th>
                 <th class="p-2 border border-slate-800">Coupon</th>
                 <th class="p-2 border border-slate-800">Bukti Bayar</th>
                 <th class="p-2 px-4 border border-slate-800">Konfirmasi</th>
@@ -42,15 +39,12 @@
                     <td class="p-2 border border-slate-300"><?= $team['ctf_email_ketua']; ?></td>
                     <td class="underline text-blue-600 border p-2 border-slate-300"><a href="<?= base_url('uploads/ctf/suket/' . $team['ctf_kp_surket_ketua']); ?>" target="_blank">Lihat</a></td>
                     <td class="underline text-blue-600 border p-2 border-slate-300"><a href="<?= base_url('uploads/ctf/ig_ara/' . $team['ctf_ig_ara_ketua']); ?>" target="_blank">Lihat</a></td>
-                    <td class="underline text-blue-600 border p-2 border-slate-300"><a href="<?= base_url('uploads/ctf/tiktok/' . $team['ctf_tiktok_ketua']); ?>" target="_blank">Lihat</a></td>
                     <td class="p-2 border border-slate-300"><?= $team['ctf_nama_anggota_1']; ?></td>
                     <td class="underline text-blue-600 p-2 border border-slate-300"><a href="<?= base_url('uploads/ctf/suket/' . $team['ctf_kp_surket_anggota_1']); ?>" target="_blank">Lihat</a></td>
                     <td class="underline text-blue-600 border p-2 border-slate-300"><a href="<?= base_url('uploads/ctf/ig_ara/' . $team['ctf_ig_ara_anggota_1']); ?>" target="_blank">Lihat</a></td>
-                    <td class="underline text-blue-600 border p-2 border-slate-300"><a href="<?= base_url('uploads/ctf/tiktok/' . $team['ctf_tiktok_anggota_1']); ?>" target="_blank">Lihat</a></td>
                     <td class="p-2 border border-slate-300"><?= $team['ctf_nama_anggota_2']; ?></td>
                     <td class="underline text-blue-600 p-2 border border-slate-300"><a href="<?= base_url('uploads/ctf/suket/' . $team['ctf_kp_surket_anggota_2']); ?>" target="_blank">Lihat</a></td>
                     <td class="underline text-blue-600 border p-2 border-slate-300"><a href="<?= base_url('uploads/ctf/ig_ara/' . $team['ctf_ig_ara_anggota_2']); ?>" target="_blank">Lihat</a></td>
-                    <td class="underline text-blue-600 border p-2 border-slate-300"><a href="<?= base_url('uploads/ctf/tiktok/' . $team['ctf_tiktok_anggota_2']); ?>" target="_blank">Lihat</a></td>
                     <?php if ($team['coupon']) : ?>
                         <td class="p-2 border border-slate-300"><?= $team['coupon']; ?></td>
                     <?php else : ?>

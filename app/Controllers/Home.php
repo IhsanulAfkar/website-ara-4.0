@@ -81,4 +81,15 @@ class Home extends BaseController
         $data['title'] = 'Dashboard';
         return view('landing/pages/dashboard/user/olim', $data);
     }
+
+    public function registerExploit()
+    {
+        session();
+        $data =
+            [
+                'title' => 'ExploIT',
+                'validation' => \Config\Services::validation()
+            ];
+        return view('landing/pages/register-exploIT', $data);
+    }
 }

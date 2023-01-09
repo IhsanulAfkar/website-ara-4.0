@@ -20,8 +20,8 @@
         <a href="#" class="block text-center bg-yellow-500 font-bold py-1 px-4 border-4 border-black">Daftar</a>
         <div class="hidden group-hover:block absolute right-0 top-12 bg-yellow-500 rounded-lg">
           <a class="block hover:text-white py-2 px-4" href="<?= base_url(); ?>/register/olimpiade">Olimpiade</a>
-          <!-- <a class="block hover:text-white py-2 px-4" href="#">CTF</a>
-          <a class="block hover:text-white py-2 px-4" href="#">ExploIT</a> -->
+          <a class="block hover:text-white py-2 px-4" href="<?= base_url(); ?>/register/exploit">Tenant ExploIT</a>
+          <!-- <a class="block hover:text-white py-2 px-4" href="#">ExploIT</a> -->
         </div>
       </div>
     </div>
@@ -53,8 +53,8 @@
     <hr class="my-2">
     <div class="flex flex-col font-bold text-lg text-center">
       <a class="block text-2xl py-2" href="<?= base_url(); ?>/register/olimpiade">Daftar Olimpiade</a>
-      <!-- <a class="block text-2xl py-2" href="<?= base_url(); ?>/olimpiade">Daftar CTF</a>
-      <a class="block text-2xl py-2" href="<?= base_url(); ?>/olimpiade">Daftar ExploIT</a> -->
+      <!-- <a class="block text-2xl py-2" href="<? base_url(); ?>/olimpiade">Daftar CTF</a> -->
+      <a class="block text-2xl py-2" href="<?= base_url(); ?>/register/exploit">Daftar Tenant ExploIT</a>
     </div>
     <div class="overflow-auto">
       <p class="text-center text-lg mt-16">Follow <span class="font-bold">ARA 4.0</span></p>

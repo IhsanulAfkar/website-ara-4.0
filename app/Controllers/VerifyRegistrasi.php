@@ -10,9 +10,13 @@ use App\Models\ExploitModel;
 
 class VerifyRegistrasi extends BaseController
 {
+    protected $session;
+    protected $Olim_Model;
+    protected $Exploit_Model;
+
     public function __construct()
     {
-        $this->session = \Config\Services::session();;
+        $this->session = \Config\Services::session();
         $this->Olim_Model = new OlimModel();
         $this->CTF_Model = new CTFModel();
         $this->Exploit_Model = new ExploitModel();
@@ -20,7 +24,7 @@ class VerifyRegistrasi extends BaseController
 
     private function moveFile($path, $file)
     {
-        if (!empty($file)) {
+        if (!empty($file) && $file->getSize() != 0) {
             $renamed = $file->getRandomName();
             $file->move($path, $renamed);
             return $renamed;
@@ -224,6 +228,7 @@ class VerifyRegistrasi extends BaseController
         }
         // Insert ke db dan redirect ke finish regist
     }
+    
     public function verify_regis_ctf()
     {
         $fieldError = 'Field ini harus diisi';
@@ -439,6 +444,7 @@ class VerifyRegistrasi extends BaseController
             print_r($dd);
         }
     }
+
     public function verify_regis_exploit()
     {
         // dd("masuk kan ya");
@@ -455,11 +461,13 @@ class VerifyRegistrasi extends BaseController
                     'is_unique' => 'Nama tim sudah terdaftar'
                 ]
             ],
-            
             'ketua_nama' => [
                 'label' => 'ketua_nama',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => $fieldError,
+                ]
             ],
-
             'suket_ketua' => [
                 'label'     => 'suket_ketua',
                 'rules'     => 'uploaded[suket_ketua]|max_size[suket_ketua, 1024]|mime_in[suket_ketua,application/pdf]',
@@ -655,11 +663,11 @@ class VerifyRegistrasi extends BaseController
             'exploit_surat_kontrak' => $moved_surat_kontrak,
         ];
 
-         // Kirim Email
-         $email = \Config\Services::email();
-         $email->setTo($email_ketua);
-         $email->setFrom('arenewalagent@gmail.com', 'ARA 4.0');
-         $email->setSubject('Email Konfirmasi Pendaftaran ExploIT');
+        // Kirim Email
+        $email = \Config\Services::email();
+        $email->setTo($email_ketua);
+        $email->setFrom('arenewalagent@gmail.com', 'ARA 4.0');
+        $email->setSubject('Email Konfirmasi Pendaftaran ExploIT');
         $body = "Halo {$tim_nama} dari {$asal_institusi},</br>
         </br>
         Terima kasih sudah mendaftar pada event kami, \"ExploIT.\"<br>
@@ -671,7 +679,7 @@ class VerifyRegistrasi extends BaseController
         --<br>
         Salam Hormat,<br>
         <br>
-        A Renewal Agent 4.0";
+        A Renewal Agents 4.0";
         $email->setMessage($body);
         if ($email->send()) {
             $this->Exploit_Model->save($data);

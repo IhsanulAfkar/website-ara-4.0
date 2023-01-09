@@ -53,6 +53,10 @@ $routes->get('/register/ctf', 'Home::registerCtf');
 $routes->post('/verify-regis-olim', 'VerifyRegistrasi::verify_regis_olim');
 $routes->post('/verify-regis-ctf', 'VerifyRegistrasi::verify_regis_ctf');
 
+// 
+$routes->get('/register/exploit', 'Home::registerExploit');
+$routes->post('/verify-regis-exploit', 'VerifyRegistrasi::verify_regis_exploit');
+// 
 $routes->match(['get', 'post'], '/verify/login', 'VerifyLogin::login', ["filter" => "noauth"]);
 $routes->get('/verify/logout', 'VerifyLogin::logout');
 

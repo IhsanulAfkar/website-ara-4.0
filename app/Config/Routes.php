@@ -75,9 +75,11 @@ $routes->group("dashboard", ["filter" => "auth"], function ($routes) {
         $routes->get('list-team', 'dashboard\AdminOlim::confirmed_team');
         $routes->get('verify-konfirmasi-team/(:any)/(:any)', 'dashboard\AdminOlim::verify_konfirmasi_team/$1/$2');
     });
+    
     $routes->group("admin-exploit", ["filter" => "auth"], function ($routes) {
-        // Not finished yet
-        $routes->get("konfirmasi-team", 'dashboard/AdminExploit::konfirmasi_team');
+        $routes->get("konfirmasi-team", 'dashboard\AdminExploit::konfirmasi_team');
+        $routes->get('list-team', 'dashboard\AdminExploit::confirmed_team');
+        $routes->get('verify-konfirmasi-team/(:any)/(:any)', 'dashboard\AdminExploit::verify_konfirmasi_team/$1/$2');
     });
     $routes->get('olimpiade', 'dashboard\User::olim');
 });

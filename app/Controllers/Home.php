@@ -65,6 +65,16 @@ class Home extends BaseController
             ];
         return view('landing/pages/close_olim', $data);
     }
+    public function registerCtf()
+    {
+        session();
+        $data =
+            [
+                'title' => 'CTF',
+                'validation' => \Config\Services::validation()
+            ];
+        return view('landing/pages/register-ctf', $data);
+    }
 
     public function coba()
     {

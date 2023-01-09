@@ -49,7 +49,10 @@ $routes->get('/auth/login', 'Home::login');
 $routes->add('/home/coba', 'Home::coba');
 
 $routes->get('/register/olimpiade', 'Home::registerOlimpiade');
+$routes->get('/register/ctf', 'Home::registerCtf');
 $routes->post('/verify-regis-olim', 'VerifyRegistrasi::verify_regis_olim');
+$routes->post('/verify-regis-ctf', 'VerifyRegistrasi::verify_regis_ctf');
+
 // 
 $routes->get('/register/exploit', 'Home::registerExploit');
 $routes->post('/verify-regis-exploit', 'VerifyRegistrasi::verify_regis_exploit');
@@ -58,10 +61,13 @@ $routes->match(['get', 'post'], '/verify/login', 'VerifyLogin::login', ["filter"
 $routes->get('/verify/logout', 'VerifyLogin::logout');
 
 $routes->get('/verify_kupon/(:any)', 'Api::verify_kupon/$1');
+$routes->get('/dashboard/admin-ctf/konfirmasi-team', 'dashboard\AdminCTF::konfirmasi_team');
+$routes->get('/dashboard/admin-ctf/list-team', 'dashboard\AdminCTF::confirmed_team');
 $routes->get('/dashboard/admin-olim/konfirmasi-team', 'dashboard\AdminOlim::konfirmasi_team');
 $routes->get('/dashboard/admin-olim/list-team', 'dashboard\AdminOlim::confirmed_team');
 //route for verify_konfirmasi_team
 $routes->get('/dashboard/admin-olim/verify-konfirmasi-team/(:any)/(:any)', 'dashboard\AdminOlim::verify_konfirmasi_team/$1/$2');
+$routes->get('/dashboard/admin-ctf/verify-konfirmasi-team/(:any)/(:any)', 'dashboard\AdminCTF::verify_konfirmasi_team/$1/$2');
 
 $routes->group("dashboard", ["filter" => "auth"], function ($routes) {
     $routes->group("admin-olim", ["filter" => "auth"], function ($routes) {
@@ -74,6 +80,14 @@ $routes->group("dashboard", ["filter" => "auth"], function ($routes) {
         $routes->get("konfirmasi-team", 'dashboard/AdminExploit::konfirmasi_team');
     });
     $routes->get('olimpiade', 'dashboard\User::olim');
+});
+$routes->group("dashboard", ["filter" => "auth"], function ($routes) {
+    $routes->group("admin-ctf", ["filter" => "auth"], function ($routes) {
+        $routes->get('konfirmasi-team', 'dashboard\AdminCTF::konfirmasi_team');
+        $routes->get('list-team', 'dashboard\AdminCTF::confirmed_team');
+        $routes->get('verify-konfirmasi-team/(:any)/(:any)', 'dashboard\AdminCTF::verify_konfirmasi_team/$1/$2');
+    });
+    $routes->get('ctf', 'dashboard\User::ctf');
 });
 //route for verify_konfirmasi_team
 

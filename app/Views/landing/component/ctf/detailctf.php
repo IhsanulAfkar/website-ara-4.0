@@ -16,7 +16,7 @@
         disebut dengan “Flag”.</p>
       <div class="mt-16 flex gap-4 mx-auto">
         <a href="<?= site_url('/register/ctf'); ?>" class="block text-center bg-blue-500 font-bold text-white w-full py-4 rounded-2xl border-4 border-black drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Daftar</a>
-        <a href="https://drive.google.com/file/d/1IoHv5luV8DBL2D0VuPUB9HCcLrTcOMDJ/view?usp=drivesdk" target="_blank" class="block text-center bg-yellow-500 font-bold text-black w-full py-4 rounded-2xl border-4 border-black drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Rulebook</a>
+        <a href="#" target="_blank" class="block text-center bg-yellow-500 font-bold text-black w-full py-4 rounded-2xl border-4 border-black drop-shadow-[0_4px_0_rgba(0,0,0,1)]">Rulebook</a>
       </div>
     </div>
   </div>

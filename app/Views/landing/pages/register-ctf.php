@@ -60,36 +60,36 @@
       <!-- Anggota 1 -->
       <p class="text-2xl font-bold mt-16">Anggota 1</p>
       <label for="nama_anggota_1" class="block mt-8">
-        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-bold text-slate-700">Nama Anggota 1</span>
-        <input type="text" id="nama_anggota_1" name="nama_anggota_1" value="<?= old('nama_anggota_1') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Input nama anggota kamu ya" />
+        <span class="after:ml-0.5 after:text-red-500 block text-sm font-bold text-slate-700">Nama Anggota 1</span>
+        <input type="text" id="nama_anggota_1" name="nama_anggota_1" value="<?= old('nama_anggota_1') ?>" class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Input nama anggota kamu ya" />
         <span class="text-red-700"><?= $validation->getError('nama_anggota_1') ?></span>
       </label>
       <label for="surket_anggota_1" class="block mt-8">
-        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm text-slate-700"><span class="font-bold">Kartu Pelajar </span>(Bisa diganti dengan Surat Keterangan Sekolah Aktif, file berupa .jpg atau .png)</span>
-        <input type="file" id="surket_anggota_1" name="surket_anggota_1" value="<?= old('surket_anggota_1') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
+        <span class="after:ml-0.5 after:text-red-500 block text-sm text-slate-700"><span class="font-bold">Kartu Pelajar </span>(Bisa diganti dengan Surat Keterangan Sekolah Aktif, file berupa .jpg atau .png)</span>
+        <input type="file" id="surket_anggota_1" name="surket_anggota_1" value="<?= old('surket_anggota_1') ?>" class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
         <span class="text-red-700"><?= $validation->getError('surket_anggota_1') ?></span>
       </label>
       <label for="ig_ara_anggota_1" class="block mt-8">
-        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm text-slate-700"><span class="font-bold">Bukti Follow Ig ARA </span>(File berupa .jpg atau .png)</span>
-        <input type="file" id="ig_ara_anggota_1" name="ig_ara_anggota_1" value="<?= old('ig_ara_anggota_1') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
+        <span class="after:ml-0.5 after:text-red-500 block text-sm text-slate-700"><span class="font-bold">Bukti Follow Ig ARA </span>(File berupa .jpg atau .png)</span>
+        <input type="file" id="ig_ara_anggota_1" name="ig_ara_anggota_1" value="<?= old('ig_ara_anggota_1') ?>" class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
         <span class="text-red-700"><?= $validation->getError('ig_ara_anggota_1') ?></span>
       </label>
 
       <!-- Anggota 2 -->
       <p class="text-2xl font-bold mt-16">Anggota 2</p>
       <label for="nama_anggota_2" class="block mt-8">
-        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-bold text-slate-700">Nama Anggota 2</span>
-        <input type="text" id="nama_anggota_2" name="nama_anggota_2" value="<?= old('nama_anggota_2') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Input nama anggota kamu ya" />
+        <span class="after:ml-0.5 after:text-red-500 block text-sm font-bold text-slate-700">Nama Anggota 2</span>
+        <input type="text" id="nama_anggota_2" name="nama_anggota_2" value="<?= old('nama_anggota_2') ?>" class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Input nama anggota kamu ya" />
         <span class="text-red-700"><?= $validation->getError('nama_anggota_2') ?></span>
       </label>
       <label for="surket_anggota_2" class="block mt-8">
-        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm text-slate-700"><span class="font-bold">Kartu Pelajar </span>(Bisa diganti dengan Surat Keterangan Sekolah Aktif, file berupa .jpg atau .png)</span>
-        <input type="file" id="surket_anggota_2" name="surket_anggota_2" value="<?= old('surket_anggota_2') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
+        <span class="after:ml-0.5 after:text-red-500 block text-sm text-slate-700"><span class="font-bold">Kartu Pelajar </span>(Bisa diganti dengan Surat Keterangan Sekolah Aktif, file berupa .jpg atau .png)</span>
+        <input type="file" id="surket_anggota_2" name="surket_anggota_2" value="<?= old('surket_anggota_2') ?>" class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
         <span class="text-red-700"><?= $validation->getError('surket_anggota_2') ?></span>
       </label>
       <label for="ig_ara_anggota_2" class="block mt-8">
-        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm text-slate-700"><span class="font-bold">Bukti Follow Ig ARA </span>(File berupa .jpg atau .png)</span>
-        <input type="file" id="ig_ara_anggota_2" name="ig_ara_anggota_2" value="<?= old('ig_ara_anggota_2') ?>" required class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
+        <span class="after:ml-0.5 after:text-red-500 block text-sm text-slate-700"><span class="font-bold">Bukti Follow Ig ARA </span>(File berupa .jpg atau .png)</span>
+        <input type="file" id="ig_ara_anggota_2" name="ig_ara_anggota_2" value="<?= old('ig_ara_anggota_2') ?>" class="mt-1 px-3 py-2 bg-white border-2 shadow-sm border-black placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
         <span class="text-red-700"><?= $validation->getError('ig_ara_anggota_2') ?></span>
       </label>
 

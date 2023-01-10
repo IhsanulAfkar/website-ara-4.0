@@ -30,7 +30,6 @@ class AdminCTF extends BaseController
             unlink($path . $filename);
         return;
     }
-
     public function konfirmasi_team()
     {
         if (!$this->session->get('is_admin')) {

@@ -52,4 +52,21 @@ class User extends BaseController
             ];
         return view('landing/pages/dashboard/user/ctf', $data);
     }
+    public function exploit()
+    {
+        if ($this->session->get('is_admin')) {
+            return redirect()->to('/auth/login');
+        }
+        if (!$this->session->get('username')) {
+            return redirect()->to('/auth/login');
+        }
+        $data =
+            [
+                'title' => 'Dashboard',
+                'nama_tim' => $this->session->get('tim'),
+                'event' => 'ExploIT',
+
+            ];
+        return view('landing/pages/dashboard/user/exploit', $data);
+    }
 }

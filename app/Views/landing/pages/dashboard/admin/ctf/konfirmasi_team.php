@@ -39,12 +39,42 @@
                     <td class="p-2 border border-slate-300"><?= $team['ctf_email_ketua']; ?></td>
                     <td class="underline text-blue-600 border p-2 border-slate-300"><a href="<?= base_url('uploads/ctf/suket/' . $team['ctf_kp_surket_ketua']); ?>" target="_blank">Lihat</a></td>
                     <td class="underline text-blue-600 border p-2 border-slate-300"><a href="<?= base_url('uploads/ctf/ig_ara/' . $team['ctf_ig_ara_ketua']); ?>" target="_blank">Lihat</a></td>
-                    <td class="p-2 border border-slate-300"><?= $team['ctf_nama_anggota_1']; ?></td>
-                    <td class="underline text-blue-600 p-2 border border-slate-300"><a href="<?= base_url('uploads/ctf/suket/' . $team['ctf_kp_surket_anggota_1']); ?>" target="_blank">Lihat</a></td>
-                    <td class="underline text-blue-600 border p-2 border-slate-300"><a href="<?= base_url('uploads/ctf/ig_ara/' . $team['ctf_ig_ara_anggota_1']); ?>" target="_blank">Lihat</a></td>
-                    <td class="p-2 border border-slate-300"><?= $team['ctf_nama_anggota_2']; ?></td>
-                    <td class="underline text-blue-600 p-2 border border-slate-300"><a href="<?= base_url('uploads/ctf/suket/' . $team['ctf_kp_surket_anggota_2']); ?>" target="_blank">Lihat</a></td>
-                    <td class="underline text-blue-600 border p-2 border-slate-300"><a href="<?= base_url('uploads/ctf/ig_ara/' . $team['ctf_ig_ara_anggota_2']); ?>" target="_blank">Lihat</a></td>
+                    <?php if ($team['ctf_nama_anggota_1']) : ?>
+                        <td class="p-2 border border-slate-300"><?= $team['ctf_nama_anggota_1']; ?></td>
+                    <?php else : ?>
+                        <td class="p-2 border border-slate-300">-</td>
+                    <?php endif; ?>
+
+                    <?php if ($team['ctf_kp_surket_anggota_1']) : ?>
+                        <td class="underline text-blue-600 p-2 border border-slate-300"><a href="<?= base_url('uploads/ctf/suket/' . $team['ctf_kp_surket_anggota_1']); ?>" target="_blank">Lihat</a></td>
+                    <?php else : ?>
+                        <td class="p-2 border border-slate-300">-</td>
+                    <?php endif; ?>
+
+                    <?php if ($team['ctf_ig_ara_anggota_1']) : ?>
+                        <td class="underline text-blue-600 border p-2 border-slate-300"><a href="<?= base_url('uploads/ctf/ig_ara/' . $team['ctf_ig_ara_anggota_1']); ?>" target="_blank">Lihat</a></td>
+                    <?php else : ?>
+                        <td class="p-2 border border-slate-300">-</td>
+                    <?php endif; ?>
+
+                    <?php if ($team['ctf_nama_anggota_2']) : ?>
+                        <td class="p-2 border border-slate-300"><?= $team['ctf_nama_anggota_2']; ?></td>
+                    <?php else : ?>
+                        <td class="p-2 border border-slate-300">-</td>
+                    <?php endif; ?>
+
+                    <?php if ($team['ctf_kp_surket_anggota_2']) : ?>
+                        <td class="underline text-blue-600 p-2 border border-slate-300"><a href="<?= base_url('uploads/ctf/suket/' . $team['ctf_kp_surket_anggota_2']); ?>" target="_blank">Lihat</a></td>
+                    <?php else : ?>
+                        <td class="p-2 border border-slate-300">-</td>
+                    <?php endif; ?>
+
+                    <?php if ($team['ctf_ig_ara_anggota_2']) : ?>
+                        <td class="underline text-blue-600 border p-2 border-slate-300"><a href="<?= base_url('uploads/ctf/ig_ara/' . $team['ctf_ig_ara_anggota_2']); ?>" target="_blank">Lihat</a></td>
+                    <?php else : ?>
+                        <td class="p-2 border border-slate-300">-</td>
+                    <?php endif; ?>
+
                     <?php if ($team['coupon']) : ?>
                         <td class="p-2 border border-slate-300"><?= $team['coupon']; ?></td>
                     <?php else : ?>

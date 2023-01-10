@@ -228,7 +228,7 @@ class VerifyRegistrasi extends BaseController
         }
         // Insert ke db dan redirect ke finish regist
     }
-    
+
     public function verify_regis_ctf()
     {
         $fieldError = 'Field ini harus diisi';
@@ -236,7 +236,7 @@ class VerifyRegistrasi extends BaseController
         $imgTypeError = 'File ini bukan gambar';
 
         $validationRules = [
-            'tim_nama' => 
+            'tim_nama' =>
             [
                 'label' => 'tim_nama',
                 'rules' => 'required|is_unique[ctf.ctf_tim_nama]',
@@ -245,7 +245,7 @@ class VerifyRegistrasi extends BaseController
                     'is_unique' => 'Nama tim sudah terdaftar'
                 ]
             ],
-            'nama_ketua' => 
+            'nama_ketua' =>
             [
                 'label' => 'nama_ketua',
                 'rules' => 'required',
@@ -253,7 +253,7 @@ class VerifyRegistrasi extends BaseController
                     'required' => $fieldError,
                 ]
             ],
-            'asal_institusi' => 
+            'asal_institusi' =>
             [
                 'label' => 'asal_institusi',
                 'rules' => 'required',
@@ -261,7 +261,7 @@ class VerifyRegistrasi extends BaseController
                     'required' => $fieldError,
                 ]
             ],
-            'email_ketua' => 
+            'email_ketua' =>
             [
                 'label' => 'email_ketua',
                 'rules' => 'required|valid_email|is_unique[ctf.ctf_email_ketua]',
@@ -271,82 +271,75 @@ class VerifyRegistrasi extends BaseController
                     'is_unique' => 'Email sudah terdaftar'
                 ]
             ],
-            'nama_anggota_1' => 
+            // 'nama_anggota_1' => 
+            // [
+            //     'label' => 'nama_anggota_1',
+            // ],
+            // 'nama_anggota_2' => 
+            // [
+            //     'label' => 'nama_anggota_2',
+            // ],
+            'surket_ketua' =>
             [
-                'label' => 'nama_anggota_1',
-            ],
-            'nama_anggota_2' => 
-            [
-                'label' => 'nama_anggota_2',
-            ],
-            'surket_ketua' => 
-            [
-                'label'     => 'suket_ketua',
-                'rules'     => 'required|uploaded[surket_ketua]|is_image[surket_ketua]|max_size[surket_ketua, 1024]',
+                'label'     => 'surket_ketua',
+                'rules'     => 'uploaded[surket_ketua]|is_image[surket_ketua]|max_size[surket_ketua, 1024]',
                 'errors'    => [
-                    'required' => $fieldError,
                     'uploaded'  => 'Field ini harus diisi',
                     'is_image'  => $imgTypeError,
                     'max_size'  => $imgSizeError
                 ]
             ],
-            'surket_anggota_1' => 
+            'surket_anggota_1' =>
             [
                 'label'     => 'surket_anggota_1',
-                'rules'     => 'uploaded[surket_anggota_1]|is_image[surket_anggota_1]|max_size[surket_anggota_1, 1024]',
+                'rules'     => 'is_image[surket_anggota_1]|max_size[surket_anggota_1, 1024]',
                 'errors'    => [
-                    'uploaded'  => 'Field ini harus diisi',
                     'is_image'  => $imgTypeError,
                     'max_size'  => $imgSizeError
                 ]
             ],
-            'surket_anggota_2' => 
+            'surket_anggota_2' =>
             [
                 'label'     => 'surket_anggota_2',
-                'rules'     => 'uploaded[surket_anggota_2]|is_image[surket_anggota_2]|max_size[surket_anggota_2, 1024]',
+                'rules'     => 'is_image[surket_anggota_2]|max_size[surket_anggota_2, 1024]',
                 'errors'    => [
-                    'uploaded'  => 'Field ini harus diisi',
                     'is_image'  => $imgTypeError,
                     'max_size'  => $imgSizeError
                 ]
             ],
-            'ig_ara_ketua' => 
+            'ig_ara_ketua' =>
             [
                 'label'     => 'ig_ara_ketua',
-                'rules'     => 'required|uploaded[ig_ara_ketua]|is_image[ig_ara_ketua]|max_size[ig_ara_ketua, 1024]',
+                'rules'     => 'uploaded[ig_ara_ketua]|is_image[ig_ara_ketua]|max_size[ig_ara_ketua, 1024]',
                 'errors'    => [
-                    'required' => $fieldError,
                     'uploaded'  => 'Field ini harus diisi',
                     'is_image'  => $imgTypeError,
                     'max_size'  => $imgSizeError
                 ]
             ],
-            'ig_ara_anggota_1' => 
+            'ig_ara_anggota_1' =>
             [
                 'label'     => 'ig_ara_anggota_1',
-                'rules'     => 'uploaded[ig_ara_anggota_1]|is_image[ig_ara_anggota_1]|max_size[ig_ara_anggota_1, 1024]',
+                'rules'     => 'is_image[ig_ara_anggota_1]|max_size[ig_ara_anggota_1, 1024]',
                 'errors'    => [
-                    'uploaded'  => 'Field ini harus diisi',
                     'is_image'  => $imgTypeError,
                     'max_size'  => $imgSizeError
                 ]
             ],
-            'ig_ara_anggota_2' => 
+            'ig_ara_anggota_2' =>
             [
                 'label'     => 'ig_ara_anggota_2',
-                'rules'     => 'uploaded[ig_ara_anggota_2]|is_image[ig_ara_anggota_2]|max_size[ig_ara_anggota_2, 1024]',
+                'rules'     => 'is_image[ig_ara_anggota_2]|max_size[ig_ara_anggota_2, 1024]',
                 'errors'    => [
-                    'uploaded'  => 'Field ini harus diisi',
                     'is_image'  => $imgTypeError,
                     'max_size'  => $imgSizeError
                 ]
             ],
-            'bukti_bayar' => 
+            'bukti_bayar' =>
             [
                 'label'     => 'bukti_bayar',
-                'rules'     => 'required|uploaded[bukti_bayar]|is_image[bukti_bayar]|max_size[bukti_bayar, 1024]',
+                'rules'     => 'uploaded[bukti_bayar]|is_image[bukti_bayar]|max_size[bukti_bayar, 1024]',
                 'errors'    => [
-                    'required' => $fieldError,
                     'uploaded'  => 'Field ini harus diisi',
                     'is_image'  => $imgTypeError,
                     'max_size'  => $imgSizeError
@@ -395,7 +388,7 @@ class VerifyRegistrasi extends BaseController
         $moved_ig_ara_anggota_1 = $this->moveFile($ig_ara_path, $ig_ara_anggota_1);
         $moved_ig_ara_anggota_2 = $this->moveFile($ig_ara_path, $ig_ara_anggota_2);
         $movedBuktiBayar = $this->moveFile($bukti_bayar_path, $fileBuktiBayar);
-        
+
         $data =
             [
                 'ctf_tim_nama' => $tim_nama,

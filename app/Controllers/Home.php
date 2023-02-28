@@ -92,4 +92,15 @@ class Home extends BaseController
             ];
         return view('landing/pages/register-exploIT', $data);
     }
+
+    public function registerExploitVisitor()
+    {
+        session();
+        $data =
+            [
+                'title' => 'ExploIT (Pengunjung)',
+                'validation' => \Config\Services::validation()
+            ];
+        return view('landing/pages/register-exploIT-visitor', $data);
+    }
 }

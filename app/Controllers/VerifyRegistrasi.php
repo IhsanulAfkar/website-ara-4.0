@@ -7,12 +7,15 @@ use App\Controllers\BaseController;
 use App\Models\OlimModel;
 use App\Models\CTFModel;
 use App\Models\ExploitModel;
+use App\Models\ExploitVisitorModel;
 
 class VerifyRegistrasi extends BaseController
 {
     protected $session;
     protected $Olim_Model;
+    protected $CTF_Model;
     protected $Exploit_Model;
+    protected $ExploitVisitor_Model;
 
     public function __construct()
     {
@@ -20,6 +23,7 @@ class VerifyRegistrasi extends BaseController
         $this->Olim_Model = new OlimModel();
         $this->CTF_Model = new CTFModel();
         $this->Exploit_Model = new ExploitModel();
+        $this->ExploitVisitor_Model = new ExploitVisitorModel();
     }
 
     private function moveFile($path, $file)
@@ -678,6 +682,135 @@ class VerifyRegistrasi extends BaseController
             $this->Exploit_Model->save($data);
             $this->session->setFlashdata('msg', 'Registrasi berhasil');
             return redirect()->to('/register/exploit');
+        } else {
+            $dd = $email->printDebugger(['headers']);
+            print_r($dd);
+        }
+    }
+
+    public function verify_regis_exploit_visitor()
+    {
+        $fieldError = 'Field ini harus diisi';
+        $imgSizeError = 'Melebihi batas max 1 mb';
+        $imgTypeError = 'File ini bukan gambar';
+
+        $validationRules = [
+            'nama' => [
+                'label' => 'nama',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => $fieldError,
+                ]
+            ],
+            'asal_institusi' => [
+                'label' => 'asal_institusi',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => $fieldError,
+                ]
+            ],
+            'whatsapp' => [
+                'label' => 'whatsapp',
+                'rules' => 'required|is_unique[exploit-visitor.visitor_wa]|numeric',
+                'errors' => [
+                    'required' => $fieldError,
+                    'is_unique' => 'Nomor sudah terdaftar',
+                    'numeric' => 'Nomor harus berupa angka'
+                ]
+            ],
+            'email' => [
+                'label' => 'email',
+                'rules' => 'required|valid_email|is_unique[exploit-visitor.visitor_email]',
+                'errors' => [
+                    'required' => $fieldError,
+                    'valid_email' => 'Email tidak valid',
+                    'is_unique' => 'Email sudah terdaftar'
+                ]
+            ],
+            'story_invitation_card' => [
+                'label'     => 'story_invitation_card',
+                'rules'     => 'uploaded[story_invitation_card]|is_image[story_invitation_card]|max_size[story_invitation_card, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'Field ini harus diisi',
+                    'is_image'  => $imgTypeError,
+                    'max_size'  => $imgSizeError
+                ]
+            ],
+            'reupload_poster' => [
+                'label'     => 'reupload_poster',
+                'rules'     => 'uploaded[reupload_poster]|is_image[reupload_poster]|max_size[reupload_poster, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'Field ini harus diisi',
+                    'is_image'  => $imgTypeError,
+                    'max_size'  => $imgSizeError
+                ]
+            ],
+            'follow_ig_ara' => [
+                'label'     => 'follow_ig_ara',
+                'rules'     => 'uploaded[follow_ig_ara]|is_image[follow_ig_ara]|max_size[follow_ig_ara, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'Field ini harus diisi',
+                    'is_image'  => $imgTypeError,
+                    'max_size'  => $imgSizeError
+                ]
+            ],
+        ];
+
+        if (!$this->validate($validationRules)) {
+            return redirect()->to('/register/exploit-visitor')->withInput();
+        }
+
+        $nama = $this->request->getVar('nama');
+        $asal_institusi = $this->request->getVar('asal_institusi');
+        $whatsapp = $this->request->getVar('whatsapp');
+        $email_visitor = $this->request->getVar('email');
+        $story_invitation_card = $this->request->getFile('story_invitation_card');
+        $reupload_poster = $this->request->getFile('reupload_poster');
+        $follow_ig_ara = $this->request->getFile('follow_ig_ara');
+
+        // Define path
+        $story_invitation_card_path = 'uploads/exploit-visitor/story_invitation_card';
+        $reupload_poster_path = 'uploads/exploit-visitor/reupload_poster';
+        $follow_ig_ara_path = 'uploads/exploit-visitor/follow_ig_ara';
+
+         // Pindah file + rename
+        $moved_story_invitation_card = $this->moveFile($story_invitation_card_path, $story_invitation_card);
+        $moved_reupload_poster = $this->moveFile($reupload_poster_path, $reupload_poster);
+        $moved_follow_ig_ara = $this->moveFile($follow_ig_ara_path, $follow_ig_ara);
+
+        $data = [
+        'visitor_nama' => $nama,
+        'visitor_email' => $email_visitor,
+        'visitor_wa' => $whatsapp,
+        'visitor_institusi' => $asal_institusi,
+        'visitor_story_invitation_card' => $moved_story_invitation_card,
+        'visitor_reupload_poster' => $moved_reupload_poster,
+        'visitor_follow_ig_ara' => $moved_follow_ig_ara,
+        'visitor_status' => 0
+        ];
+
+        // Kirim Email
+        $email = \Config\Services::email();
+        $email->setTo($email_visitor);
+        $email->setFrom('arenewalagent@gmail.com', 'ARA 4.0');
+        $email->setSubject('Email Konfirmasi Pendaftaran Pengunjung ExploIT');
+        $body = "Halo {$nama},</br>
+        </br>
+        Terima kasih sudah mendaftar pada event kami, \"ExploIT.\"<br>
+        <br>
+        Dengan ini, kami telah menerima berkas Anda. Kami akan mengecek kelengkapan berkas yang sudah dikirimkan sesuai dengan persyaratan kami. <br>
+        <br>
+        Terima kasih.<br>
+        <br>
+        --<br>
+        Salam Hormat,<br>
+        <br>
+        A Renewal Agents 4.0";
+        $email->setMessage($body);
+        if($email->send()){
+            $this->ExploitVisitor_Model->save($data);
+            $this->session->setFlashdata('msg', 'Registrasi berhasil');
+            return redirect()->to('/register/exploit-visitor');
         } else {
             $dd = $email->printDebugger(['headers']);
             print_r($dd);

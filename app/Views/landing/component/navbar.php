@@ -21,6 +21,7 @@
         <div class="hidden group-hover:block absolute right-0 top-12 bg-yellow-500 rounded-lg">
           <a class="block hover:text-white py-2 px-4" href="<?= base_url(); ?>/register/olimpiade">Olimpiade</a>
           <a class="block hover:text-white py-2 px-4" href="<?= base_url(); ?>/register/exploit">Tenant ExploIT</a>
+          <a class="block hover:text-white py-2 px-4" href="<?= base_url(); ?>/register/exploit-visitor">Pengunjung ExploIT</a>
           <a class="block hover:text-white py-2 px-4" href="<?= base_url(); ?>/register/ctf">CTF</a>
           <!-- <a class="block hover:text-white py-2 px-4" href="#">ExploIT</a> -->
         </div>

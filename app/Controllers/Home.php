@@ -53,6 +53,14 @@ class Home extends BaseController
         $data['event_time'] = "Nov 20, 2022 00:00:00";
         return view('landing/pages/exploit', $data);
     }
+    public function exploitVotePage()
+    {
+        session();
+        $data['title'] = "ExploIT Vote";
+        $data['event_time'] = "Nov 20, 2022 00:00:00";
+        // $data['tenants'] = dataDariDatabase();
+        return view('landing/pages/exploit_vote', $data);
+    }
 
     // Register
     public function registerOlimpiade()

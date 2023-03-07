@@ -15,18 +15,18 @@ class TokenModel extends Model
     ];
 
     protected $token = 'token';
-
+    protected $is_used = 'is_used';
     protected $useTimestamps = true;
     protected $createdField = 'created_at';
 
     public function getToken($token) {
-        $query = $this->where($this->token, $token)->first();
-        // dd($query);
+        $query = $this->where($this->token, $token)->where($this->is_used, 0)->first();
+        $id = $this->getIdWithToken($token);
 
         if($query) {
+            $this->update($query['id'], ['is_used' => 1]);
             return true;
         }
-        
         else {
             return false;
         }

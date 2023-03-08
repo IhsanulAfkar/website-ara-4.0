@@ -58,6 +58,10 @@ $routes->get('/register/exploit', 'Home::registerExploit');
 $routes->post('/verify-regis-exploit', 'VerifyRegistrasi::verify_regis_exploit');
 //
 
+// VOTE
+$routes->get('/exploit/vote', 'Home::exploitVotePage');
+$routes->post('/exploit/vote/tenants', 'VoteController::voteExploit');
+
 $routes->get('/register/exploit-visitor', 'Home::registerExploitVisitor');
 $routes->post('/verify-regis-exploit-visitor', 'VerifyRegistrasi::verify_regis_exploit_visitor');
 

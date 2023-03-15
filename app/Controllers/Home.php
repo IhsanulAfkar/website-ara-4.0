@@ -2,8 +2,16 @@
 
 namespace App\Controllers;
 
+use App\Models\ExploitModel;
+use PSpell\Config;
+
 class Home extends BaseController
 {
+    protected $exploitModel;
+    public function __construct()
+    {
+        $this->exploitModel = new ExploitModel();
+    }
     public function index()
     {
         $data['title'] = "Home";
@@ -58,8 +66,9 @@ class Home extends BaseController
         session();
         $data['title'] = "ExploIT Vote";
         $data['event_time'] = "Nov 20, 2022 00:00:00";
-        // $data['tenants'] = dataDariDatabase();
-        return view('landing/pages/exploit_vote', $data);
+
+        $data['tenants'] = $this->exploitModel->where('exploit_status', 1)->findAll();
+        return view('landing/pages/voting-exploit', $data);
     }
 
     // Register

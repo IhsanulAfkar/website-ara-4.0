@@ -61,6 +61,7 @@ $routes->post('/verify-regis-exploit', 'VerifyRegistrasi::verify_regis_exploit')
 // VOTE
 $routes->get('/exploit/vote', 'Home::exploitVotePage');
 $routes->post('/exploit/vote/tenants', 'VoteController::voteExploit');
+$routes->get('/generateToken', 'VoteController::generateToken');
 
 $routes->get('/register/exploit-visitor', 'Home::registerExploitVisitor');
 $routes->post('/verify-regis-exploit-visitor', 'VerifyRegistrasi::verify_regis_exploit_visitor');
@@ -89,7 +90,7 @@ $routes->group("dashboard", ["filter" => "auth"], function ($routes) {
         $routes->get("konfirmasi-team", 'dashboard\AdminExploit::konfirmasi_team');
         $routes->get('list-team', 'dashboard\AdminExploit::confirmed_team');
         $routes->get('verify-konfirmasi-team/(:any)/(:any)', 'dashboard\AdminExploit::verify_konfirmasi_team/$1/$2');
-        
+
         $routes->get("konfirmasi-visitor", 'dashboard\AdminExploit::konfirmasi_visitor');
         $routes->get('list-visitor', 'dashboard\AdminExploit::confirmed_visitor');
         $routes->get('verify-konfirmasi-visitor/(:any)/(:any)', 'dashboard\AdminExploit::verify_konfirmasi_visitor/$1/$2');

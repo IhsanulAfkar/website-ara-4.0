@@ -22,20 +22,36 @@ class VoteController extends BaseController
 
     public function voteExploit()
     {
-        $id = $this->request->getVar('vote');
+        $id = $this->request->getVar('id_tenant');
         $token = $this->request->getVar('token');
-        
+
         $query = $this->tokenModel->getToken($token);
-
-        if (!$query) {
+        if (empty($id) || empty($token)) {
+            $this->session->setFlashdata('error', 'Vote gagal, data tidak terpenuhi :(');
             return redirect()->to('/exploit/vote')->withInput();
-            //Flashdata kalau perlu
-        }
-        else {
-            $voteCount = intval($this->exploitModel->select('exploit_vote')->where('exploit_tim_id', $id)->first());
-
+        } else if (!$query) {
+            $this->session->setFlashdata('error', 'Vote gagal, token salah :(');
+            return redirect()->to('/exploit/vote')->withInput();
+        } else {
+            $voteCount = $this->exploitModel->select('exploit_vote')->where('exploit_tim_id', $id)->first();
+            $voteCount = intval($voteCount['exploit_vote']);
             $this->exploitModel->update($id, ['exploit_vote' => ($voteCount + 1)]); //nambah voteCount
+            $this->session->setFlashdata('msg', 'Vote berhasil!😊');
+            return redirect()->to('/exploit/vote')->withInput();
         }
     }
-
+    public function generateToken()
+    {
+        helper('text');
+        for ($i = 0; $i < 110; $i++) {
+            # code...
+            $token = random_string('alpha', 5);
+            echo $token;
+            $data = [
+                "token" => $token
+            ];
+            $this->tokenModel->save($data);
+        }
+        return;
+    }
 }

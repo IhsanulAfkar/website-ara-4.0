@@ -1,0 +1,28 @@
+Page Regist peserta ExploIT
+
+Sistem voting
+- Membuat sistem Token dari setiap pendaftar ExploIT
+    - Token ini nanti akan digunakan untuk Vote Tenant ExploIT
+- Menyediakan token cadangan untuk daftar manual
+- Membuat webpage Voting Tenant ExploIT (sedang DD desain)
+
+Alur
+- Buka page voting (sementara html biasa aja krn blom jadi)
+    Versi 2:
+    Belum
+    - Di form vote team ada field token buat auth
+    Sudah
+    - Jika vote, muncul 'token sudah terpakai, anda sudah memilih tim abc' misal
+
+Tambahan
+- Untuk token pengunjung yang daftar sebelum hari-h (lewat web), bikin table baru buat token
+    yang ada fk-nya (user_id dari user)
+- Untuk token di hari-h bikin table baru juga yang isinya token, 
+    di generate sama admin exploit di dashboard admin exploit (bikin page buat generate + masukin ke db)
+- Di kedua tabel tersebut, ada column tim yang di vote, biar nanti kalo udah nge-vote ke record
+- Buat page voting, nanti ada data2:
+    - tim-tim yang di voting (nama tim, asal, deskripsi_singkat, dll bisa nambah nanti)
+    - Kalo bisa pake js, biar secure dan gak nambah halaman lagi
+
+deadline utk registrasi + landing page exploit (fe): 1 maret
+deadline voting: 10 maret

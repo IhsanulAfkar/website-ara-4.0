@@ -19,15 +19,14 @@ class TokenModel extends Model
     protected $useTimestamps = true;
     protected $createdField = 'created_at';
 
-    public function getToken($token) {
+    public function getToken($token)
+    {
         $query = $this->where($this->token, $token)->where($this->is_used, 0)->first();
-        $id = $this->getIdWithToken($token);
 
-        if($query) {
+        if ($query) {
             $this->update($query['id'], ['is_used' => 1]);
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
